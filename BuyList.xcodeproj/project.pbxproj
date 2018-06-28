@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053C92BD5E8B28C536D9E0C5 /* Pods_BuyListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */; };
 		200BEF6E20B99831003F0A99 /* UITableView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF6D20B99831003F0A99 /* UITableView+Addition.swift */; };
 		200BEF7020B99867003F0A99 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF6F20B99867003F0A99 /* NibLoadable.swift */; };
 		200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */; };
@@ -33,6 +34,7 @@
 		208D42032031EBBB004618CA /* BuyListAddContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddContentCell.swift */; };
 		208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42062032CB63004618CA /* LoadJsonFile.swift */; };
 		2096998F203516950066AEC4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2096998E203516940066AEC4 /* sample.json */; };
+		84B87E7A82CC26D29DB229EA /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
 		E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */; };
 		E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C61F46E3E30040728A /* BuyListPresenter.swift */; };
 		E10F35C91F46E3F50040728A /* BuyListHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C81F46E3F50040728A /* BuyListHistoryPresenter.swift */; };
@@ -63,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061618CD687D505957671086 /* Pods-BuyListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuyListTests/Pods-BuyListTests.release.xcconfig"; sourceTree = "<group>"; };
 		200BEF6D20B99831003F0A99 /* UITableView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Addition.swift"; sourceTree = "<group>"; };
 		200BEF6F20B99867003F0A99 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Addition.swift"; sourceTree = "<group>"; };
@@ -90,6 +93,10 @@
 		208D42022031EBBB004618CA /* BuyListAddContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListAddContentCell.swift; sourceTree = "<group>"; };
 		208D42062032CB63004618CA /* LoadJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonFile.swift; sourceTree = "<group>"; };
 		2096998E203516940066AEC4 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		753227B3DC93A70EBA086EF9 /* Pods-BuyList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.release.xcconfig"; sourceTree = "<group>"; };
+		A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77765413B76B23CC34D948D /* Pods-BuyList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.debug.xcconfig"; sourceTree = "<group>"; };
 		E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListHistoryVC.swift; sourceTree = "<group>"; };
 		E10F35C61F46E3E30040728A /* BuyListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListPresenter.swift; sourceTree = "<group>"; };
 		E10F35C81F46E3F50040728A /* BuyListHistoryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListHistoryPresenter.swift; sourceTree = "<group>"; };
@@ -111,6 +118,7 @@
 		E1B826541EE1596D008AEE9D /* BuyListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuyListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B826581EE1596D008AEE9D /* BuyListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListTests.swift; sourceTree = "<group>"; };
 		E1B8265A1EE1596D008AEE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26CF736F2CFD7BD88702031 /* Pods-BuyListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyListTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuyListTests/Pods-BuyListTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,7 @@
 			files = (
 				E18ABDB71F20BB190012416A /* Realm.framework in Frameworks */,
 				E18ABDB91F20BB270012416A /* RealmSwift.framework in Frameworks */,
+				84B87E7A82CC26D29DB229EA /* Pods_BuyList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053C92BD5E8B28C536D9E0C5 /* Pods_BuyListTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +246,17 @@
 			name = BuyList;
 			sourceTree = "<group>";
 		};
+		C09DB7C2E9BD0C87D97472A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C77765413B76B23CC34D948D /* Pods-BuyList.debug.xcconfig */,
+				753227B3DC93A70EBA086EF9 /* Pods-BuyList.release.xcconfig */,
+				E26CF736F2CFD7BD88702031 /* Pods-BuyListTests.debug.xcconfig */,
+				061618CD687D505957671086 /* Pods-BuyListTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E10F35C31F46E3970040728A /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +293,8 @@
 				207F2396202C1471009BF523 /* SVProgressHUD.framework */,
 				E18ABDB81F20BB270012416A /* RealmSwift.framework */,
 				E18ABDB61F20BB190012416A /* Realm.framework */,
+				249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */,
+				A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -283,6 +306,7 @@
 				E1B826571EE1596D008AEE9D /* BuyListTests */,
 				E18ABDB51F20BB170012416A /* Frameworks */,
 				E1B8263F1EE1596D008AEE9D /* Products */,
+				C09DB7C2E9BD0C87D97472A7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,10 +354,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1B8265D1EE1596D008AEE9D /* Build configuration list for PBXNativeTarget "BuyList" */;
 			buildPhases = (
+				77728F006AD58FF6BC8D2247 /* [CP] Check Pods Manifest.lock */,
 				E1B8263A1EE1596D008AEE9D /* Sources */,
 				E1B8263B1EE1596D008AEE9D /* Frameworks */,
 				E1B8263C1EE1596D008AEE9D /* Resources */,
 				E18ABDB41F20B9F70012416A /* ShellScript */,
+				F8986709FF14AA99ED120A03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,6 +374,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1B826601EE1596D008AEE9D /* Build configuration list for PBXNativeTarget "BuyListTests" */;
 			buildPhases = (
+				B8707B95FB5974350B546A96 /* [CP] Check Pods Manifest.lock */,
 				E1B826501EE1596D008AEE9D /* Sources */,
 				E1B826511EE1596D008AEE9D /* Frameworks */,
 				E1B826521EE1596D008AEE9D /* Resources */,
@@ -428,6 +455,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		77728F006AD58FF6BC8D2247 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BuyList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8707B95FB5974350B546A96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BuyListTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E18ABDB41F20B9F70012416A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +505,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		F8986709FF14AA99ED120A03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BuyList/Pods-BuyList-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuyList/Pods-BuyList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -639,6 +722,7 @@
 		};
 		E1B8265E1EE1596D008AEE9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C77765413B76B23CC34D948D /* Pods-BuyList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98UFL8A7L4;
@@ -659,6 +743,7 @@
 		};
 		E1B8265F1EE1596D008AEE9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 753227B3DC93A70EBA086EF9 /* Pods-BuyList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98UFL8A7L4;
@@ -679,6 +764,7 @@
 		};
 		E1B826611EE1596D008AEE9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E26CF736F2CFD7BD88702031 /* Pods-BuyListTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -694,6 +780,7 @@
 		};
 		E1B826621EE1596D008AEE9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 061618CD687D505957671086 /* Pods-BuyListTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
