@@ -34,7 +34,7 @@
 		208D42032031EBBB004618CA /* BuyListAddContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddContentCell.swift */; };
 		208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42062032CB63004618CA /* LoadJsonFile.swift */; };
 		2096998F203516950066AEC4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2096998E203516940066AEC4 /* sample.json */; };
-		84B87E7A82CC26D29DB229EA /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
+		A24C351784CCB446C29EC380 /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
 		E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */; };
 		E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C61F46E3E30040728A /* BuyListPresenter.swift */; };
 		E10F35C91F46E3F50040728A /* BuyListHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C81F46E3F50040728A /* BuyListHistoryPresenter.swift */; };
@@ -42,8 +42,6 @@
 		E10F35CD1F46E4200040728A /* BuyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35CC1F46E4200040728A /* BuyListInteractor.swift */; };
 		E10F35CF1F46E4320040728A /* BuyListHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35CE1F46E4320040728A /* BuyListHistoryInteractor.swift */; };
 		E10F35D21F46E45C0040728A /* SettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35D11F46E45C0040728A /* SettingInteractor.swift */; };
-		E18ABDB71F20BB190012416A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18ABDB61F20BB190012416A /* Realm.framework */; };
-		E18ABDB91F20BB270012416A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18ABDB81F20BB270012416A /* RealmSwift.framework */; };
 		E18ABDBB1F20C34A0012416A /* SampleRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18ABDBA1F20C34A0012416A /* SampleRealm.swift */; };
 		E1B826421EE1596D008AEE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B826411EE1596D008AEE9D /* AppDelegate.swift */; };
 		E1B826441EE1596D008AEE9D /* BuyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B826431EE1596D008AEE9D /* BuyListVC.swift */; };
@@ -126,9 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18ABDB71F20BB190012416A /* Realm.framework in Frameworks */,
-				E18ABDB91F20BB270012416A /* RealmSwift.framework in Frameworks */,
-				84B87E7A82CC26D29DB229EA /* Pods_BuyList.framework in Frameworks */,
+				A24C351784CCB446C29EC380 /* Pods_BuyList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +354,6 @@
 				E1B8263A1EE1596D008AEE9D /* Sources */,
 				E1B8263B1EE1596D008AEE9D /* Frameworks */,
 				E1B8263C1EE1596D008AEE9D /* Resources */,
-				E18ABDB41F20B9F70012416A /* ShellScript */,
 				F8986709FF14AA99ED120A03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -490,21 +485,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		E18ABDB41F20B9F70012416A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		F8986709FF14AA99ED120A03 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
