@@ -11,6 +11,6 @@ import UIKit
 class BuyListHistoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.parent?.navigationItem.title = "買い物履歴"
+        navigationItem.title = "買い物履歴"
     }
 }

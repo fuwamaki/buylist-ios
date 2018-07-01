@@ -15,7 +15,7 @@ class SettingVC: UIViewController, SettingUserInterface {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.parent?.navigationItem.title = "設定"
+        navigationItem.title = "設定"
 
         let presenter = SettingPresenter()
         let interactor = SettingInteractor()

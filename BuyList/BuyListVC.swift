@@ -32,7 +32,7 @@ class BuyListVC: UIViewController, BuyListUserInterface {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.parent?.navigationItem.title = Constant.title
+        navigationItem.title = Constant.title
         setupViper()
         self.eventHandler?.setBuyListContent()
     }
