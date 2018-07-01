@@ -8,15 +8,15 @@
 
 import UIKit
 
-class SettingVC:UIViewController,SettingUserInterface {
+class SettingVC: UIViewController, SettingUserInterface {
 
     var eventHandler: SettingEventHandler?
     @IBOutlet weak var settingTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.parent?.navigationItem.title = "設定"
-        
+
         let presenter = SettingPresenter()
         let interactor = SettingInteractor()
         presenter.interactor = interactor
@@ -33,7 +33,7 @@ class SettingVC:UIViewController,SettingUserInterface {
         super.didReceiveMemoryWarning()
     }
 
-    func getSettingCell(_ dto:SettingViewCellDto) -> UITableViewCell {
+    func getSettingCell(_ dto: SettingViewCellDto) -> UITableViewCell {
         let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingContentCell.identifier) as! SettingContentCell
         cell.setContentTitle(dto)
         if dto.eventLabel == "appversion" {
@@ -44,9 +44,8 @@ class SettingVC:UIViewController,SettingUserInterface {
         }
         return cell
     }
-    
+
     func reloadTableView() {
         settingTableView.reloadData()
     }
 }
-

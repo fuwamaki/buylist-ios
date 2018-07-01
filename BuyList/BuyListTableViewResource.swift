@@ -11,21 +11,19 @@ import Foundation
 struct BuyListTableViewResource {
     var buyListContentSectionInfo = BuyListContentSectionInfo()
     var buyListAddContentSectionInfo = BuyListAddContentSectionInfo()
-    
+
     private var sectionList: [BuyListSectionInfo] {
         return [buyListContentSectionInfo, buyListAddContentSectionInfo]
     }
-    
+
     var sectionListCount: Int {
         return sectionList.count
     }
-    
+
     subscript (index: Int) -> BuyListSectionInfo? {
-        get {
-            guard sectionList.count > index else {
-                return nil
-            }
-            return sectionList[index]
+        guard sectionList.count > index else {
+            return nil
         }
+        return sectionList[index]
     }
 }

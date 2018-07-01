@@ -12,15 +12,13 @@ protocol BuyListInteractable {
     func getBuyListData() -> [SampleJsonData.Rows]?
 }
 
-protocol BuyListDelegate:class {
-    
+protocol BuyListDelegate: class {
 }
 
-
-class BuyListInteractor:BuyListInteractable {
-    weak var delegate:BuyListDelegate?
+class BuyListInteractor: BuyListInteractable {
+    weak var delegate: BuyListDelegate?
     let loadJsonFile = LoadJsonFile()
-    
+
     func getBuyListData() -> [SampleJsonData.Rows]? {
         guard let sampleJsonData = loadJsonFile.getJson() else {
             return nil

@@ -8,21 +8,21 @@
 
 import UIKit
 
-class SettingContentCell:UITableViewCell {
-    
+class SettingContentCell: UITableViewCell {
+
     static let identifier = SettingContentCell.className
-    
-    @IBOutlet weak var titleLabel:UILabel!
-    @IBOutlet weak var appVersionLabel:UILabel!
-    
-    func setContentTitle(_ dto:SettingViewCellDto) {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var appVersionLabel: UILabel!
+
+    func setContentTitle(_ dto: SettingViewCellDto) {
         self.titleLabel.text = dto.title
     }
-    
-    func setAppVersion(_ appVersion:String) {
+
+    func setAppVersion(_ appVersion: String) {
         self.appVersionLabel.text = appVersion
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         let view = UIView()
@@ -30,4 +30,3 @@ class SettingContentCell:UITableViewCell {
         self.selectedBackgroundView = view
     }
 }
-

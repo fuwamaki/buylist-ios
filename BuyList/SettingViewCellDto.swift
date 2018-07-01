@@ -13,7 +13,7 @@ enum SettingContents {
 }
 
 protocol SettingViewCellDto {
-    var title:String { get }
-    var content:SettingContents { get }
-    var eventLabel:String { get }
+    var title: String { get }
+    var content: SettingContents { get }
+    var eventLabel: String { get }
 }

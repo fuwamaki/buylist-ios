@@ -9,11 +9,11 @@
 import Foundation
 
 class Debug: NSObject {
-    
+
     class func log(_ obj: Any?,
-                   file:String = #file,
-                   line:Int = #line,
-                   function:String = #function
+                   file: String = #file,
+                   line: Int = #line,
+                   function: String = #function
         ) {
         #if DEBUG
             var filename = file
@@ -27,5 +27,4 @@ class Debug: NSObject {
             }
         #endif
     }
-    
 }

@@ -9,13 +9,10 @@
 import Foundation
 
 protocol BuyListHistoryInteractable {
-    
 }
 
-protocol BuyListHistoryDelegate {
-    
+protocol BuyListHistoryDelegate: class {
 }
 
 class BuyListHistoryInteractor {
-    
 }

@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window:UIWindow?
+    var window: UIWindow?
     let homeScreenQuickAction = HomeScreenQuickAction()
 
     // when open app
@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         homeScreenQuickAction.createHomeScreenQuickAction()
         return true
     }
-    
+
     // when before close app
     func applicationWillResignActive(_ application: UIApplication) {
     }
@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         let handleShortCutItem = homeScreenQuickAction.handleShortCutItem(shortcutItem: shortcutItem)
         completionHandler(handleShortCutItem.0)
-        
+
         if let tabVC = UIApplication.shared.keyWindow?.rootViewController as? UITabBarController {
             tabVC.selectedIndex = 2
         }
@@ -55,6 +55,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = settingView
         self.window?.makeKeyAndVisible()
     }
-
 }
-

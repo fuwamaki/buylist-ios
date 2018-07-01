@@ -10,8 +10,7 @@ import Foundation
 import RealmSwift
 
 class BuyListDao {
-    
-    func saveBuyList(_ name:String){
+    func saveBuyList(_ name: String) {
         let realm = try! Realm()
         let buyListEntity = BuyListEntity(name: name)
         do {
@@ -22,7 +21,7 @@ class BuyListDao {
             Debug.log("realm -> \(error)")
         }
     }
-    
+
     func getBuyList() -> BuyListEntity? {
         let realm = try! Realm()
         guard let object = realm.objects(BuyListEntity.self).first else {
@@ -30,6 +29,4 @@ class BuyListDao {
         }
         return object
     }
-    
 }
-

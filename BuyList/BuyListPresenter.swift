@@ -21,11 +21,11 @@ protocol BuyListUserInterface: class {
 }
 
 class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
-    
+
     var buyListTableViewInfo: BuyListTableViewResource = BuyListTableViewResource()
     var interactor: BuyListInteractable?
     weak var userInterface: BuyListUserInterface?
-    
+
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         userInterface?.setupViews(tableView)
@@ -36,7 +36,7 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 1))
         return tableView
     }()
-    
+
     func setBuyListContent() {
         if let buyListArray = interactor?.getBuyListData() {
             for content in buyListArray {
@@ -50,15 +50,15 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
 }
 
 extension BuyListPresenter: UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return buyListTableViewInfo.sectionListCount
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return buyListTableViewInfo[section]?.rowCount ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sectionInfo = buyListTableViewInfo[section]
         return sectionInfo?.title
@@ -79,19 +79,19 @@ extension BuyListPresenter: UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
+
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         if let cellInfo = buyListTableViewInfo[indexPath.section]?.cellInfo[indexPath.row] {
             switch cellInfo.cellType {
-                case .content:
-                    return .delete
-                case .addContent:
-                    return .insert
+            case .content:
+                return .delete
+            case .addContent:
+                return .insert
             }
         }
         return .none
     }
-    
+
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if var sectionInfo = buyListTableViewInfo[indexPath.section], editingStyle == .delete {
             sectionInfo.cellInfo.remove(at: indexPath.row)
@@ -101,7 +101,7 @@ extension BuyListPresenter: UITableViewDataSource {
 }
 
 extension BuyListPresenter: UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }

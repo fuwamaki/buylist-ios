@@ -28,28 +28,28 @@ protocol BuyListTableInfo {
 }
 
 struct BuyListContentSectionInfo: BuyListSectionInfo {
-    var title: String? = nil
-    
+    var title: String?
+
     struct BuyListContentCell: BuyListTableInfo {
         var buyListContentDto: BuyListContentDto?
         var cellType: BuyListCellType = .content
     }
-    
+
     var cellInfo: [BuyListTableInfo] = []
-    
+
     mutating func append(_ contentCell: BuyListContentCell) {
         cellInfo.append(contentCell)
     }
 }
 
 struct BuyListAddContentSectionInfo: BuyListSectionInfo {
-    var title: String? = nil
+    var title: String?
     var rowCount: Int = 1
-    
+
     struct BuyListAddContentCell: BuyListTableInfo {
-        var buyListContentDto: BuyListContentDto? = nil
+        let buyListContentDto: BuyListContentDto? = nil
         var cellType: BuyListCellType = .addContent
     }
-    
+
     var cellInfo: [BuyListTableInfo] = [BuyListAddContentCell()]
 }

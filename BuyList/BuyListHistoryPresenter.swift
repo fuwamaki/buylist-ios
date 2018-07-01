@@ -9,13 +9,10 @@
 import Foundation
 
 protocol BuyListHistoryEventHandler {
-    
 }
 
 protocol BuyListHistoryUserInterface {
-    
 }
 
 class BuyListHistoryPresenter {
-    
 }

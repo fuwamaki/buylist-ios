@@ -11,16 +11,16 @@ import UIKit
 
 enum QuickActionItem: String {
     case top, history, setting
-    init?(fullType: String){
+    init?(fullType: String) {
         guard let last = fullType.components(separatedBy: ".").last else { return nil }
         self.init(rawValue: last)
     }
 }
 
 class HomeScreenQuickAction {
-    
+
     // MARK: create
-    
+
     func createHomeScreenQuickAction() {
         let shortcut1 = UIMutableApplicationShortcutItem (
             type: QuickActionItem.top.rawValue,
@@ -45,13 +45,13 @@ class HomeScreenQuickAction {
         )
         UIApplication.shared.shortcutItems = [shortcut1, shortcut2, shortcut3]
     }
-    
+
     // MARK: action
-    
+
     func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> (Bool, String) {
         var handled = false
         var item = ""
-        switch(shortcutItem.type) {
+        switch shortcutItem.type {
         case QuickActionItem.top.rawValue:
             item = "TopView"
             handled = true
