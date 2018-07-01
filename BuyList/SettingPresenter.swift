@@ -46,11 +46,11 @@ extension SettingPresenter: UITableViewDataSource {
         }
         return count
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return settingTableViewResource.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionInfo = settingTableViewResource[(indexPath as NSIndexPath).section]
         let cellInfo = sectionInfo?.cellTypes[(indexPath as NSIndexPath).row]
@@ -59,7 +59,7 @@ extension SettingPresenter: UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sectionInfo = settingTableViewResource[section]
         return sectionInfo?.title
