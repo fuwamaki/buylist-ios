@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum quickActionItem:String {
+enum QuickActionItem: String {
     case top, history, setting
     init?(fullType: String){
         guard let last = fullType.components(separatedBy: ".").last else { return nil }
@@ -23,21 +23,21 @@ class HomeScreenQuickAction {
     
     func createHomeScreenQuickAction() {
         let shortcut1 = UIMutableApplicationShortcutItem (
-            type: quickActionItem.top.rawValue,
+            type: QuickActionItem.top.rawValue,
             localizedTitle: "トップ",
             localizedSubtitle: "",
             icon: UIApplicationShortcutIcon(type: .home),
             userInfo: nil
         )
         let shortcut2 = UIMutableApplicationShortcutItem (
-            type: quickActionItem.history.rawValue,
+            type: QuickActionItem.history.rawValue,
             localizedTitle: "履歴",
             localizedSubtitle: "",
             icon: UIApplicationShortcutIcon(type: .bookmark),
             userInfo: nil
         )
         let shortcut3 = UIMutableApplicationShortcutItem (
-            type: quickActionItem.setting.rawValue,
+            type: QuickActionItem.setting.rawValue,
             localizedTitle: "設定",
             localizedSubtitle: "",
             icon: UIApplicationShortcutIcon(type: .share),
@@ -52,13 +52,13 @@ class HomeScreenQuickAction {
         var handled = false
         var item = ""
         switch(shortcutItem.type) {
-        case quickActionItem.top.rawValue:
+        case QuickActionItem.top.rawValue:
             item = "TopView"
             handled = true
-        case quickActionItem.history.rawValue:
+        case QuickActionItem.history.rawValue:
             item = "HistoryView"
             handled = true
-        case quickActionItem.setting.rawValue:
+        case QuickActionItem.setting.rawValue:
             item = "SettingView"
         default:
             break

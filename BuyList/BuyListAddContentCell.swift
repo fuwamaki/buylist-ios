@@ -10,7 +10,7 @@ import UIKit
 
 class BuyListAddContentCell: UITableViewCell {
     
-    fileprivate struct const {
+    fileprivate struct Constant {
         static let title = "項目を追加"
     }
 
@@ -28,6 +28,6 @@ class BuyListAddContentCell: UITableViewCell {
         selectedBackgroundView?.backgroundColor = UIColor.white
         textLabel?.font = UIFont.bodyText
         textLabel?.textColor = UIColor.black
-        textLabel?.text = const.title
+        textLabel?.text = Constant.title
     }
 }

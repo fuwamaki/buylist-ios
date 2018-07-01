@@ -10,7 +10,7 @@ import UIKit
 
 class BuyListVC: UIViewController, BuyListUserInterface {
     
-    fileprivate struct const {
+    fileprivate struct Constant {
         static let title = "買い物リスト"
     }
     
@@ -32,7 +32,7 @@ class BuyListVC: UIViewController, BuyListUserInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.parent?.navigationItem.title = const.title
+        self.parent?.navigationItem.title = Constant.title
         setupViper()
         self.eventHandler?.setBuyListContent()
     }
