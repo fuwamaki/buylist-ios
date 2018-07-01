@@ -22,10 +22,7 @@ class BuyListTable: Object {
     @objc dynamic var buy_off_time_recently: Date = Date()
 }
 
-//test
-//モデルクラス
 class SampleRealm: Object {
-    //初期化できていること
     @objc dynamic var id: Int = 0
     @objc dynamic var title: String = ""
 }
@@ -34,13 +31,11 @@ class SampleUseRealm {
 
     let sr = SampleRealm()
 
-    //data set
     func realmConnect() {
         sr.id = 1
         sr.title = "hoge"
     }
 
-    //Action
     func realmAction(action: RealmAction, obj: SampleRealm) {
         let realm = try! Realm()
         switch action {
@@ -48,7 +43,6 @@ class SampleUseRealm {
             _ = realm.objects(SampleRealm.self)
         case .save:
             try! realm.write {
-                //save realmConnect
                 realm.add(self.sr)
             }
         case .delete:

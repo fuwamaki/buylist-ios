@@ -14,7 +14,7 @@ struct SettingTableViewResource {
         return [SettingNotificationSectionInfo(), SettingAppInfoSectionInfo()]
     }
 
-    var count: Int {//SectionList数
+    var count: Int {
         guard let sectionListCount = list?.count else {
             return 0
         }

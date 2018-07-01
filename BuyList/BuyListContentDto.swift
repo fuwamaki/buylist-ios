@@ -11,11 +11,10 @@ import Foundation
 final class BuyListContentDto {
     var id: String
     var title: String
-    // TODO: 項目の追加
-//    var count:Int
-//    var description:String
-//    var create_time:String
-//    var update_time:String
+//    var count: Int
+//    var description: String
+//    var createTime: String
+//    var updateTime: String
 
     init(id: String, title: String) {
         self.id = id

@@ -11,15 +11,6 @@ import UIKit
 class BuyListHistoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBarSetting()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    //ナビゲーションバーの設定
-    func navigationBarSetting() {
         self.parent?.navigationItem.title = "買い物履歴"
     }
 }
