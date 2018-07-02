@@ -8,42 +8,41 @@
 
 import UIKit
 
-class SettingVC: UIViewController, SettingUserInterface {
+class SettingVC: UITableViewController, SettingUserInterface {
 
-    var eventHandler: SettingEventHandler?
+    private var eventHandler: SettingEventHandler?
     @IBOutlet weak var settingTableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "設定"
+        setupViews()
+    }
 
-        let presenter = SettingPresenter()
+    private func setupViews() {
+        let presenter = SettingPresenter(self)
         let interactor = SettingInteractor()
+        self.eventHandler = presenter
         presenter.interactor = interactor
         interactor.delegate = presenter
-        self.eventHandler = presenter
-        presenter.userInterface = self
         settingTableView.dataSource = presenter
         settingTableView.delegate = presenter
-        settingTableView.register(UINib(nibName: SettingContentCell.identifier, bundle: nil), forCellReuseIdentifier: SettingContentCell.identifier)
-//        self.dismiss(animated: true, completion: nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func getTableViewCell(_ indexPath: IndexPath) -> UITableViewCell {
+        return super.tableView(settingTableView, cellForRowAt: indexPath)
     }
-
-    func getSettingCell(_ dto: SettingViewCellDto) -> UITableViewCell {
-        let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingContentCell.identifier) as! SettingContentCell
-        cell.setContentTitle(dto)
-        if dto.eventLabel == "appversion" {
-            guard let appVersion = eventHandler?.getAppVersion() else {
-                return UITableViewCell()
-            }
-            cell.setAppVersion(appVersion)
-        }
-        return cell
-    }
+//    func getSettingCell(_ dto: SettingViewCellDto) -> UITableViewCell {
+//        let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingContentCell.identifier) as! SettingContentCell
+//        cell.setContentTitle(dto)
+//        if dto.eventLabel == "appversion" {
+//            guard let appVersion = eventHandler?.getAppVersion() else {
+//                return UITableViewCell()
+//            }
+//            cell.setAppVersion(appVersion)
+//        }
+//        return cell
+//    }
 
     func reloadTableView() {
         settingTableView.reloadData()

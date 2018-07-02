@@ -16,16 +16,21 @@ protocol SettingEventHandler {
 
 protocol SettingUserInterface: class {
     func reloadTableView()
-    func getSettingCell(_ dto: SettingViewCellDto) -> UITableViewCell
+    func getTableViewCell(_ indexPath: IndexPath) -> UITableViewCell
 }
 
 class SettingPresenter: NSObject, SettingEventHandler, SettingDelegate {
+    
     var settingTableViewResource: SettingTableViewResource = SettingTableViewResource()
     var interactor: SettingInteractable?
-    weak var userInterface: SettingUserInterface?
+    var userInterface: SettingUserInterface
+    
+    init(_ userInterface: SettingUserInterface) {
+        self.userInterface = userInterface
+    }
 
     func viewWillAppear() {
-        userInterface?.reloadTableView()
+        userInterface.reloadTableView()
     }
 
     func getAppVersion() -> String {
@@ -41,32 +46,16 @@ class SettingPresenter: NSObject, SettingEventHandler, SettingDelegate {
 
 extension SettingPresenter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = settingTableViewResource[section]?.rowCount else {
-            return 0
-        }
-        return count
+        return 2
     }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return settingTableViewResource.count
-    }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sectionInfo = settingTableViewResource[(indexPath as NSIndexPath).section]
-        let cellInfo = sectionInfo?.cellTypes[(indexPath as NSIndexPath).row]
-        if let cellInfo = cellInfo, let userInterface = userInterface {
-            return userInterface.getSettingCell(cellInfo)
-        }
-        return UITableViewCell()
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let sectionInfo = settingTableViewResource[section]
-        return sectionInfo?.title
+        return userInterface.getTableViewCell(indexPath)
     }
 }
 
 extension SettingPresenter: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sectionInfo = settingTableViewResource[(indexPath as NSIndexPath).section]
         let cellInfo = sectionInfo?.cellTypes[(indexPath as NSIndexPath).row]
