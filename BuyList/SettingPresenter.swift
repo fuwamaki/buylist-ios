@@ -16,15 +16,14 @@ protocol SettingEventHandler {
 
 protocol SettingUserInterface: class {
     func reloadTableView()
-    func getTableViewCell(_ indexPath: IndexPath) -> UITableViewCell
 }
 
 class SettingPresenter: NSObject, SettingEventHandler, SettingDelegate {
-    
+
     var settingTableViewResource: SettingTableViewResource = SettingTableViewResource()
     var interactor: SettingInteractable?
     var userInterface: SettingUserInterface
-    
+
     init(_ userInterface: SettingUserInterface) {
         self.userInterface = userInterface
     }
@@ -44,18 +43,9 @@ class SettingPresenter: NSObject, SettingEventHandler, SettingDelegate {
     }
 }
 
-extension SettingPresenter: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return userInterface.getTableViewCell(indexPath)
-    }
-}
-
+// MEMO: StaticCellsではDataSourceの指定不要
 extension SettingPresenter: UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sectionInfo = settingTableViewResource[(indexPath as NSIndexPath).section]
         let cellInfo = sectionInfo?.cellTypes[(indexPath as NSIndexPath).row]

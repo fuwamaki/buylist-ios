@@ -8,15 +8,16 @@
 
 import UIKit
 
+// MEMO: Static Cellsは、親ViewがUITableViewControllerじゃないといけない。
 class SettingVC: UITableViewController, SettingUserInterface {
 
     private var eventHandler: SettingEventHandler?
-    @IBOutlet weak var settingTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "設定"
         setupViews()
+        setVersionValue()
     }
 
     private func setupViews() {
@@ -25,26 +26,21 @@ class SettingVC: UITableViewController, SettingUserInterface {
         self.eventHandler = presenter
         presenter.interactor = interactor
         interactor.delegate = presenter
-        settingTableView.dataSource = presenter
-        settingTableView.delegate = presenter
+        tableView.delegate = presenter
     }
 
-    func getTableViewCell(_ indexPath: IndexPath) -> UITableViewCell {
-        return super.tableView(settingTableView, cellForRowAt: indexPath)
+    func setVersionValue() {
+        let versionCell = VersionCell()
+        versionCell.setupVersion()
     }
-//    func getSettingCell(_ dto: SettingViewCellDto) -> UITableViewCell {
-//        let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingContentCell.identifier) as! SettingContentCell
-//        cell.setContentTitle(dto)
-//        if dto.eventLabel == "appversion" {
-//            guard let appVersion = eventHandler?.getAppVersion() else {
-//                return UITableViewCell()
-//            }
-//            cell.setAppVersion(appVersion)
-//        }
-//        return cell
-//    }
 
     func reloadTableView() {
-        settingTableView.reloadData()
+        tableView.reloadData()
+    }
+}
+
+class VersionCell: UITableViewCell {
+    func setupVersion() {
+        self.detailTextLabel?.text = "ためにし"
     }
 }
