@@ -13,12 +13,8 @@
 		200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */; };
 		200BEF7420B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */; };
 		200BEF7620B9AD23003F0A99 /* UIView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */; };
-		206052A0202D75E8007F7219 /* SettingTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060529F202D75E8007F7219 /* SettingTableInfo.swift */; };
-		206052A2202D762C007F7219 /* SettingViewCellDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A1202D762C007F7219 /* SettingViewCellDto.swift */; };
 		206052A4202D7901007F7219 /* SettingTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A3202D7901007F7219 /* SettingTableViewResource.swift */; };
-		206052A7202D7F0A007F7219 /* SettingContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A6202D7F0A007F7219 /* SettingContentCell.swift */; };
 		206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A9202D7F98007F7219 /* NSObject+Addition.swift */; };
-		206052AC202D8ABF007F7219 /* SettingContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206052AB202D8ABF007F7219 /* SettingContentCell.xib */; };
 		206052B3202DABCE007F7219 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052B2202DABCE007F7219 /* AppInfo.swift */; };
 		206052B5202DD16F007F7219 /* HomeScreenQuickAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052B4202DD16F007F7219 /* HomeScreenQuickAction.swift */; };
 		208A605020B9B8A9007794C8 /* UIFont+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A604F20B9B8A9007794C8 /* UIFont+Addition.swift */; };
@@ -34,8 +30,6 @@
 		208D42032031EBBB004618CA /* BuyListAddContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddContentCell.swift */; };
 		208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42062032CB63004618CA /* LoadJsonFile.swift */; };
 		2096998F203516950066AEC4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2096998E203516940066AEC4 /* sample.json */; };
-		7B95C6EE20EA0ED6007EBE48 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95C6ED20EA0ED6007EBE48 /* TableSection.swift */; };
-		7B95C6F020EA0F00007EBE48 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B95C6EF20EA0F00007EBE48 /* TableCell.swift */; };
 		A24C351784CCB446C29EC380 /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
 		E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */; };
 		E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C61F46E3E30040728A /* BuyListPresenter.swift */; };
@@ -71,12 +65,8 @@
 		200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Addition.swift"; sourceTree = "<group>"; };
 		200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Addition.swift"; sourceTree = "<group>"; };
 		200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Addition.swift"; sourceTree = "<group>"; };
-		2060529F202D75E8007F7219 /* SettingTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableInfo.swift; sourceTree = "<group>"; };
-		206052A1202D762C007F7219 /* SettingViewCellDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewCellDto.swift; sourceTree = "<group>"; };
 		206052A3202D7901007F7219 /* SettingTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewResource.swift; sourceTree = "<group>"; };
-		206052A6202D7F0A007F7219 /* SettingContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContentCell.swift; sourceTree = "<group>"; };
 		206052A9202D7F98007F7219 /* NSObject+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Addition.swift"; sourceTree = "<group>"; };
-		206052AB202D8ABF007F7219 /* SettingContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingContentCell.xib; sourceTree = "<group>"; };
 		206052B2202DABCE007F7219 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		206052B4202DD16F007F7219 /* HomeScreenQuickAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenQuickAction.swift; sourceTree = "<group>"; };
 		207F2396202C1471009BF523 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
@@ -95,8 +85,6 @@
 		2096998E203516940066AEC4 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		753227B3DC93A70EBA086EF9 /* Pods-BuyList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.release.xcconfig"; sourceTree = "<group>"; };
-		7B95C6ED20EA0ED6007EBE48 /* TableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
-		7B95C6EF20EA0F00007EBE48 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77765413B76B23CC34D948D /* Pods-BuyList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.debug.xcconfig"; sourceTree = "<group>"; };
 		E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListHistoryVC.swift; sourceTree = "<group>"; };
@@ -147,9 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				E10F35CA1F46E4020040728A /* SettingPresenter.swift */,
-				2060529F202D75E8007F7219 /* SettingTableInfo.swift */,
 				206052A3202D7901007F7219 /* SettingTableViewResource.swift */,
-				206052A1202D762C007F7219 /* SettingViewCellDto.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -158,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				E1B826451EE1596D008AEE9D /* SettingVC.swift */,
-				206052A6202D7F0A007F7219 /* SettingContentCell.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -182,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				E1B826471EE1596D008AEE9D /* Main.storyboard */,
-				206052AB202D8ABF007F7219 /* SettingContentCell.xib */,
 				E1B8264C1EE1596D008AEE9D /* LaunchScreen.storyboard */,
 			);
 			name = UserInterface;
@@ -220,8 +204,6 @@
 				206052B2202DABCE007F7219 /* AppInfo.swift */,
 				206052B4202DD16F007F7219 /* HomeScreenQuickAction.swift */,
 				208D41F02030552C004618CA /* Debug.swift */,
-				7B95C6ED20EA0ED6007EBE48 /* TableSection.swift */,
-				7B95C6EF20EA0F00007EBE48 /* TableCell.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -439,7 +421,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				206052AC202D8ABF007F7219 /* SettingContentCell.xib in Resources */,
 				E1B8264E1EE1596D008AEE9D /* LaunchScreen.storyboard in Resources */,
 				2096998F203516950066AEC4 /* sample.json in Resources */,
 				E1B8264B1EE1596D008AEE9D /* Assets.xcassets in Resources */,
@@ -535,11 +516,9 @@
 			files = (
 				E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */,
 				208D41FD20318BAD004618CA /* BuyListContentDto.swift in Sources */,
-				7B95C6EE20EA0ED6007EBE48 /* TableSection.swift in Sources */,
 				206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */,
 				200BEF7020B99867003F0A99 /* NibLoadable.swift in Sources */,
 				E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */,
-				206052A7202D7F0A007F7219 /* SettingContentCell.swift in Sources */,
 				208D41EF203044C3004618CA /* BuyListEntity.swift in Sources */,
 				E10F35CF1F46E4320040728A /* BuyListHistoryInteractor.swift in Sources */,
 				208D41F920318B85004618CA /* BuyListTableInfo.swift in Sources */,
@@ -547,7 +526,6 @@
 				E1B826421EE1596D008AEE9D /* AppDelegate.swift in Sources */,
 				200BEF7620B9AD23003F0A99 /* UIView+Addition.swift in Sources */,
 				208A605020B9B8A9007794C8 /* UIFont+Addition.swift in Sources */,
-				206052A2202D762C007F7219 /* SettingViewCellDto.swift in Sources */,
 				208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */,
 				200BEF6E20B99831003F0A99 /* UITableView+Addition.swift in Sources */,
 				E10F35D21F46E45C0040728A /* SettingInteractor.swift in Sources */,
@@ -558,8 +536,6 @@
 				200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */,
 				208D41ED2030448D004618CA /* BuyListDao.swift in Sources */,
 				208D42032031EBBB004618CA /* BuyListAddContentCell.swift in Sources */,
-				206052A0202D75E8007F7219 /* SettingTableInfo.swift in Sources */,
-				7B95C6F020EA0F00007EBE48 /* TableCell.swift in Sources */,
 				206052B5202DD16F007F7219 /* HomeScreenQuickAction.swift in Sources */,
 				208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */,
 				E18ABDBB1F20C34A0012416A /* SampleRealm.swift in Sources */,
