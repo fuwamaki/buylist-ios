@@ -9,37 +9,38 @@
 import Foundation
 import UIKit
 
+enum SettingTableCellType {
+    // section1: detailed settings
+    case notification
+    // section2: about this service
+    case inquiry, version
+}
+
 protocol SettingEventHandler {
-    func viewWillAppear()
-    func getAppVersion() -> String
+    func displayAppVersion()
 }
 
 protocol SettingUserInterface: class {
-    func reloadTableView()
+    func setVersionText(_ version: String)
 }
 
-class SettingPresenter: NSObject, SettingEventHandler, SettingDelegate {
+class SettingPresenter: NSObject {
 
-    var settingTableViewResource: SettingTableViewResource = SettingTableViewResource()
-    var interactor: SettingInteractable?
+    var settingTableViewResource = SettingTableViewResource()
+    var interactor: SettingInteractable
     var userInterface: SettingUserInterface
 
     init(_ userInterface: SettingUserInterface) {
+        let interactor = SettingInteractor()
         self.userInterface = userInterface
+        self.interactor = interactor
     }
+}
 
-    func viewWillAppear() {
-        userInterface.reloadTableView()
-    }
+extension SettingPresenter: SettingEventHandler {
 
-    func getAppVersion() -> String {
-        guard let appVersion = interactor?.getAppVersion() else {
-            return ""
-        }
-        return appVersion
-    }
-
-    func didGetUserData() {
+    func displayAppVersion() {
+        userInterface.setVersionText(interactor.getAppVersion())
     }
 }
 
@@ -47,14 +48,15 @@ class SettingPresenter: NSObject, SettingEventHandler, SettingDelegate {
 extension SettingPresenter: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sectionInfo = settingTableViewResource[(indexPath as NSIndexPath).section]
-        let cellInfo = sectionInfo?.cellTypes[(indexPath as NSIndexPath).row]
-        if let cellInfo = cellInfo {
-            switch cellInfo.content {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let cell = settingTableViewResource[indexPath.section]?.cells[indexPath.row] {
+            switch cell.type {
             case .notification:
-                print("push notification setting")
-            default:
-                return
+                print("notification")
+            case .inquiry:
+                print("inquiry")
+            case .version:
+                print("version")
             }
         }
     }

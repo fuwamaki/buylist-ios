@@ -12,12 +12,7 @@ protocol SettingInteractable {
     func getAppVersion() -> String
 }
 
-protocol SettingDelegate: class {
-    func didGetUserData()
-}
-
 class SettingInteractor: SettingInteractable {
-    weak var delegate: SettingDelegate?
 
     func getAppVersion() -> String {
         return AppInfo.appVersion

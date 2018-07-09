@@ -10,36 +10,44 @@ import Foundation
 
 struct SettingTableViewResource {
 
-    fileprivate var list: [SettingSectionInfo]? {
-        return [SettingNotificationSectionInfo(), SettingAppInfoSectionInfo()]
-    }
+    struct TableSection {
+        let title: String?
+        let cells: [TableCell]
 
-    var count: Int {
-        guard let sectionListCount = list?.count else {
-            return 0
+        init(title: String? = nil, cells: [TableCell]) {
+            self.title = title
+            self.cells = cells
         }
-        return sectionListCount
     }
 
-    subscript(index: Int) -> SettingSectionInfo? {
-        guard let sectionList = list else {
+    struct TableCell {
+        let title: String?
+        let type: SettingTableCellType
+
+        init(title: String? = nil, type: SettingTableCellType) {
+            self.title = title
+            self.type = type
+        }
+    }
+
+    let notificationCell = TableCell(type: .notification)
+    let inquiryCell = TableCell(type: .inquiry)
+    let versionCell = TableCell(type: .version)
+
+    private var tableSections: [TableSection] {
+        let detailedSettingsSection = TableSection(cells: [notificationCell])
+        let aboutThisServiceSection = TableSection(cells: [inquiryCell, versionCell])
+        return [detailedSettingsSection, aboutThisServiceSection]
+    }
+
+    var tableSectionsCount: Int {
+        return tableSections.count
+    }
+
+    subscript (index: Int) -> TableSection? {
+        guard tableSections.count > index else {
             return nil
         }
-        if sectionList.count > index {
-            return sectionList[index]
-        } else {
-            return nil
-        }
-    }
-
-    func getSectionInfo<T: SettingSectionInfo>() -> T {
-        var info: SettingSectionInfo?
-        list!.forEach {
-            if let sameInfo = $0 as? T {
-                info = sameInfo
-                return
-            }
-        }
-        return info as! T
+        return tableSections[index]
     }
 }

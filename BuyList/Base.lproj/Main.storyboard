@@ -125,7 +125,7 @@
         <!--Setting-->
         <scene sceneID="Ncn-Nz-BMd">
             <objects>
-                <tableViewController id="HvH-j8-8qN" sceneMemberID="viewController">
+                <tableViewController id="HvH-j8-8qN" customClass="SettingVC" customModule="BuyList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="jHw-fb-Waz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,6 +205,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Setting" id="PmL-1z-dbc"/>
+                    <connections>
+                        <outlet property="versionText" destination="Kbz-WI-kIi" id="BYi-dT-vqO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNa-wV-gSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
