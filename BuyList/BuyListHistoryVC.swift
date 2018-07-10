@@ -9,8 +9,8 @@
 import UIKit
 
 class BuyListHistoryVC: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "買い物履歴"
     }
 }

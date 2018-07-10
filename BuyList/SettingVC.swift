@@ -16,7 +16,6 @@ class SettingVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "設定"
         setupViews()
         eventHandler?.displayAppVersion()
     }

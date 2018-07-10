@@ -10,10 +10,6 @@ import UIKit
 
 class BuyListVC: UIViewController, BuyListUserInterface {
 
-    fileprivate struct Constant {
-        static let title = "買い物リスト"
-    }
-
     private var presenter: BuyListPresenter
     private var interactor: BuyListInteractor
     private var eventHandler: BuyListEventHandler?
@@ -32,7 +28,6 @@ class BuyListVC: UIViewController, BuyListUserInterface {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = Constant.title
         setupViper()
         self.eventHandler?.setBuyListContent()
     }
