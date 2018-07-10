@@ -230,6 +230,14 @@
 			name = BuyList;
 			sourceTree = "<group>";
 		};
+		20EC136720F50954001E40A6 /* BuyListHistory */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */,
+			);
+			name = BuyListHistory;
+			sourceTree = "<group>";
+		};
 		C09DB7C2E9BD0C87D97472A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,8 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				208D41F220305C7C004618CA /* BuyList */,
+				20EC136720F50954001E40A6 /* BuyListHistory */,
 				206052A5202D7EEA007F7219 /* Setting */,
-				E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */,
 			);
 			name = VC;
 			sourceTree = "<group>";
