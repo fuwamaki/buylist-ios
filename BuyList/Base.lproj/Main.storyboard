@@ -134,7 +134,7 @@
                         <sections>
                             <tableViewSection headerTitle="詳細設定" id="OrN-mD-L5S">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="RSo-1u-XL3" style="IBUITableViewCellStyleDefault" id="XbU-Ts-YEX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NotificationCell" textLabel="RSo-1u-XL3" style="IBUITableViewCellStyleDefault" id="XbU-Ts-YEX">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XbU-Ts-YEX" id="uLV-bI-m7k">
@@ -155,7 +155,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="本サービスについて" id="c75-4k-NFP">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="OGN-GY-Nz5" style="IBUITableViewCellStyleDefault" id="niQ-GT-KAQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="InquiryCell" textLabel="OGN-GY-Nz5" style="IBUITableViewCellStyleDefault" id="niQ-GT-KAQ">
                                         <rect key="frame" x="0.0" y="155.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="niQ-GT-KAQ" id="JQr-zg-bcP">
@@ -172,7 +172,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="jXU-aR-ZHy" detailTextLabel="Kbz-WI-kIi" style="IBUITableViewCellStyleValue1" id="fzs-0t-lFB" customClass="VersionCell" customModule="BuyList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="VersionCell" textLabel="jXU-aR-ZHy" detailTextLabel="Kbz-WI-kIi" style="IBUITableViewCellStyleValue1" id="fzs-0t-lFB" customClass="VersionCell" customModule="BuyList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="199.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fzs-0t-lFB" id="tR5-59-QhN">
