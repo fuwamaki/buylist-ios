@@ -11,8 +11,10 @@ import Foundation
 protocol BuyListHistoryInteractable {
 }
 
-protocol BuyListHistoryDelegate: class {
-}
-
-class BuyListHistoryInteractor {
+class BuyListHistoryInteractor: BuyListHistoryInteractable {
+    // TODO: 履歴を取得して返すクラス
+    func getBuyHistory() -> [ItemEntity] {
+        let item = ItemEntity(id: "0", name: "test", count: 1, createTime: Date(), boughtTime: Date())
+        return [item]
+    }
 }
