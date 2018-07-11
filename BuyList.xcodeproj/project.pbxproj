@@ -176,7 +176,6 @@
 			children = (
 				E1B826471EE1596D008AEE9D /* Main.storyboard */,
 				E1B8264C1EE1596D008AEE9D /* LaunchScreen.storyboard */,
-				20EC136820F509C7001E40A6 /* MainTabBarController.swift */,
 				7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */,
 			);
 			name = UserInterface;
@@ -241,6 +240,14 @@
 			name = BuyList;
 			sourceTree = "<group>";
 		};
+		20B4407220F65B920078D371 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				20EC136820F509C7001E40A6 /* MainTabBarController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		20EC136720F50954001E40A6 /* BuyListHistory */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +303,7 @@
 		E10F35C31F46E3970040728A /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				20B4407220F65B920078D371 /* Main */,
 				208D41F220305C7C004618CA /* BuyList */,
 				20EC136720F50954001E40A6 /* BuyListHistory */,
 				206052A5202D7EEA007F7219 /* Setting */,
