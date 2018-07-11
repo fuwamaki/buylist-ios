@@ -241,6 +241,38 @@
 			name = BuyListHistory;
 			sourceTree = "<group>";
 		};
+		7B10E8AA20F60C4200D416CD /* BuyListHistory */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35C81F46E3F50040728A /* BuyListHistoryPresenter.swift */,
+			);
+			name = BuyListHistory;
+			sourceTree = "<group>";
+		};
+		7B10E8AB20F60C6000D416CD /* BuyList */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35CC1F46E4200040728A /* BuyListInteractor.swift */,
+			);
+			name = BuyList;
+			sourceTree = "<group>";
+		};
+		7B10E8AC20F60C6500D416CD /* BuyListHistory */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35CE1F46E4320040728A /* BuyListHistoryInteractor.swift */,
+			);
+			name = BuyListHistory;
+			sourceTree = "<group>";
+		};
+		7B10E8AD20F60C6D00D416CD /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35D11F46E45C0040728A /* SettingInteractor.swift */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 		C09DB7C2E9BD0C87D97472A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,8 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				208D41F320305C91004618CA /* BuyList */,
+				7B10E8AA20F60C4200D416CD /* BuyListHistory */,
 				2060529E202D75D2007F7219 /* Setting */,
-				E10F35C81F46E3F50040728A /* BuyListHistoryPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -275,9 +307,9 @@
 		E10F35C51F46E3A60040728A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				E10F35CC1F46E4200040728A /* BuyListInteractor.swift */,
-				E10F35CE1F46E4320040728A /* BuyListHistoryInteractor.swift */,
-				E10F35D11F46E45C0040728A /* SettingInteractor.swift */,
+				7B10E8AB20F60C6000D416CD /* BuyList */,
+				7B10E8AC20F60C6500D416CD /* BuyListHistory */,
+				7B10E8AD20F60C6D00D416CD /* Setting */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
