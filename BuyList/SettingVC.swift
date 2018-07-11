@@ -16,13 +16,13 @@ class SettingVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
+        let presenter = SettingPresenter(self)
+        self.eventHandler = presenter
+        setupTableView(presenter)
         eventHandler?.displayAppVersion()
     }
 
-    private func setupViews() {
-        let presenter = SettingPresenter(self)
-        self.eventHandler = presenter
+    private func setupTableView(_ presenter: SettingPresenter) {
         tableView.delegate = presenter
     }
 }

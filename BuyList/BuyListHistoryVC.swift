@@ -15,12 +15,12 @@ class BuyListHistoryVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-    }
-
-    private func setupViews() {
         let presenter = BuyListHistoryPresenter(self)
         self.eventHandler = presenter
+        setupTableView(presenter)
+    }
+
+    private func setupTableView(_ presenter: BuyListHistoryPresenter) {
         tableView.delegate = presenter
         tableView.dataSource = presenter
         tableView.registerForCell(BuyListHistoryTableCell.self)
