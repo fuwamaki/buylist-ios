@@ -10,7 +10,18 @@ import UIKit
 
 class BuyListHistoryVC: UIViewController {
 
+    private var eventHandler: BuyListHistoryEventHandler?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
     }
+
+    private func setupViews() {
+        let presenter = BuyListHistoryPresenter(self)
+        self.eventHandler = presenter
+    }
+}
+
+extension BuyListHistoryVC: BuyListHistoryUserInterface {
 }

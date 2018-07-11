@@ -11,8 +11,19 @@ import Foundation
 protocol BuyListHistoryEventHandler {
 }
 
-protocol BuyListHistoryUserInterface {
+protocol BuyListHistoryUserInterface: class {
 }
 
 class BuyListHistoryPresenter {
+    var interactor: BuyListHistoryInteractable
+    var userInterface: BuyListHistoryUserInterface
+
+    init(_ userInterface: BuyListHistoryUserInterface) {
+        let interactor = BuyListHistoryInteractor()
+        self.userInterface = userInterface
+        self.interactor = interactor
+    }
+}
+
+extension BuyListHistoryPresenter: BuyListHistoryEventHandler {
 }
