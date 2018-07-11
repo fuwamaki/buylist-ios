@@ -43,8 +43,8 @@ class MainTabBarController: UITabBarController {
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if let index = tabBar.items?.firstIndex(of: item) {
-            navigationItem.title = tabItems[index].title
+        if let items = tabBar.items, let itemIndex = items.index(of: item) {
+            navigationItem.title = tabItems[itemIndex].title
         }
     }
 }
