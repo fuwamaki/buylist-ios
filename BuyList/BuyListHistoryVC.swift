@@ -29,8 +29,4 @@ class BuyListHistoryVC: UIViewController {
 }
 
 extension BuyListHistoryVC: BuyListHistoryUserInterface {
-
-    func getBuyListHistoryDequeueCell(_ indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueCellForIndexPath(indexPath) as BuyListHistoryTableCell
-    }
 }

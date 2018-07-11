@@ -12,7 +12,6 @@ protocol BuyListHistoryEventHandler {
 }
 
 protocol BuyListHistoryUserInterface: class {
-    func getBuyListHistoryDequeueCell(_ indexPath: IndexPath) -> UITableViewCell
 }
 
 class BuyListHistoryPresenter: NSObject {
@@ -36,7 +35,7 @@ extension BuyListHistoryPresenter: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = userInterface.getBuyListHistoryDequeueCell(indexPath)
+        let cell = tableView.dequeueCellForIndexPath(indexPath) as BuyListHistoryTableCell
         cell.textLabel?.text = "sample"
         return cell
     }
