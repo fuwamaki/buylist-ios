@@ -9,17 +9,18 @@
 import Foundation
 
 final class ItemEntity {
-    var id: String
-    var name: String
+    var buyId: String
+    var itemId: String
+    var itemName: String
     var count: Int
     var createTime: Date
-    var boughtTime: Date
+    var boughtTime: Date?
 
-    init(id: String, name: String, count: Int, createTime: Date, boughtTime: Date) {
-        self.id = id
-        self.name = name
+    init(buyId: String, itemId: String, itemName: String, count: Int, createTime: Date) {
+        self.buyId = buyId
+        self.itemId = itemId
+        self.itemName = itemName
         self.count = count
         self.createTime = createTime
-        self.boughtTime = boughtTime
     }
 }
