@@ -32,7 +32,8 @@
 		2096998F203516950066AEC4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2096998E203516940066AEC4 /* sample.json */; };
 		20EC136920F509C7001E40A6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC136820F509C7001E40A6 /* MainTabBarController.swift */; };
 		7B10E8AF20F60DB500D416CD /* ItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10E8AE20F60DB500D416CD /* ItemEntity.swift */; };
-		7B10E8B120F6146A00D416CD /* BuyHistoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10E8B020F6146A00D416CD /* BuyHistoryTableCell.swift */; };
+		7B10E8B120F6146A00D416CD /* BuyListHistoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10E8B020F6146A00D416CD /* BuyListHistoryTableCell.swift */; };
+		7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */; };
 		A24C351784CCB446C29EC380 /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
 		E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */; };
 		E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C61F46E3E30040728A /* BuyListPresenter.swift */; };
@@ -90,7 +91,8 @@
 		249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		753227B3DC93A70EBA086EF9 /* Pods-BuyList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.release.xcconfig"; sourceTree = "<group>"; };
 		7B10E8AE20F60DB500D416CD /* ItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntity.swift; sourceTree = "<group>"; };
-		7B10E8B020F6146A00D416CD /* BuyHistoryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyHistoryTableCell.swift; sourceTree = "<group>"; };
+		7B10E8B020F6146A00D416CD /* BuyListHistoryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListHistoryTableCell.swift; sourceTree = "<group>"; };
+		7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListHistoryTableCell.xib; sourceTree = "<group>"; };
 		A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77765413B76B23CC34D948D /* Pods-BuyList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.debug.xcconfig"; sourceTree = "<group>"; };
 		E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListHistoryVC.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				E1B826471EE1596D008AEE9D /* Main.storyboard */,
 				E1B8264C1EE1596D008AEE9D /* LaunchScreen.storyboard */,
 				20EC136820F509C7001E40A6 /* MainTabBarController.swift */,
+				7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */,
 			);
 			name = UserInterface;
 			sourceTree = "<group>";
@@ -242,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */,
-				7B10E8B020F6146A00D416CD /* BuyHistoryTableCell.swift */,
+				7B10E8B020F6146A00D416CD /* BuyListHistoryTableCell.swift */,
 			);
 			name = BuyListHistory;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			files = (
 				E1B8264E1EE1596D008AEE9D /* LaunchScreen.storyboard in Resources */,
 				2096998F203516950066AEC4 /* sample.json in Resources */,
+				7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */,
 				E1B8264B1EE1596D008AEE9D /* Assets.xcassets in Resources */,
 				E1B826491EE1596D008AEE9D /* Main.storyboard in Resources */,
 			);
@@ -565,7 +569,7 @@
 			files = (
 				E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */,
 				208D41FD20318BAD004618CA /* BuyListContentDto.swift in Sources */,
-				7B10E8B120F6146A00D416CD /* BuyHistoryTableCell.swift in Sources */,
+				7B10E8B120F6146A00D416CD /* BuyListHistoryTableCell.swift in Sources */,
 				20EC136920F509C7001E40A6 /* MainTabBarController.swift in Sources */,
 				206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */,
 				200BEF7020B99867003F0A99 /* NibLoadable.swift in Sources */,

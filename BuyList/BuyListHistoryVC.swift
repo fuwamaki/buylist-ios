@@ -11,6 +11,7 @@ import UIKit
 class BuyListHistoryVC: UIViewController {
 
     private var eventHandler: BuyListHistoryEventHandler?
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,15 @@ class BuyListHistoryVC: UIViewController {
     private func setupViews() {
         let presenter = BuyListHistoryPresenter(self)
         self.eventHandler = presenter
+        tableView.delegate = presenter
+        tableView.dataSource = presenter
+        tableView.registerForCell(BuyListHistoryTableCell.self)
     }
 }
 
 extension BuyListHistoryVC: BuyListHistoryUserInterface {
+
+    func getBuyListHistoryDequeueCell(_ indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueCellForIndexPath(indexPath) as BuyListHistoryTableCell
+    }
 }

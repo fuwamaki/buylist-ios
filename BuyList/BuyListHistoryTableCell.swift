@@ -8,9 +8,11 @@
 
 import UIKit
 
-final class BuyHistoryTableCell: UITableViewCell {
+final class BuyListHistoryTableCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 }
+
+extension BuyListHistoryTableCell: NibLoadable {}
