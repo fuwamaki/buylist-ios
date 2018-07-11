@@ -18,6 +18,13 @@ final class BuyListHistoryTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+
+    func setLabel(_ item: ItemEntity) {
+        itemNameLabel.text = item.itemName
+        itemCountLabel.text = String(item.count)
+//        itemCreateTimeLabel.text = String(item.createTime)
+//        itemCheckLabel.text = String(item.boughtTime)
+    }
 }
 
 extension BuyListHistoryTableCell: NibLoadable {}
