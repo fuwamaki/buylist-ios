@@ -10,6 +10,11 @@ import UIKit
 
 final class BuyListHistoryTableCell: UITableViewCell {
 
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var itemCountLabel: UILabel!
+    @IBOutlet weak var itemCreateTimeLabel: UILabel!
+    @IBOutlet weak var itemCheckLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
