@@ -11,8 +11,6 @@ import UIKit
 
 class BuyListContainerVC: UIViewController {
 
-    let buyListVC = BuyListVC()
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
