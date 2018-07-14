@@ -26,7 +26,7 @@ class BuyListContentCell: UITableViewCell {
         textLabel?.textColor = UIColor.black
     }
 
-    func setContentTitle(_ dto: BuyListContentDto) {
-        textLabel?.text = dto.title
+    func setContentTitle(_ title: String?) {
+        textLabel?.text = title ?? ""
     }
 }
