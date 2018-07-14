@@ -46,6 +46,10 @@ extension BuyListHistoryPresenter: UITableViewDataSource {
         cell.setLabel(mockItemEntity.mockItems[indexPath.row])
         return cell
     }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 96
+    }
 }
 
 extension BuyListHistoryPresenter: UITableViewDelegate {
