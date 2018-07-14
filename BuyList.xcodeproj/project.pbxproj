@@ -23,9 +23,7 @@
 		208D41EF203044C3004618CA /* BuyListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41EE203044C3004618CA /* BuyListEntity.swift */; };
 		208D41F12030552C004618CA /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F02030552C004618CA /* Debug.swift */; };
 		208D41F520305CB5004618CA /* BuyListContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F420305CB5004618CA /* BuyListContentCell.swift */; };
-		208D41F920318B85004618CA /* BuyListTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F820318B85004618CA /* BuyListTableInfo.swift */; };
 		208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FA20318B98004618CA /* BuyListTableViewResource.swift */; };
-		208D41FD20318BAD004618CA /* BuyListContentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FC20318BAD004618CA /* BuyListContentDto.swift */; };
 		208D41FF2031B161004618CA /* BuyListContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FE2031B161004618CA /* BuyListContainerVC.swift */; };
 		208D42032031EBBB004618CA /* BuyListAddContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddContentCell.swift */; };
 		208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42062032CB63004618CA /* LoadJsonFile.swift */; };
@@ -82,9 +80,7 @@
 		208D41EE203044C3004618CA /* BuyListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListEntity.swift; sourceTree = "<group>"; };
 		208D41F02030552C004618CA /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		208D41F420305CB5004618CA /* BuyListContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContentCell.swift; sourceTree = "<group>"; };
-		208D41F820318B85004618CA /* BuyListTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListTableInfo.swift; sourceTree = "<group>"; };
 		208D41FA20318B98004618CA /* BuyListTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListTableViewResource.swift; sourceTree = "<group>"; };
-		208D41FC20318BAD004618CA /* BuyListContentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContentDto.swift; sourceTree = "<group>"; };
 		208D41FE2031B161004618CA /* BuyListContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContainerVC.swift; sourceTree = "<group>"; };
 		208D42022031EBBB004618CA /* BuyListAddContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListAddContentCell.swift; sourceTree = "<group>"; };
 		208D42062032CB63004618CA /* LoadJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonFile.swift; sourceTree = "<group>"; };
@@ -239,9 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				E10F35C61F46E3E30040728A /* BuyListPresenter.swift */,
-				208D41F820318B85004618CA /* BuyListTableInfo.swift */,
 				208D41FA20318B98004618CA /* BuyListTableViewResource.swift */,
-				208D41FC20318BAD004618CA /* BuyListContentDto.swift */,
 			);
 			name = BuyList;
 			sourceTree = "<group>";
@@ -590,7 +584,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */,
-				208D41FD20318BAD004618CA /* BuyListContentDto.swift in Sources */,
 				7B10E8B120F6146A00D416CD /* BuyListHistoryTableCell.swift in Sources */,
 				20EC136920F509C7001E40A6 /* MainTabBarController.swift in Sources */,
 				206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */,
@@ -598,7 +591,6 @@
 				E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */,
 				208D41EF203044C3004618CA /* BuyListEntity.swift in Sources */,
 				E10F35CF1F46E4320040728A /* BuyListHistoryInteractor.swift in Sources */,
-				208D41F920318B85004618CA /* BuyListTableInfo.swift in Sources */,
 				7B10E8AF20F60DB500D416CD /* ItemEntity.swift in Sources */,
 				E1B826461EE1596D008AEE9D /* SettingVC.swift in Sources */,
 				E1B826421EE1596D008AEE9D /* AppDelegate.swift in Sources */,
