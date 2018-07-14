@@ -32,6 +32,10 @@ extension UIColor {
         return UIColor(hex: "#ffffff")
     }
 
+    class var baseGray: UIColor {
+        return UIColor(hex: "#EFEFF4")
+    }
+
     class var gray: UIColor {
         return UIColor(hex: "#c5c5c5")
     }

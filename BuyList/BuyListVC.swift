@@ -28,6 +28,7 @@ class BuyListVC: UIViewController {
 
     private func setupViews() {
         view.pinSubview(tableView, margin: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+        tableView.backgroundColor = UIColor.baseGray
     }
 
     private func setupTableView(_ presenter: BuyListPresenter) {
