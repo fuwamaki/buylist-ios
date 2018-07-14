@@ -11,7 +11,7 @@ import Foundation
 final class ItemEntity {
     var buyId: String
     var itemId: String
-    var itemName: String
+    var name: String
     var count: Int
     var createTime: Date
     var checkTime: Date?
@@ -19,7 +19,7 @@ final class ItemEntity {
     init(buyId: String, itemId: String, itemName: String, count: Int, createTime: Date, checkTime: Date? = nil) {
         self.buyId = buyId
         self.itemId = itemId
-        self.itemName = itemName
+        self.name = itemName
         self.count = count
         self.createTime = createTime
         self.checkTime = checkTime

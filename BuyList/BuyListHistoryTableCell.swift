@@ -35,7 +35,7 @@ final class BuyListHistoryTableCell: UITableViewCell {
     }
 
     func setLabel(_ item: ItemEntity) {
-        itemNameLabel.text = item.itemName
+        itemNameLabel.text = item.name
         itemCountLabel.text = String(item.count)
         itemCreateTimeLabel.text = Constant.createTimeLabelText + dateFormatter.string(from: item.createTime)
         if let checkTime = item.checkTime {

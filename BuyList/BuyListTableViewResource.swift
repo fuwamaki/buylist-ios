@@ -54,7 +54,7 @@ struct BuyListTableViewResource {
     }
 
     mutating func appendContent(_ item: ItemEntity) {
-        contentCells.append(TableCell(title: item.itemName, type: .content))
+        contentCells.append(TableCell(title: item.name, type: .content))
     }
 
     mutating func removeContent(_ index: Int) {
