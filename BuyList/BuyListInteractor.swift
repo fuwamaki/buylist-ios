@@ -9,20 +9,20 @@
 import Foundation
 
 protocol BuyListInteractable {
-    func getBuyListData() -> [SampleJsonData.Rows]?
-}
-
-protocol BuyListDelegate: class {
+    func getBuyListData() -> [ItemEntity]
 }
 
 class BuyListInteractor: BuyListInteractable {
-    weak var delegate: BuyListDelegate?
+
     let loadJsonFile = LoadJsonFile()
 
-    func getBuyListData() -> [SampleJsonData.Rows]? {
-        guard let sampleJsonData = loadJsonFile.getJson() else {
-            return nil
+    func getBuyListData() -> [ItemEntity] {
+        var items: [ItemEntity] = []
+        if let jsonDate = loadJsonFile.getJson() {
+            jsonDate.rows.forEach {
+                items.append(ItemEntity(buyId: "1", itemId: $0.itemId, itemName: $0.name, count: $0.count, createTime: Date()))
+            }
         }
-        return sampleJsonData.rows
+        return items
     }
 }
