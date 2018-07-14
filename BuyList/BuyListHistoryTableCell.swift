@@ -15,6 +15,12 @@ final class BuyListHistoryTableCell: UITableViewCell {
     @IBOutlet weak var itemCreateTimeLabel: UILabel!
     @IBOutlet weak var itemCheckTimeLabel: UILabel!
 
+    private struct Constant {
+        static let createTimeLabelText = "作成時間:"
+        static let checkTimeLabelText = "チェック時間:"
+        static let spaceTimeLabelText = "----年--月--日"
+    }
+
     private lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -31,11 +37,11 @@ final class BuyListHistoryTableCell: UITableViewCell {
     func setLabel(_ item: ItemEntity) {
         itemNameLabel.text = item.itemName
         itemCountLabel.text = String(item.count)
-        itemCreateTimeLabel.text = dateFormatter.string(from: item.createTime)
+        itemCreateTimeLabel.text = Constant.createTimeLabelText + dateFormatter.string(from: item.createTime)
         if let checkTime = item.checkTime {
-            itemCheckTimeLabel.text = dateFormatter.string(from: checkTime)
+            itemCheckTimeLabel.text = Constant.checkTimeLabelText + dateFormatter.string(from: checkTime)
         } else {
-            itemCheckTimeLabel.text = nil
+            itemCheckTimeLabel.text = Constant.checkTimeLabelText + Constant.spaceTimeLabelText
         }
     }
 }
