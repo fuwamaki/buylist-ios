@@ -16,7 +16,7 @@ class BuyListHistoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let presenter = BuyListHistoryPresenter(self)
-        self.eventHandler = presenter
+        eventHandler = presenter
         setupTableView(presenter)
     }
 
