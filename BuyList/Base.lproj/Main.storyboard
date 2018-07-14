@@ -45,7 +45,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="tapAddBuyListButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="CcJ-Wk-jTe"/>
+                                    <action selector="addButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bZ4-bT-frR"/>
                                 </connections>
                             </button>
                         </subviews>
