@@ -10,7 +10,7 @@ import Foundation
 import AdSupport
 
 class DeviceManager {
-    
+
     func getAdvertisingIdentifier() -> String {
         return ASIdentifierManager.shared().advertisingIdentifier.uuidString
     }
