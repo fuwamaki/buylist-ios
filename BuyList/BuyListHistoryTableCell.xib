@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -68,7 +65,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="itemCheckLabel" destination="fNe-3c-cH5" id="r7z-9b-8UQ"/>
+                <outlet property="itemCheckTimeLabel" destination="fNe-3c-cH5" id="r7z-9b-8UQ"/>
                 <outlet property="itemCountLabel" destination="CwX-1d-X7m" id="AzJ-wK-FCf"/>
                 <outlet property="itemCreateTimeLabel" destination="TXL-D7-GB2" id="ZVN-aB-Ysh"/>
                 <outlet property="itemNameLabel" destination="z0h-G9-Omx" id="nFL-zn-YYl"/>
