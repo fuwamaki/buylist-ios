@@ -42,7 +42,7 @@
 		E10F35CD1F46E4200040728A /* BuyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35CC1F46E4200040728A /* BuyListInteractor.swift */; };
 		E10F35CF1F46E4320040728A /* BuyListHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35CE1F46E4320040728A /* BuyListHistoryInteractor.swift */; };
 		E10F35D21F46E45C0040728A /* SettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35D11F46E45C0040728A /* SettingInteractor.swift */; };
-		E18ABDBB1F20C34A0012416A /* SampleRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18ABDBA1F20C34A0012416A /* SampleRealm.swift */; };
+		E18ABDBB1F20C34A0012416A /* ItemRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18ABDBA1F20C34A0012416A /* ItemRealm.swift */; };
 		E1B826421EE1596D008AEE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B826411EE1596D008AEE9D /* AppDelegate.swift */; };
 		E1B826441EE1596D008AEE9D /* BuyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B826431EE1596D008AEE9D /* BuyListVC.swift */; };
 		E1B826461EE1596D008AEE9D /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B826451EE1596D008AEE9D /* SettingVC.swift */; };
@@ -104,7 +104,7 @@
 		E10F35D11F46E45C0040728A /* SettingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingInteractor.swift; sourceTree = "<group>"; };
 		E18ABDB61F20BB190012416A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E18ABDB81F20BB270012416A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		E18ABDBA1F20C34A0012416A /* SampleRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleRealm.swift; sourceTree = "<group>"; };
+		E18ABDBA1F20C34A0012416A /* ItemRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRealm.swift; sourceTree = "<group>"; };
 		E1B8263E1EE1596D008AEE9D /* BuyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B826411EE1596D008AEE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1B826431EE1596D008AEE9D /* BuyListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListVC.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -192,7 +192,7 @@
 		206052AF202DA4EF007F7219 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				E18ABDBA1F20C34A0012416A /* SampleRealm.swift */,
+				E18ABDBA1F20C34A0012416A /* ItemRealm.swift */,
 				208D41EC2030448D004618CA /* BuyListDao.swift */,
 				208D42062032CB63004618CA /* LoadJsonFile.swift */,
 			);
@@ -609,7 +609,7 @@
 				7B7EFF0720F8B5AD00E9F330 /* DeviceManager.swift in Sources */,
 				206052B5202DD16F007F7219 /* HomeScreenQuickAction.swift in Sources */,
 				208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */,
-				E18ABDBB1F20C34A0012416A /* SampleRealm.swift in Sources */,
+				E18ABDBB1F20C34A0012416A /* ItemRealm.swift in Sources */,
 				208D41F520305CB5004618CA /* BuyListContentCell.swift in Sources */,
 				208A605220B9B9B4007794C8 /* UIColor.swift in Sources */,
 				206052B3202DABCE007F7219 /* AppInfo.swift in Sources */,

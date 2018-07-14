@@ -14,7 +14,7 @@ protocol BuyListHistoryInteractable {
 class BuyListHistoryInteractor: BuyListHistoryInteractable {
     // TODO: 履歴を取得して返すクラス
     func getBuyHistory() -> [ItemEntity] {
-        let item = ItemEntity(buyId: "0", itemId: "0", itemName: "test", count: 1, createTime: Date())
+        let item = ItemEntity(buyId: "0", itemId: "0", name: "test", count: 1, createTime: Date())
         return [item]
     }
 }

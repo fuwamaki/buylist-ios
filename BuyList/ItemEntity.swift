@@ -16,10 +16,10 @@ final class ItemEntity {
     var createTime: Date
     var checkTime: Date?
 
-    init(buyId: String, itemId: String, itemName: String, count: Int, createTime: Date, checkTime: Date? = nil) {
+    init(buyId: String, itemId: String, name: String, count: Int, createTime: Date, checkTime: Date? = nil) {
         self.buyId = buyId
         self.itemId = itemId
-        self.name = itemName
+        self.name = name
         self.count = count
         self.createTime = createTime
         self.checkTime = checkTime
