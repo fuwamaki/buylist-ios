@@ -38,7 +38,7 @@ class BuyListPresenter: NSObject {
 extension BuyListPresenter: BuyListEventHandler {
 
     func setBuyListContent() {
-        let items = interactor.getBuyListData()
+        let items = interactor.getItems()
         for item in items {
             buyListTableViewResource.appendContent(item)
         }
