@@ -8,56 +8,39 @@
 
 import UIKit
 
-class BuyListVC: UIViewController, BuyListUserInterface {
+class BuyListVC: UIViewController {
 
-    private var presenter: BuyListPresenter
-    private var interactor: BuyListInteractor
     private var eventHandler: BuyListEventHandler?
-
-    init() {
-        presenter = BuyListPresenter()
-        interactor = BuyListInteractor()
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        presenter = BuyListPresenter()
-        interactor = BuyListInteractor()
-        super.init(nibName: nil, bundle: nil)
-    }
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViper()
-        self.eventHandler?.setBuyListContent()
+        let presenter = BuyListPresenter(self)
+        eventHandler = presenter
+        setupViews()
+        setupTableView(presenter)
+        eventHandler?.setBuyListContent()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
 
-    private func setupViper() {
-        presenter.interactor = interactor
-        interactor.delegate = presenter
-        self.eventHandler = presenter
-        presenter.userInterface = self
+    private func setupViews() {
+        view.pinSubview(tableView, margin: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
     }
 
-    func setupViews(_ tableView: UITableView) {
-        view.pinSubview(tableView, margin: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+    private func setupTableView(_ presenter: BuyListPresenter) {
+        tableView.delegate = presenter
+        tableView.dataSource = presenter
         tableView.registerForCell(BuyListContentCell.self)
         tableView.registerForCell(BuyListAddContentCell.self)
     }
+}
 
-    func reloadTableView(_ tableView: UITableView) {
+extension BuyListVC: BuyListUserInterface {
+
+    func reloadTableView() {
         tableView.reloadData()
-    }
-
-    func getBuyListContentCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueCellForIndexPath(indexPath) as BuyListContentCell
-    }
-
-    func getBuyListAddContentCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueCellForIndexPath(indexPath) as BuyListAddContentCell
     }
 }
