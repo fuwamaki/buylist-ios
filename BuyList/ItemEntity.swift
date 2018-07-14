@@ -14,13 +14,14 @@ final class ItemEntity {
     var itemName: String
     var count: Int
     var createTime: Date
-    var boughtTime: Date?
+    var checkTime: Date?
 
-    init(buyId: String, itemId: String, itemName: String, count: Int, createTime: Date) {
+    init(buyId: String, itemId: String, itemName: String, count: Int, createTime: Date, checkTime: Date? = nil) {
         self.buyId = buyId
         self.itemId = itemId
         self.itemName = itemName
         self.count = count
         self.createTime = createTime
+        self.checkTime = checkTime
     }
 }
