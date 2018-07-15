@@ -34,6 +34,7 @@
 		7B7EFF0720F8B5AD00E9F330 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0620F8B5AD00E9F330 /* DeviceManager.swift */; };
 		7B7EFF0A20F9AF8D00E9F330 /* MockItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */; };
 		7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */; };
+		7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */; };
 		A24C351784CCB446C29EC380 /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
 		E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */; };
 		E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C61F46E3E30040728A /* BuyListPresenter.swift */; };
@@ -93,6 +94,7 @@
 		7B7EFF0620F8B5AD00E9F330 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItemEntity.swift; sourceTree = "<group>"; };
 		7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListHistoryTableCell.xib; sourceTree = "<group>"; };
+		7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Addition.swift"; sourceTree = "<group>"; };
 		A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77765413B76B23CC34D948D /* Pods-BuyList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.debug.xcconfig"; sourceTree = "<group>"; };
 		E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListHistoryVC.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */,
 				208A604F20B9B8A9007794C8 /* UIFont+Addition.swift */,
 				208A605120B9B9B4007794C8 /* UIColor.swift */,
+				7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */,
 				208D41EF203044C3004618CA /* BuyListEntity.swift in Sources */,
 				E10F35CF1F46E4320040728A /* BuyListHistoryInteractor.swift in Sources */,
+				7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */,
 				7B10E8AF20F60DB500D416CD /* ItemEntity.swift in Sources */,
 				E1B826461EE1596D008AEE9D /* SettingVC.swift in Sources */,
 				E1B826421EE1596D008AEE9D /* AppDelegate.swift in Sources */,
