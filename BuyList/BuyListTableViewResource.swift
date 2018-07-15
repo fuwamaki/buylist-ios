@@ -25,11 +25,13 @@ struct BuyListTableViewResource {
 
     struct TableCell {
         var name: String?
+        var count: Int?
         let type: BuyListTableCellType
 
-        init(name: String? = nil, type: BuyListTableCellType) {
+        init(name: String? = nil, type: BuyListTableCellType, count: Int? = nil) {
             self.name = name
             self.type = type
+            self.count = count
         }
     }
 
@@ -55,7 +57,7 @@ struct BuyListTableViewResource {
     }
 
     mutating func appendItemCell(_ item: ItemEntity) {
-        itemCells.append(TableCell(name: item.name, type: .item))
+        itemCells.append(TableCell(name: item.name, type: .item, count: item.count))
     }
 
     mutating func appendEmptyItemCell() {

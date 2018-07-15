@@ -32,6 +32,7 @@ class BuyListItemCell: UITableViewCell {
         textFieldLabel.frame = CGRect(x: CGFloat.leftMargin, y: 0, width: bounds.size.width - CGFloat.leftMargin, height: bounds.size.height)
     }
 
+    // TODO: countのlabel追加
     private func setupViews() {
         textFieldLabel.font = UIFont.bodyText
         textFieldLabel.textColor = UIColor.black
