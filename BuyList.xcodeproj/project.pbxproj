@@ -31,6 +31,7 @@
 		20EC136920F509C7001E40A6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC136820F509C7001E40A6 /* MainTabBarController.swift */; };
 		7B10E8AF20F60DB500D416CD /* ItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10E8AE20F60DB500D416CD /* ItemEntity.swift */; };
 		7B10E8B120F6146A00D416CD /* BuyListHistoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10E8B020F6146A00D416CD /* BuyListHistoryTableCell.swift */; };
+		7B293F6420FAEC610009FE92 /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B293F6320FAEC610009FE92 /* String+Addition.swift */; };
 		7B7EFF0720F8B5AD00E9F330 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0620F8B5AD00E9F330 /* DeviceManager.swift */; };
 		7B7EFF0A20F9AF8D00E9F330 /* MockItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */; };
 		7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */; };
@@ -91,6 +92,7 @@
 		753227B3DC93A70EBA086EF9 /* Pods-BuyList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.release.xcconfig"; sourceTree = "<group>"; };
 		7B10E8AE20F60DB500D416CD /* ItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntity.swift; sourceTree = "<group>"; };
 		7B10E8B020F6146A00D416CD /* BuyListHistoryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListHistoryTableCell.swift; sourceTree = "<group>"; };
+		7B293F6320FAEC610009FE92 /* String+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
 		7B7EFF0620F8B5AD00E9F330 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItemEntity.swift; sourceTree = "<group>"; };
 		7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListHistoryTableCell.xib; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				208A604F20B9B8A9007794C8 /* UIFont+Addition.swift */,
 				208A605120B9B9B4007794C8 /* UIColor+Addition.swift */,
 				7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */,
+				7B293F6320FAEC610009FE92 /* String+Addition.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				E10F35CF1F46E4320040728A /* BuyListHistoryInteractor.swift in Sources */,
 				7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */,
 				7B10E8AF20F60DB500D416CD /* ItemEntity.swift in Sources */,
+				7B293F6420FAEC610009FE92 /* String+Addition.swift in Sources */,
 				E1B826461EE1596D008AEE9D /* SettingVC.swift in Sources */,
 				E1B826421EE1596D008AEE9D /* AppDelegate.swift in Sources */,
 				200BEF7620B9AD23003F0A99 /* UIView+Addition.swift in Sources */,
