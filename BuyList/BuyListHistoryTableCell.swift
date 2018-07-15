@@ -21,6 +21,7 @@ final class BuyListHistoryTableCell: UITableViewCell {
         static let spaceTimeLabelText = "----年--月--日"
     }
 
+    // TODO: dateFormatterはextensionファイルにできればしたい
     private lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")

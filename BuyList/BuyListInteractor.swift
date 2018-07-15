@@ -27,6 +27,7 @@ class BuyListInteractor: BuyListInteractable {
     }
 
     func saveItem(name: String, count: Int) {
+        // TODO: 警告消せるようにクロージャの扱いを修正する
         let itemRealmEntity = ItemRealmEntity(value: ["buyId": "0002", "itemId": "0002", "name": name, "count": count, "createTime": Date()])
         let _ = itemRealm.realmAction(action: .save, item: itemRealmEntity)
     }

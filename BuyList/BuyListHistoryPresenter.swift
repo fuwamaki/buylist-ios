@@ -17,6 +17,7 @@ protocol BuyListHistoryUserInterface: class {
 class BuyListHistoryPresenter: NSObject {
     var interactor: BuyListHistoryInteractable
     var userInterface: BuyListHistoryUserInterface
+    // TODO: mockを使用しない処理に
     // mock
     var mockItemEntity: MockItemEntity
 
