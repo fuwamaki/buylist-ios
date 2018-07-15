@@ -9,15 +9,14 @@
 import Foundation
 
 extension NSObject {
-    
-    static var className:String {
+
+    static var className: String {
         let fullname = NSStringFromClass(self)
         if let lastDotIndex = fullname.lastIndexOf(".") {
             let index = fullname.index(after: lastDotIndex)
             return String(fullname.suffix(from: index))
         } else {
             return fullname
-            
         }
     }
 }
@@ -25,10 +24,8 @@ extension NSObject {
 extension String {
     func lastIndexOf(_ character: Character) -> Index? {
         var last: Index?
-        for i in self.indices {
-            if self[i] == character {
-                last = i
-            }
+        for i in self.indices where self[i] == character {
+            last = i
         }
         return last
     }

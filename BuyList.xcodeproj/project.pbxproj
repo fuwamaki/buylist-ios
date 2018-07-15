@@ -13,27 +13,27 @@
 		200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */; };
 		200BEF7420B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */; };
 		200BEF7620B9AD23003F0A99 /* UIView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */; };
-		206052A0202D75E8007F7219 /* SettingTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060529F202D75E8007F7219 /* SettingTableInfo.swift */; };
-		206052A2202D762C007F7219 /* SettingViewCellDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A1202D762C007F7219 /* SettingViewCellDto.swift */; };
 		206052A4202D7901007F7219 /* SettingTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A3202D7901007F7219 /* SettingTableViewResource.swift */; };
-		206052A7202D7F0A007F7219 /* SettingContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A6202D7F0A007F7219 /* SettingContentCell.swift */; };
 		206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A9202D7F98007F7219 /* NSObject+Addition.swift */; };
-		206052AC202D8ABF007F7219 /* SettingContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206052AB202D8ABF007F7219 /* SettingContentCell.xib */; };
 		206052B3202DABCE007F7219 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052B2202DABCE007F7219 /* AppInfo.swift */; };
 		206052B5202DD16F007F7219 /* HomeScreenQuickAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052B4202DD16F007F7219 /* HomeScreenQuickAction.swift */; };
 		208A605020B9B8A9007794C8 /* UIFont+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A604F20B9B8A9007794C8 /* UIFont+Addition.swift */; };
-		208A605220B9B9B4007794C8 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A605120B9B9B4007794C8 /* UIColor.swift */; };
-		208D41ED2030448D004618CA /* BuyListDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41EC2030448D004618CA /* BuyListDao.swift */; };
-		208D41EF203044C3004618CA /* BuyListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41EE203044C3004618CA /* BuyListEntity.swift */; };
+		208A605220B9B9B4007794C8 /* UIColor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A605120B9B9B4007794C8 /* UIColor+Addition.swift */; };
 		208D41F12030552C004618CA /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F02030552C004618CA /* Debug.swift */; };
-		208D41F520305CB5004618CA /* BuyListContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F420305CB5004618CA /* BuyListContentCell.swift */; };
-		208D41F920318B85004618CA /* BuyListTableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F820318B85004618CA /* BuyListTableInfo.swift */; };
+		208D41F520305CB5004618CA /* BuyListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F420305CB5004618CA /* BuyListItemCell.swift */; };
 		208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FA20318B98004618CA /* BuyListTableViewResource.swift */; };
-		208D41FD20318BAD004618CA /* BuyListContentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FC20318BAD004618CA /* BuyListContentDto.swift */; };
 		208D41FF2031B161004618CA /* BuyListContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FE2031B161004618CA /* BuyListContainerVC.swift */; };
-		208D42032031EBBB004618CA /* BuyListAddContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddContentCell.swift */; };
+		208D42032031EBBB004618CA /* BuyListAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddCell.swift */; };
 		208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42062032CB63004618CA /* LoadJsonFile.swift */; };
 		2096998F203516950066AEC4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2096998E203516940066AEC4 /* sample.json */; };
+		20EC136920F509C7001E40A6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC136820F509C7001E40A6 /* MainTabBarController.swift */; };
+		7B10E8AF20F60DB500D416CD /* ItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10E8AE20F60DB500D416CD /* ItemEntity.swift */; };
+		7B10E8B120F6146A00D416CD /* BuyListHistoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10E8B020F6146A00D416CD /* BuyListHistoryTableCell.swift */; };
+		7B293F6420FAEC610009FE92 /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B293F6320FAEC610009FE92 /* String+Addition.swift */; };
+		7B7EFF0720F8B5AD00E9F330 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0620F8B5AD00E9F330 /* DeviceManager.swift */; };
+		7B7EFF0A20F9AF8D00E9F330 /* MockItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */; };
+		7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */; };
+		7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */; };
 		A24C351784CCB446C29EC380 /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
 		E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */; };
 		E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C61F46E3E30040728A /* BuyListPresenter.swift */; };
@@ -42,7 +42,7 @@
 		E10F35CD1F46E4200040728A /* BuyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35CC1F46E4200040728A /* BuyListInteractor.swift */; };
 		E10F35CF1F46E4320040728A /* BuyListHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35CE1F46E4320040728A /* BuyListHistoryInteractor.swift */; };
 		E10F35D21F46E45C0040728A /* SettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35D11F46E45C0040728A /* SettingInteractor.swift */; };
-		E18ABDBB1F20C34A0012416A /* SampleRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18ABDBA1F20C34A0012416A /* SampleRealm.swift */; };
+		E18ABDBB1F20C34A0012416A /* ItemRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18ABDBA1F20C34A0012416A /* ItemRealm.swift */; };
 		E1B826421EE1596D008AEE9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B826411EE1596D008AEE9D /* AppDelegate.swift */; };
 		E1B826441EE1596D008AEE9D /* BuyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B826431EE1596D008AEE9D /* BuyListVC.swift */; };
 		E1B826461EE1596D008AEE9D /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B826451EE1596D008AEE9D /* SettingVC.swift */; };
@@ -69,30 +69,30 @@
 		200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Addition.swift"; sourceTree = "<group>"; };
 		200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Addition.swift"; sourceTree = "<group>"; };
 		200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Addition.swift"; sourceTree = "<group>"; };
-		2060529F202D75E8007F7219 /* SettingTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableInfo.swift; sourceTree = "<group>"; };
-		206052A1202D762C007F7219 /* SettingViewCellDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewCellDto.swift; sourceTree = "<group>"; };
 		206052A3202D7901007F7219 /* SettingTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewResource.swift; sourceTree = "<group>"; };
-		206052A6202D7F0A007F7219 /* SettingContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContentCell.swift; sourceTree = "<group>"; };
 		206052A9202D7F98007F7219 /* NSObject+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Addition.swift"; sourceTree = "<group>"; };
-		206052AB202D8ABF007F7219 /* SettingContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingContentCell.xib; sourceTree = "<group>"; };
 		206052B2202DABCE007F7219 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		206052B4202DD16F007F7219 /* HomeScreenQuickAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenQuickAction.swift; sourceTree = "<group>"; };
 		207F2396202C1471009BF523 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		208A604F20B9B8A9007794C8 /* UIFont+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Addition.swift"; sourceTree = "<group>"; };
-		208A605120B9B9B4007794C8 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		208D41EC2030448D004618CA /* BuyListDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListDao.swift; sourceTree = "<group>"; };
-		208D41EE203044C3004618CA /* BuyListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListEntity.swift; sourceTree = "<group>"; };
+		208A605120B9B9B4007794C8 /* UIColor+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Addition.swift"; sourceTree = "<group>"; };
 		208D41F02030552C004618CA /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
-		208D41F420305CB5004618CA /* BuyListContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContentCell.swift; sourceTree = "<group>"; };
-		208D41F820318B85004618CA /* BuyListTableInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListTableInfo.swift; sourceTree = "<group>"; };
+		208D41F420305CB5004618CA /* BuyListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListItemCell.swift; sourceTree = "<group>"; };
 		208D41FA20318B98004618CA /* BuyListTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListTableViewResource.swift; sourceTree = "<group>"; };
-		208D41FC20318BAD004618CA /* BuyListContentDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContentDto.swift; sourceTree = "<group>"; };
 		208D41FE2031B161004618CA /* BuyListContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContainerVC.swift; sourceTree = "<group>"; };
-		208D42022031EBBB004618CA /* BuyListAddContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListAddContentCell.swift; sourceTree = "<group>"; };
+		208D42022031EBBB004618CA /* BuyListAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListAddCell.swift; sourceTree = "<group>"; };
 		208D42062032CB63004618CA /* LoadJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonFile.swift; sourceTree = "<group>"; };
 		2096998E203516940066AEC4 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		20EC136820F509C7001E40A6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		753227B3DC93A70EBA086EF9 /* Pods-BuyList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.release.xcconfig"; sourceTree = "<group>"; };
+		7B10E8AE20F60DB500D416CD /* ItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEntity.swift; sourceTree = "<group>"; };
+		7B10E8B020F6146A00D416CD /* BuyListHistoryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListHistoryTableCell.swift; sourceTree = "<group>"; };
+		7B293F6320FAEC610009FE92 /* String+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
+		7B7EFF0620F8B5AD00E9F330 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItemEntity.swift; sourceTree = "<group>"; };
+		7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListHistoryTableCell.xib; sourceTree = "<group>"; };
+		7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Addition.swift"; sourceTree = "<group>"; };
 		A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77765413B76B23CC34D948D /* Pods-BuyList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.debug.xcconfig"; sourceTree = "<group>"; };
 		E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListHistoryVC.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		E10F35D11F46E45C0040728A /* SettingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingInteractor.swift; sourceTree = "<group>"; };
 		E18ABDB61F20BB190012416A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E18ABDB81F20BB270012416A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		E18ABDBA1F20C34A0012416A /* SampleRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleRealm.swift; sourceTree = "<group>"; };
+		E18ABDBA1F20C34A0012416A /* ItemRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRealm.swift; sourceTree = "<group>"; };
 		E1B8263E1EE1596D008AEE9D /* BuyList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B826411EE1596D008AEE9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1B826431EE1596D008AEE9D /* BuyListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListVC.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -143,9 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E10F35CA1F46E4020040728A /* SettingPresenter.swift */,
-				2060529F202D75E8007F7219 /* SettingTableInfo.swift */,
 				206052A3202D7901007F7219 /* SettingTableViewResource.swift */,
-				206052A1202D762C007F7219 /* SettingViewCellDto.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				E1B826451EE1596D008AEE9D /* SettingVC.swift */,
-				206052A6202D7F0A007F7219 /* SettingContentCell.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -162,14 +159,16 @@
 		206052A8202D7F67007F7219 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				200BEF6F20B99867003F0A99 /* NibLoadable.swift */,
 				206052A9202D7F98007F7219 /* NSObject+Addition.swift */,
 				200BEF6D20B99831003F0A99 /* UITableView+Addition.swift */,
-				200BEF6F20B99867003F0A99 /* NibLoadable.swift */,
 				200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */,
 				200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */,
 				200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */,
 				208A604F20B9B8A9007794C8 /* UIFont+Addition.swift */,
-				208A605120B9B9B4007794C8 /* UIColor.swift */,
+				208A605120B9B9B4007794C8 /* UIColor+Addition.swift */,
+				7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */,
+				7B293F6320FAEC610009FE92 /* String+Addition.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -178,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				E1B826471EE1596D008AEE9D /* Main.storyboard */,
-				206052AB202D8ABF007F7219 /* SettingContentCell.xib */,
 				E1B8264C1EE1596D008AEE9D /* LaunchScreen.storyboard */,
+				7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */,
 			);
 			name = UserInterface;
 			sourceTree = "<group>";
@@ -195,8 +194,7 @@
 		206052AF202DA4EF007F7219 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				E18ABDBA1F20C34A0012416A /* SampleRealm.swift */,
-				208D41EC2030448D004618CA /* BuyListDao.swift */,
+				E18ABDBA1F20C34A0012416A /* ItemRealm.swift */,
 				208D42062032CB63004618CA /* LoadJsonFile.swift */,
 			);
 			name = DataStore;
@@ -205,7 +203,8 @@
 		206052B0202DA4FF007F7219 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				208D41EE203044C3004618CA /* BuyListEntity.swift */,
+				7B7EFF0820F9AF7D00E9F330 /* Mock */,
+				7B10E8AE20F60DB500D416CD /* ItemEntity.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -216,6 +215,7 @@
 				206052B2202DABCE007F7219 /* AppInfo.swift */,
 				206052B4202DD16F007F7219 /* HomeScreenQuickAction.swift */,
 				208D41F02030552C004618CA /* Debug.swift */,
+				7B7EFF0620F8B5AD00E9F330 /* DeviceManager.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -225,8 +225,8 @@
 			children = (
 				E1B826431EE1596D008AEE9D /* BuyListVC.swift */,
 				208D41FE2031B161004618CA /* BuyListContainerVC.swift */,
-				208D41F420305CB5004618CA /* BuyListContentCell.swift */,
-				208D42022031EBBB004618CA /* BuyListAddContentCell.swift */,
+				208D41F420305CB5004618CA /* BuyListItemCell.swift */,
+				208D42022031EBBB004618CA /* BuyListAddCell.swift */,
 			);
 			name = BuyList;
 			sourceTree = "<group>";
@@ -235,11 +235,66 @@
 			isa = PBXGroup;
 			children = (
 				E10F35C61F46E3E30040728A /* BuyListPresenter.swift */,
-				208D41F820318B85004618CA /* BuyListTableInfo.swift */,
 				208D41FA20318B98004618CA /* BuyListTableViewResource.swift */,
-				208D41FC20318BAD004618CA /* BuyListContentDto.swift */,
 			);
 			name = BuyList;
+			sourceTree = "<group>";
+		};
+		20B4407220F65B920078D371 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				20EC136820F509C7001E40A6 /* MainTabBarController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		20EC136720F50954001E40A6 /* BuyListHistory */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */,
+				7B10E8B020F6146A00D416CD /* BuyListHistoryTableCell.swift */,
+			);
+			name = BuyListHistory;
+			sourceTree = "<group>";
+		};
+		7B10E8AA20F60C4200D416CD /* BuyListHistory */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35C81F46E3F50040728A /* BuyListHistoryPresenter.swift */,
+			);
+			name = BuyListHistory;
+			sourceTree = "<group>";
+		};
+		7B10E8AB20F60C6000D416CD /* BuyList */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35CC1F46E4200040728A /* BuyListInteractor.swift */,
+			);
+			name = BuyList;
+			sourceTree = "<group>";
+		};
+		7B10E8AC20F60C6500D416CD /* BuyListHistory */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35CE1F46E4320040728A /* BuyListHistoryInteractor.swift */,
+			);
+			name = BuyListHistory;
+			sourceTree = "<group>";
+		};
+		7B10E8AD20F60C6D00D416CD /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				E10F35D11F46E45C0040728A /* SettingInteractor.swift */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		7B7EFF0820F9AF7D00E9F330 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */,
+			);
+			name = Mock;
 			sourceTree = "<group>";
 		};
 		C09DB7C2E9BD0C87D97472A7 /* Pods */ = {
@@ -256,9 +311,10 @@
 		E10F35C31F46E3970040728A /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				20B4407220F65B920078D371 /* Main */,
 				208D41F220305C7C004618CA /* BuyList */,
+				20EC136720F50954001E40A6 /* BuyListHistory */,
 				206052A5202D7EEA007F7219 /* Setting */,
-				E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -267,8 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				208D41F320305C91004618CA /* BuyList */,
+				7B10E8AA20F60C4200D416CD /* BuyListHistory */,
 				2060529E202D75D2007F7219 /* Setting */,
-				E10F35C81F46E3F50040728A /* BuyListHistoryPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -276,9 +332,9 @@
 		E10F35C51F46E3A60040728A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				E10F35CC1F46E4200040728A /* BuyListInteractor.swift */,
-				E10F35CE1F46E4320040728A /* BuyListHistoryInteractor.swift */,
-				E10F35D11F46E45C0040728A /* SettingInteractor.swift */,
+				7B10E8AB20F60C6000D416CD /* BuyList */,
+				7B10E8AC20F60C6500D416CD /* BuyListHistory */,
+				7B10E8AD20F60C6D00D416CD /* Setting */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -355,6 +411,7 @@
 				E1B8263B1EE1596D008AEE9D /* Frameworks */,
 				E1B8263C1EE1596D008AEE9D /* Resources */,
 				F8986709FF14AA99ED120A03 /* [CP] Embed Pods Frameworks */,
+				20268A3320E90C2F007E61C7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -432,9 +489,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				206052AC202D8ABF007F7219 /* SettingContentCell.xib in Resources */,
 				E1B8264E1EE1596D008AEE9D /* LaunchScreen.storyboard in Resources */,
 				2096998F203516950066AEC4 /* sample.json in Resources */,
+				7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */,
 				E1B8264B1EE1596D008AEE9D /* Assets.xcassets in Resources */,
 				E1B826491EE1596D008AEE9D /* Main.storyboard in Resources */,
 			);
@@ -450,6 +507,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		20268A3320E90C2F007E61C7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		77728F006AD58FF6BC8D2247 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -514,19 +584,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */,
-				208D41FD20318BAD004618CA /* BuyListContentDto.swift in Sources */,
+				7B10E8B120F6146A00D416CD /* BuyListHistoryTableCell.swift in Sources */,
+				20EC136920F509C7001E40A6 /* MainTabBarController.swift in Sources */,
 				206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */,
 				200BEF7020B99867003F0A99 /* NibLoadable.swift in Sources */,
 				E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */,
-				206052A7202D7F0A007F7219 /* SettingContentCell.swift in Sources */,
-				208D41EF203044C3004618CA /* BuyListEntity.swift in Sources */,
 				E10F35CF1F46E4320040728A /* BuyListHistoryInteractor.swift in Sources */,
-				208D41F920318B85004618CA /* BuyListTableInfo.swift in Sources */,
+				7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */,
+				7B10E8AF20F60DB500D416CD /* ItemEntity.swift in Sources */,
+				7B293F6420FAEC610009FE92 /* String+Addition.swift in Sources */,
 				E1B826461EE1596D008AEE9D /* SettingVC.swift in Sources */,
 				E1B826421EE1596D008AEE9D /* AppDelegate.swift in Sources */,
 				200BEF7620B9AD23003F0A99 /* UIView+Addition.swift in Sources */,
 				208A605020B9B8A9007794C8 /* UIFont+Addition.swift in Sources */,
-				206052A2202D762C007F7219 /* SettingViewCellDto.swift in Sources */,
 				208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */,
 				200BEF6E20B99831003F0A99 /* UITableView+Addition.swift in Sources */,
 				E10F35D21F46E45C0040728A /* SettingInteractor.swift in Sources */,
@@ -535,17 +605,17 @@
 				208D41FF2031B161004618CA /* BuyListContainerVC.swift in Sources */,
 				206052A4202D7901007F7219 /* SettingTableViewResource.swift in Sources */,
 				200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */,
-				208D41ED2030448D004618CA /* BuyListDao.swift in Sources */,
-				208D42032031EBBB004618CA /* BuyListAddContentCell.swift in Sources */,
-				206052A0202D75E8007F7219 /* SettingTableInfo.swift in Sources */,
+				208D42032031EBBB004618CA /* BuyListAddCell.swift in Sources */,
+				7B7EFF0720F8B5AD00E9F330 /* DeviceManager.swift in Sources */,
 				206052B5202DD16F007F7219 /* HomeScreenQuickAction.swift in Sources */,
 				208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */,
-				E18ABDBB1F20C34A0012416A /* SampleRealm.swift in Sources */,
-				208D41F520305CB5004618CA /* BuyListContentCell.swift in Sources */,
-				208A605220B9B9B4007794C8 /* UIColor.swift in Sources */,
+				E18ABDBB1F20C34A0012416A /* ItemRealm.swift in Sources */,
+				208D41F520305CB5004618CA /* BuyListItemCell.swift in Sources */,
+				208A605220B9B9B4007794C8 /* UIColor+Addition.swift in Sources */,
 				206052B3202DABCE007F7219 /* AppInfo.swift in Sources */,
 				208D41F12030552C004618CA /* Debug.swift in Sources */,
 				E10F35C91F46E3F50040728A /* BuyListHistoryPresenter.swift in Sources */,
+				7B7EFF0A20F9AF8D00E9F330 /* MockItemEntity.swift in Sources */,
 				E10F35CB1F46E4020040728A /* SettingPresenter.swift in Sources */,
 				E10F35CD1F46E4200040728A /* BuyListInteractor.swift in Sources */,
 			);
@@ -706,16 +776,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98UFL8A7L4;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BuyList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maki.BuyList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -727,16 +794,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 98UFL8A7L4;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BuyList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maki.BuyList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

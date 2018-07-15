@@ -8,18 +8,25 @@
 
 import UIKit
 
-class BuyListHistoryVC:UIViewController {
+class BuyListHistoryVC: UIViewController {
+
+    private var eventHandler: BuyListHistoryEventHandler?
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBarSetting()
+        let presenter = BuyListHistoryPresenter(self)
+        eventHandler = presenter
+        setupTableView(presenter)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+
+    private func setupTableView(_ presenter: BuyListHistoryPresenter) {
+        tableView.delegate = presenter
+        tableView.dataSource = presenter
+        tableView.backgroundColor = UIColor.baseGray
+        tableView.registerForCell(BuyListHistoryTableCell.self)
     }
-    
-    //ナビゲーションバーの設定
-    func navigationBarSetting() {
-        self.parent?.navigationItem.title = "買い物履歴"
-    }
+}
+
+extension BuyListHistoryVC: BuyListHistoryUserInterface {
 }

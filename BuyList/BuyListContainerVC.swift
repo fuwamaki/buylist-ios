@@ -9,19 +9,13 @@
 import Foundation
 import UIKit
 
-class BuyListContainerVC:UIViewController {
-    let buyListVC = BuyListVC()
-    
+class BuyListContainerVC: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+
+    @IBAction func addButton(_ sender: Any) {
+        Debug.log("add")
     }
-    
-//    @IBAction func tapAddBuyListButton(_ sender: Any) {
-//        buyListVC.addBuyList()
-//    }
-    
 }

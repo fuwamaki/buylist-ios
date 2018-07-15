@@ -9,11 +9,11 @@
 import Foundation
 
 struct AppInfo {
-    static var appVersion:String {
+    static var appVersion: String {
         return Bundle.main.infoDictionary!["CFBundleShortVersionString"]! as! String
     }
-    
-    static var buildVersion:String {
+
+    static var buildVersion: String {
         return Bundle.main.infoDictionary!["CFBundleVersion"]! as! String
     }
 }

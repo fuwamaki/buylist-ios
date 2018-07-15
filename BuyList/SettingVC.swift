@@ -8,45 +8,28 @@
 
 import UIKit
 
-class SettingVC:UIViewController,SettingUserInterface {
+// MEMO: Static Cellsは、親ViewがUITableViewControllerじゃないといけない。
+class SettingVC: UITableViewController {
 
-    var eventHandler: SettingEventHandler?
-    @IBOutlet weak var settingTableView: UITableView!
-    
+    private var eventHandler: SettingEventHandler?
+    @IBOutlet weak var versionText: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.parent?.navigationItem.title = "設定"
-        
-        let presenter = SettingPresenter()
-        let interactor = SettingInteractor()
-        presenter.interactor = interactor
-        interactor.delegate = presenter
+        let presenter = SettingPresenter(self)
         self.eventHandler = presenter
-        presenter.userInterface = self
-        settingTableView.dataSource = presenter
-        settingTableView.delegate = presenter
-        settingTableView.register(UINib(nibName: SettingContentCell.identifier, bundle: nil), forCellReuseIdentifier: SettingContentCell.identifier)
-//        self.dismiss(animated: true, completion: nil)
+        setupTableView(presenter)
+        eventHandler?.displayAppVersion()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    func getSettingCell(_ dto:SettingViewCellDto) -> UITableViewCell {
-        let cell = settingTableView.dequeueReusableCell(withIdentifier: SettingContentCell.identifier) as! SettingContentCell
-        cell.setContentTitle(dto)
-        if dto.eventLabel == "appversion" {
-            guard let appVersion = eventHandler?.getAppVersion() else {
-                return UITableViewCell()
-            }
-            cell.setAppVersion(appVersion)
-        }
-        return cell
-    }
-    
-    func reloadTableView() {
-        settingTableView.reloadData()
+    private func setupTableView(_ presenter: SettingPresenter) {
+        tableView.delegate = presenter
     }
 }
 
+extension SettingVC: SettingUserInterface {
+
+    func setVersionText(_ version: String) {
+        versionText.text = version
+    }
+}

@@ -1,5 +1,5 @@
 //
-//  BuyListAddContentCell.swift
+//  BuyListAddCell.swift
 //  BuyList
 //
 //  Created by 牧宥作 on 2018/02/13.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class BuyListAddContentCell: UITableViewCell {
-    
-    fileprivate struct const {
+class BuyListAddCell: UITableViewCell {
+
+    fileprivate struct Constant {
         static let title = "項目を追加"
     }
 
@@ -18,16 +18,16 @@ class BuyListAddContentCell: UITableViewCell {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setupViews()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupViews()
     }
-    
+
     private func setupViews() {
         selectedBackgroundView?.backgroundColor = UIColor.white
         textLabel?.font = UIFont.bodyText
         textLabel?.textColor = UIColor.black
-        textLabel?.text = const.title
+        textLabel?.text = Constant.title
     }
 }

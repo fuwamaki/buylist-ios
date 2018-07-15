@@ -9,39 +9,45 @@
 import Foundation
 
 struct SettingTableViewResource {
-    
-    fileprivate var list:[SettingSectionInfo]?  {
-        return [SettingNotificationSectionInfo(), SettingAppInfoSectionInfo()]
-    }
-    
-    var count:Int {//SectionList数
-        guard let sectionListCount = list?.count else {
-            return 0
-        }
-        return sectionListCount
-    }
-    
-    subscript(index:Int) -> SettingSectionInfo? {
-        get {
-            guard let sectionList = list else{
-                return nil
-            }
-            if sectionList.count > index {
-                return sectionList[index]
-            } else {
-                return nil
-            }
+
+    struct TableSection {
+        let title: String?
+        let cells: [TableCell]
+
+        init(title: String? = nil, cells: [TableCell]) {
+            self.title = title
+            self.cells = cells
         }
     }
-    
-    func getSectionInfo<T:SettingSectionInfo>() -> T {
-        var info:SettingSectionInfo?
-        list!.forEach {
-            if let sameInfo = $0 as? T {
-                info = sameInfo
-                return
-            }
+
+    struct TableCell {
+        let title: String?
+        let type: SettingTableCellType
+
+        init(title: String? = nil, type: SettingTableCellType) {
+            self.title = title
+            self.type = type
         }
-        return info as! T
+    }
+
+    let notificationCell = TableCell(type: .notification)
+    let inquiryCell = TableCell(type: .inquiry)
+    let versionCell = TableCell(type: .version)
+
+    private var tableSections: [TableSection] {
+        let detailedSettingsSection = TableSection(cells: [notificationCell])
+        let aboutThisServiceSection = TableSection(cells: [inquiryCell, versionCell])
+        return [detailedSettingsSection, aboutThisServiceSection]
+    }
+
+    var tableSectionsCount: Int {
+        return tableSections.count
+    }
+
+    subscript (index: Int) -> TableSection? {
+        guard tableSections.count > index else {
+            return nil
+        }
+        return tableSections[index]
     }
 }

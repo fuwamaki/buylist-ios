@@ -9,45 +9,50 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate:UIResponder,UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window:UIWindow?
+    var window: UIWindow?
     let homeScreenQuickAction = HomeScreenQuickAction()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {//アプリ起動時
+    // when open app
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         homeScreenQuickAction.createHomeScreenQuickAction()
         return true
     }
-    
-    func applicationWillResignActive(_ application: UIApplication) {//アプリ閉じそうな時
+
+    // when before close app
+    func applicationWillResignActive(_ application: UIApplication) {
     }
 
-    func applicationDidEnterBackground(_ application: UIApplication) {//アプリ閉じた時
+    // when app close
+    func applicationDidEnterBackground(_ application: UIApplication) {
     }
 
-    func applicationWillEnterForeground(_ application: UIApplication) {//アプリ開きそうな時
+    // when before open app
+    func applicationWillEnterForeground(_ application: UIApplication) {
     }
 
-    func applicationDidBecomeActive(_ application: UIApplication) {//アプリ開いた時
+    // when open app
+    func applicationDidBecomeActive(_ application: UIApplication) {
     }
 
-    func applicationWillTerminate(_ application: UIApplication) {//タスクキル時
+    // when task kill
+    func applicationWillTerminate(_ application: UIApplication) {
     }
 
-    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {//QuickAction起動時
+    // starting quick action
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         let handleShortCutItem = homeScreenQuickAction.handleShortCutItem(shortcutItem: shortcutItem)
         completionHandler(handleShortCutItem.0)
-        
+
         if let tabVC = UIApplication.shared.keyWindow?.rootViewController as? UITabBarController {
             tabVC.selectedIndex = 2
         }
-        // TODO: tabbarが消えちゃう問題の改修
+        // TODO: quick action でアプリ起動するとtabbarが消える問題の対応
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let settingView = storyboard.instantiateViewController(withIdentifier: handleShortCutItem.1)
         self.window?.rootViewController = settingView
         self.window?.makeKeyAndVisible()
     }
-
 }
-

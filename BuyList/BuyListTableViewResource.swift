@@ -9,23 +9,72 @@
 import Foundation
 
 struct BuyListTableViewResource {
-    var buyListContentSectionInfo = BuyListContentSectionInfo()
-    var buyListAddContentSectionInfo = BuyListAddContentSectionInfo()
-    
-    private var sectionList: [BuyListSectionInfo] {
-        return [buyListContentSectionInfo, buyListAddContentSectionInfo]
+
+    private struct Constant {
+        static let addTitle = "項目を追加"
     }
-    
-    var sectionListCount: Int {
-        return sectionList.count
-    }
-    
-    subscript (index: Int) -> BuyListSectionInfo? {
-        get {
-            guard sectionList.count > index else {
-                return nil
-            }
-            return sectionList[index]
+    struct TableSection {
+        let title: String?
+        let cells: [TableCell]
+
+        init(title: String? = nil, cells: [TableCell]) {
+            self.title = title
+            self.cells = cells
         }
+    }
+
+    struct TableCell {
+        var name: String?
+        var count: Int?
+        let type: BuyListTableCellType
+
+        init(name: String? = nil, type: BuyListTableCellType, count: Int? = nil) {
+            self.name = name
+            self.type = type
+            self.count = count
+        }
+    }
+
+    private var isAppendEmptyItemCell: Bool = false
+    var itemCells: [TableCell] = []
+    let addCell = TableCell(name: Constant.addTitle, type: .add)
+
+    private var tableSections: [TableSection] {
+        let itemSection = TableSection(cells: itemCells)
+        let addSection = TableSection(cells: [addCell])
+        return [itemSection, addSection]
+    }
+
+    var tableSectionCount: Int {
+        return tableSections.count
+    }
+
+    subscript (index: Int) -> TableSection? {
+        guard tableSections.count > index else {
+            return nil
+        }
+        return tableSections[index]
+    }
+
+    mutating func appendItemCell(_ item: ItemEntity) {
+        itemCells.append(TableCell(name: item.name, type: .item, count: item.count))
+    }
+
+    mutating func appendEmptyItemCell() {
+        if !isAppendEmptyItemCell {
+            itemCells.append(TableCell(type: .item))
+            isAppendEmptyItemCell = true
+        }
+    }
+
+    mutating func setEmptyItemName(_ name: String) {
+        if isAppendEmptyItemCell {
+            itemCells[itemCells.count].name = name
+            isAppendEmptyItemCell = false
+        }
+    }
+
+    mutating func removeItemCell(_ index: Int) {
+        itemCells.remove(at: index)
     }
 }
