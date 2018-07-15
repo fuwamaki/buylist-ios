@@ -24,18 +24,18 @@ struct BuyListTableViewResource {
     }
 
     struct TableCell {
-        var title: String?
+        var name: String?
         let type: BuyListTableCellType
 
-        init(title: String? = nil, type: BuyListTableCellType) {
-            self.title = title
+        init(name: String? = nil, type: BuyListTableCellType) {
+            self.name = name
             self.type = type
         }
     }
 
     private var isAppendEmptyItemCell: Bool = false
     var itemCells: [TableCell] = []
-    let addCell = TableCell(title: Constant.addTitle, type: .add)
+    let addCell = TableCell(name: Constant.addTitle, type: .add)
 
     private var tableSections: [TableSection] {
         let itemSection = TableSection(cells: itemCells)
@@ -55,7 +55,7 @@ struct BuyListTableViewResource {
     }
 
     mutating func appendItemCell(_ item: ItemEntity) {
-        itemCells.append(TableCell(title: item.name, type: .item))
+        itemCells.append(TableCell(name: item.name, type: .item))
     }
 
     mutating func appendEmptyItemCell() {
@@ -67,7 +67,7 @@ struct BuyListTableViewResource {
 
     mutating func setEmptyItemName(_ name: String) {
         if isAppendEmptyItemCell {
-            itemCells[itemCells.count].title = name
+            itemCells[itemCells.count].name = name
             isAppendEmptyItemCell = false
         }
     }

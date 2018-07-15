@@ -84,7 +84,7 @@ extension BuyListPresenter: UITableViewDataSource {
             switch cell.type {
             case .item:
                 let buyListItemCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListItemCell
-                buyListItemCell.setItemTitle(cell.title)
+                buyListItemCell.setItemTitle(cell.name)
                 return buyListItemCell
             case .add:
                 let buyListAddCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListAddCell
