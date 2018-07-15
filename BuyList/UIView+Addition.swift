@@ -11,7 +11,6 @@ import UIKit
 extension UIView {
 
     public struct LayoutMarginOptions: OptionSet {
-        public typealias RawValue = Int
         public var rawValue: Int
         public init(rawValue: Int) {
             self.rawValue = rawValue
