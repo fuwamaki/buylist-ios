@@ -45,4 +45,12 @@ class BuyListContentCell: UITableViewCell {
 
 extension BuyListContentCell: UITextFieldDelegate {
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        // TODO: テキスト入力完了したら、saveする処理
+    }
 }
