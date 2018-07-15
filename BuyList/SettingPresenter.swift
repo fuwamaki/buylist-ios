@@ -52,11 +52,11 @@ extension SettingPresenter: UITableViewDelegate {
         if let cell = settingTableViewResource[indexPath.section]?.cells[indexPath.row] {
             switch cell.type {
             case .notification:
-                print("notification")
+                Debug.log("notification")
             case .inquiry:
-                print("inquiry")
+                Debug.log("inquiry")
             case .version:
-                print("version")
+                Debug.log("version")
             }
         }
     }

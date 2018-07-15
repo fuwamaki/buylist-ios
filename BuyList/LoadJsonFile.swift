@@ -40,15 +40,10 @@ class LoadJsonFile {
                     return nil
                 }
                 let sampleJsonData = try? JSONDecoder().decode(SampleJsonData.self, from: data)
-                // parse処理
-                //            let a = try JSONSerialization.jsonObject(with: data, options: [])
-                //            let json =  JSON.parse(jsonStr)
-                // ちゃんと値取得できているか確認する
-                //encode
                 let encoder = JSONEncoder()
                 encoder.outputFormatting = .prettyPrinted
                 let encoded = try! encoder.encode(sampleJsonData)
-                print(String(data: encoded, encoding: .utf8)!)
+                Debug.log(String(data: encoded, encoding: .utf8)!)
                 return sampleJsonData
             } catch {
                 return nil

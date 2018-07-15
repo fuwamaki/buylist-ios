@@ -122,7 +122,7 @@ extension BuyListPresenter: UITableViewDelegate {
         if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
             switch cell.type {
             case .item:
-                print("item selected")
+                Debug.log("item selected")
             case .add:
                 insertItemCell()
             }

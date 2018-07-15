@@ -16,6 +16,6 @@ class BuyListContainerVC: UIViewController {
     }
 
     @IBAction func addButton(_ sender: Any) {
-        print("add")
+        Debug.log("add")
     }
 }
