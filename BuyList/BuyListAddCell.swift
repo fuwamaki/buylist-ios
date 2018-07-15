@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BuyListAddContentCell: UITableViewCell {
+class BuyListAddCell: UITableViewCell {
 
     fileprivate struct Constant {
         static let title = "項目を追加"

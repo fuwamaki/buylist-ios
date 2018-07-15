@@ -35,7 +35,7 @@ class BuyListVC: UIViewController {
         tableView.delegate = presenter
         tableView.dataSource = presenter
         tableView.registerForCell(BuyListContentCell.self)
-        tableView.registerForCell(BuyListAddContentCell.self)
+        tableView.registerForCell(BuyListAddCell.self)
     }
 }
 

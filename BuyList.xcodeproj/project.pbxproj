@@ -25,7 +25,7 @@
 		208D41F520305CB5004618CA /* BuyListContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F420305CB5004618CA /* BuyListContentCell.swift */; };
 		208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FA20318B98004618CA /* BuyListTableViewResource.swift */; };
 		208D41FF2031B161004618CA /* BuyListContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FE2031B161004618CA /* BuyListContainerVC.swift */; };
-		208D42032031EBBB004618CA /* BuyListAddContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddContentCell.swift */; };
+		208D42032031EBBB004618CA /* BuyListAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddCell.swift */; };
 		208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42062032CB63004618CA /* LoadJsonFile.swift */; };
 		2096998F203516950066AEC4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2096998E203516940066AEC4 /* sample.json */; };
 		20EC136920F509C7001E40A6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC136820F509C7001E40A6 /* MainTabBarController.swift */; };
@@ -82,7 +82,7 @@
 		208D41F420305CB5004618CA /* BuyListContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContentCell.swift; sourceTree = "<group>"; };
 		208D41FA20318B98004618CA /* BuyListTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListTableViewResource.swift; sourceTree = "<group>"; };
 		208D41FE2031B161004618CA /* BuyListContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContainerVC.swift; sourceTree = "<group>"; };
-		208D42022031EBBB004618CA /* BuyListAddContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListAddContentCell.swift; sourceTree = "<group>"; };
+		208D42022031EBBB004618CA /* BuyListAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListAddCell.swift; sourceTree = "<group>"; };
 		208D42062032CB63004618CA /* LoadJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonFile.swift; sourceTree = "<group>"; };
 		2096998E203516940066AEC4 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		20EC136820F509C7001E40A6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 				E1B826431EE1596D008AEE9D /* BuyListVC.swift */,
 				208D41FE2031B161004618CA /* BuyListContainerVC.swift */,
 				208D41F420305CB5004618CA /* BuyListContentCell.swift */,
-				208D42022031EBBB004618CA /* BuyListAddContentCell.swift */,
+				208D42022031EBBB004618CA /* BuyListAddCell.swift */,
 			);
 			name = BuyList;
 			sourceTree = "<group>";
@@ -605,7 +605,7 @@
 				206052A4202D7901007F7219 /* SettingTableViewResource.swift in Sources */,
 				200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */,
 				208D41ED2030448D004618CA /* BuyListDao.swift in Sources */,
-				208D42032031EBBB004618CA /* BuyListAddContentCell.swift in Sources */,
+				208D42032031EBBB004618CA /* BuyListAddCell.swift in Sources */,
 				7B7EFF0720F8B5AD00E9F330 /* DeviceManager.swift in Sources */,
 				206052B5202DD16F007F7219 /* HomeScreenQuickAction.swift in Sources */,
 				208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */,

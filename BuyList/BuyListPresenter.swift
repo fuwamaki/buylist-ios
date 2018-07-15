@@ -68,7 +68,7 @@ extension BuyListPresenter: UITableViewDataSource {
                 buyListContentCell.setContentTitle(cell.title)
                 return buyListContentCell
             case .add:
-                let buyListAddCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListAddContentCell
+                let buyListAddCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListAddCell
                 return buyListAddCell
             }
         } else {
