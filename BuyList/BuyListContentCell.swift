@@ -10,23 +10,38 @@ import UIKit
 
 class BuyListContentCell: UITableViewCell {
 
+    private var textFieldLabel: UITextField
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        textFieldLabel = UITextField(frame: CGRect.null)
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setupViews()
     }
 
     required init?(coder aDecoder: NSCoder) {
+        textFieldLabel = UITextField(frame: CGRect.null)
         super.init(coder: aDecoder)
         setupViews()
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        textFieldLabel.frame = CGRect(x: 16.0, y: 0, width: bounds.size.width - 16.0, height: bounds.size.height)
+    }
     private func setupViews() {
+        textFieldLabel.font = UIFont.bodyText
+        textFieldLabel.textColor = UIColor.black
+        textFieldLabel.delegate = self
+        textFieldLabel.contentVerticalAlignment = .center
+        addSubview(textFieldLabel)
         selectedBackgroundView?.backgroundColor = UIColor.white
-        textLabel?.font = UIFont.bodyText
-        textLabel?.textColor = UIColor.black
     }
 
     func setContentTitle(_ title: String?) {
-        textLabel?.text = title ?? ""
+        textFieldLabel.text = title ?? ""
     }
+}
+
+extension BuyListContentCell: UITextFieldDelegate {
+
 }
