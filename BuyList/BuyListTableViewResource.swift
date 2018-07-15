@@ -33,14 +33,14 @@ struct BuyListTableViewResource {
         }
     }
 
-    private var isAppendEmptyContent: Bool = false
-    var contentCells: [TableCell] = []
+    private var isAppendEmptyItemCell: Bool = false
+    var itemCells: [TableCell] = []
     let addCell = TableCell(title: Constant.addTitle, type: .add)
 
     private var tableSections: [TableSection] {
-        let contentSection = TableSection(cells: contentCells)
+        let itemSection = TableSection(cells: itemCells)
         let addSection = TableSection(cells: [addCell])
-        return [contentSection, addSection]
+        return [itemSection, addSection]
     }
 
     var tableSectionCount: Int {
@@ -54,25 +54,25 @@ struct BuyListTableViewResource {
         return tableSections[index]
     }
 
-    mutating func appendContent(_ item: ItemEntity) {
-        contentCells.append(TableCell(title: item.name, type: .content))
+    mutating func appendItemCell(_ item: ItemEntity) {
+        itemCells.append(TableCell(title: item.name, type: .item))
     }
 
-    mutating func appendEmptyContent() {
-        if !isAppendEmptyContent {
-            contentCells.append(TableCell(type: .content))
-            isAppendEmptyContent = true
+    mutating func appendEmptyItemCell() {
+        if !isAppendEmptyItemCell {
+            itemCells.append(TableCell(type: .item))
+            isAppendEmptyItemCell = true
         }
     }
 
-    mutating func setEmptyContentName(_ name: String) {
-        if isAppendEmptyContent {
-            contentCells[contentCells.count].title = name
-            isAppendEmptyContent = false
+    mutating func setEmptyItemName(_ name: String) {
+        if isAppendEmptyItemCell {
+            itemCells[itemCells.count].title = name
+            isAppendEmptyItemCell = false
         }
     }
 
-    mutating func removeContent(_ index: Int) {
-        contentCells.remove(at: index)
+    mutating func removeItemCell(_ index: Int) {
+        itemCells.remove(at: index)
     }
 }

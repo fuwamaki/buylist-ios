@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 
 enum BuyListTableCellType {
-    case content
+    case item
     case add
 }
 
 protocol BuyListEventHandler {
-    func setBuyListContent()
+    func setBuyListItem()
 }
 
-protocol BuyListContentCellEventHandler {
+protocol BuyListItemCellEventHandler {
     func saveAddItem(_ name: String?)
 }
 
@@ -38,29 +38,29 @@ class BuyListPresenter: NSObject {
         self.interactable = interactor
     }
 
-    private func insertContentCell() {
-        buyListTableViewResource.appendEmptyContent()
+    private func insertItemCell() {
+        buyListTableViewResource.appendEmptyItemCell()
         userInterface.reloadTableView()
     }
 }
 
 extension BuyListPresenter: BuyListEventHandler {
 
-    func setBuyListContent() {
+    func setBuyListItem() {
         let items = interactable.getItems()
         for item in items {
-            buyListTableViewResource.appendContent(item)
+            buyListTableViewResource.appendItemCell(item)
         }
         userInterface.reloadTableView()
     }
 }
 
-extension BuyListPresenter: BuyListContentCellEventHandler {
+extension BuyListPresenter: BuyListItemCellEventHandler {
 
     func saveAddItem(_ name: String?) {
         if let name = name {
             interactable.saveItem(name: name, count: 1)
-            buyListTableViewResource.setEmptyContentName(name)
+            buyListTableViewResource.setEmptyItemName(name)
         }
     }
 }
@@ -82,10 +82,10 @@ extension BuyListPresenter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
             switch cell.type {
-            case .content:
-                let buyListContentCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListContentCell
-                buyListContentCell.setContentTitle(cell.title)
-                return buyListContentCell
+            case .item:
+                let buyListItemCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListItemCell
+                buyListItemCell.setItemTitle(cell.title)
+                return buyListItemCell
             case .add:
                 let buyListAddCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListAddCell
                 return buyListAddCell
@@ -98,7 +98,7 @@ extension BuyListPresenter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
             switch cell.type {
-            case .content:
+            case .item:
                 return .delete
             case .add:
                 return .insert
@@ -109,7 +109,7 @@ extension BuyListPresenter: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            buyListTableViewResource.removeContent(indexPath.row)
+            buyListTableViewResource.removeItemCell(indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -121,10 +121,10 @@ extension BuyListPresenter: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
             switch cell.type {
-            case .content:
-                print("content selected")
+            case .item:
+                print("item selected")
             case .add:
-                insertContentCell()
+                insertItemCell()
             }
         }
     }

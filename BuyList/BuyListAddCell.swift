@@ -1,5 +1,5 @@
 //
-//  BuyListAddContentCell.swift
+//  BuyListAddCell.swift
 //  BuyList
 //
 //  Created by 牧宥作 on 2018/02/13.

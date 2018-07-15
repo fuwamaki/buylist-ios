@@ -22,7 +22,7 @@
 		208D41ED2030448D004618CA /* BuyListDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41EC2030448D004618CA /* BuyListDao.swift */; };
 		208D41EF203044C3004618CA /* BuyListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41EE203044C3004618CA /* BuyListEntity.swift */; };
 		208D41F12030552C004618CA /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F02030552C004618CA /* Debug.swift */; };
-		208D41F520305CB5004618CA /* BuyListContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F420305CB5004618CA /* BuyListContentCell.swift */; };
+		208D41F520305CB5004618CA /* BuyListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F420305CB5004618CA /* BuyListItemCell.swift */; };
 		208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FA20318B98004618CA /* BuyListTableViewResource.swift */; };
 		208D41FF2031B161004618CA /* BuyListContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FE2031B161004618CA /* BuyListContainerVC.swift */; };
 		208D42032031EBBB004618CA /* BuyListAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddCell.swift */; };
@@ -81,7 +81,7 @@
 		208D41EC2030448D004618CA /* BuyListDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListDao.swift; sourceTree = "<group>"; };
 		208D41EE203044C3004618CA /* BuyListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListEntity.swift; sourceTree = "<group>"; };
 		208D41F02030552C004618CA /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
-		208D41F420305CB5004618CA /* BuyListContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContentCell.swift; sourceTree = "<group>"; };
+		208D41F420305CB5004618CA /* BuyListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListItemCell.swift; sourceTree = "<group>"; };
 		208D41FA20318B98004618CA /* BuyListTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListTableViewResource.swift; sourceTree = "<group>"; };
 		208D41FE2031B161004618CA /* BuyListContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContainerVC.swift; sourceTree = "<group>"; };
 		208D42022031EBBB004618CA /* BuyListAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListAddCell.swift; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 			children = (
 				E1B826431EE1596D008AEE9D /* BuyListVC.swift */,
 				208D41FE2031B161004618CA /* BuyListContainerVC.swift */,
-				208D41F420305CB5004618CA /* BuyListContentCell.swift */,
+				208D41F420305CB5004618CA /* BuyListItemCell.swift */,
 				208D42022031EBBB004618CA /* BuyListAddCell.swift */,
 			);
 			name = BuyList;
@@ -618,7 +618,7 @@
 				206052B5202DD16F007F7219 /* HomeScreenQuickAction.swift in Sources */,
 				208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */,
 				E18ABDBB1F20C34A0012416A /* ItemRealm.swift in Sources */,
-				208D41F520305CB5004618CA /* BuyListContentCell.swift in Sources */,
+				208D41F520305CB5004618CA /* BuyListItemCell.swift in Sources */,
 				208A605220B9B9B4007794C8 /* UIColor+Addition.swift in Sources */,
 				206052B3202DABCE007F7219 /* AppInfo.swift in Sources */,
 				208D41F12030552C004618CA /* Debug.swift in Sources */,

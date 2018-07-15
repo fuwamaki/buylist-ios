@@ -1,5 +1,5 @@
 //
-//  BuyListContentCell.swift
+//  BuyListItemCell.swift
 //  BuyList
 //
 //  Created by 牧宥作 on 2018/02/11.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class BuyListContentCell: UITableViewCell {
+class BuyListItemCell: UITableViewCell {
 
-    private var eventHandler: BuyListContentCellEventHandler
+    private var eventHandler: BuyListItemCellEventHandler
     private var textFieldLabel: UITextField
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -41,12 +41,12 @@ class BuyListContentCell: UITableViewCell {
         selectedBackgroundView?.backgroundColor = UIColor.white
     }
 
-    func setContentTitle(_ title: String?) {
+    func setItemTitle(_ title: String?) {
         textFieldLabel.text = title ?? String.phi
     }
 }
 
-extension BuyListContentCell: UITextFieldDelegate {
+extension BuyListItemCell: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

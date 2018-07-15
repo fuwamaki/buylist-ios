@@ -19,7 +19,7 @@ class BuyListVC: UIViewController {
         eventHandler = presenter
         setupViews()
         setupTableView(presenter)
-        eventHandler?.setBuyListContent()
+        eventHandler?.setBuyListItem()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -34,7 +34,7 @@ class BuyListVC: UIViewController {
     private func setupTableView(_ presenter: BuyListPresenter) {
         tableView.delegate = presenter
         tableView.dataSource = presenter
-        tableView.registerForCell(BuyListContentCell.self)
+        tableView.registerForCell(BuyListItemCell.self)
         tableView.registerForCell(BuyListAddCell.self)
     }
 }
