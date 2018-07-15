@@ -25,21 +25,21 @@ class HomeScreenQuickAction {
         let shortcut1 = UIMutableApplicationShortcutItem (
             type: QuickActionItem.top.rawValue,
             localizedTitle: "トップ",
-            localizedSubtitle: "",
+            localizedSubtitle: String.phi,
             icon: UIApplicationShortcutIcon(type: .home),
             userInfo: nil
         )
         let shortcut2 = UIMutableApplicationShortcutItem (
             type: QuickActionItem.history.rawValue,
             localizedTitle: "履歴",
-            localizedSubtitle: "",
+            localizedSubtitle: String.phi,
             icon: UIApplicationShortcutIcon(type: .bookmark),
             userInfo: nil
         )
         let shortcut3 = UIMutableApplicationShortcutItem (
             type: QuickActionItem.setting.rawValue,
             localizedTitle: "設定",
-            localizedSubtitle: "",
+            localizedSubtitle: String.phi,
             icon: UIApplicationShortcutIcon(type: .share),
             userInfo: nil
         )
@@ -50,7 +50,7 @@ class HomeScreenQuickAction {
 
     func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> (Bool, String) {
         var handled = false
-        var item = ""
+        var item = String.phi
         switch shortcutItem.type {
         case QuickActionItem.top.rawValue:
             item = "TopView"

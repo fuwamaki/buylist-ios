@@ -42,7 +42,7 @@ class BuyListContentCell: UITableViewCell {
     }
 
     func setContentTitle(_ title: String?) {
-        textFieldLabel.text = title ?? ""
+        textFieldLabel.text = title ?? String.phi
     }
 }
 

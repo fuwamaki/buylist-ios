@@ -16,7 +16,7 @@ enum RealmAction {
 class ItemRealmEntity: Object {
     @objc dynamic var buyId: String = "0001"
     @objc dynamic var itemId: String = "0001"
-    @objc dynamic var name: String = ""
+    @objc dynamic var name: String = String.phi
     @objc dynamic var count: Int = 0
     @objc dynamic var createTime: Date = Date()
     @objc dynamic var checkTime: Date?
