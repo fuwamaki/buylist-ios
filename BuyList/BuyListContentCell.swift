@@ -26,7 +26,7 @@ class BuyListContentCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        textFieldLabel.frame = CGRect(x: 16.0, y: 0, width: bounds.size.width - 16.0, height: bounds.size.height)
+        textFieldLabel.frame = CGRect(x: CGFloat.leftMargin, y: 0, width: bounds.size.width - CGFloat.leftMargin, height: bounds.size.height)
     }
     private func setupViews() {
         textFieldLabel.font = UIFont.bodyText
