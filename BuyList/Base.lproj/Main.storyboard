@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--リスト-->
+        <!--Buy List-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController storyboardIdentifier="TopView" id="9pv-A4-QxB" customClass="BuyListContainerVC" customModule="BuyList" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="hcK-VC-AA8" secondAttribute="bottom" id="mz2-C8-1ph"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="リスト" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Buy List" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,7 +106,7 @@
                             <constraint firstAttribute="trailing" secondItem="ll6-Gb-jPV" secondAttribute="trailing" id="yz9-PH-dxe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="履歴" id="adr-4L-Tx0"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="adr-4L-Tx0"/>
                     <connections>
                         <outlet property="tableView" destination="ll6-Gb-jPV" id="6Ee-5O-79e"/>
                     </connections>
@@ -197,7 +197,7 @@
                             <outlet property="delegate" destination="HvH-j8-8qN" id="F15-iz-d48"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Setting" id="PmL-1z-dbc"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="first" id="PmL-1z-dbc"/>
                     <connections>
                         <outlet property="versionText" destination="Kbz-WI-kIi" id="BYi-dT-vqO"/>
                     </connections>

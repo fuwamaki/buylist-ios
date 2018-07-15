@@ -27,8 +27,8 @@ class MainTabBarController: UITabBarController {
     }
 
     var tabItems: [TabItem] {
-        return [TabItem(title: "買い物", tabNumber: .buylist),
-                TabItem(title: "履歴", tabNumber: .history),
+        return [TabItem(title: "買い物リスト", tabNumber: .buylist),
+                TabItem(title: "買い物履歴", tabNumber: .history),
                 TabItem(title: "設定", tabNumber: .setting)]
     }
 
