@@ -18,6 +18,10 @@ protocol BuyListEventHandler {
     func setBuyListContent()
 }
 
+protocol BuyListContentCellEventHandler {
+    func saveAddItem(_ name: String?)
+}
+
 protocol BuyListUserInterface: class {
     func reloadTableView()
 }
@@ -25,24 +29,39 @@ protocol BuyListUserInterface: class {
 class BuyListPresenter: NSObject {
 
     var buyListTableViewResource = BuyListTableViewResource()
-    var interactor: BuyListInteractable
+    var interactable: BuyListInteractable
     var userInterface: BuyListUserInterface
 
     init(_ userInterface: BuyListUserInterface) {
         let interactor = BuyListInteractor()
         self.userInterface = userInterface
-        self.interactor = interactor
+        self.interactable = interactor
+    }
+
+    private func insertContentCell() {
+        buyListTableViewResource.appendEmptyContent()
+        userInterface.reloadTableView()
     }
 }
 
 extension BuyListPresenter: BuyListEventHandler {
 
     func setBuyListContent() {
-        let items = interactor.getItems()
+        let items = interactable.getItems()
         for item in items {
             buyListTableViewResource.appendContent(item)
         }
         userInterface.reloadTableView()
+    }
+}
+
+extension BuyListPresenter: BuyListContentCellEventHandler {
+
+    func saveAddItem(_ name: String?) {
+        if let name = name {
+            interactable.saveItem(name: name, count: 1)
+            buyListTableViewResource.setEmptyContentName(name)
+        }
     }
 }
 
@@ -100,5 +119,13 @@ extension BuyListPresenter: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
+            switch cell.type {
+            case .content:
+                print("content selected")
+            case .add:
+                insertContentCell()
+            }
+        }
     }
 }

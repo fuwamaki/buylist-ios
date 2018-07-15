@@ -10,16 +10,19 @@ import UIKit
 
 class BuyListContentCell: UITableViewCell {
 
+    private var eventHandler: BuyListContentCellEventHandler
     private var textFieldLabel: UITextField
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         textFieldLabel = UITextField(frame: CGRect.null)
+        eventHandler = BuyListPresenter(BuyListVC())
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setupViews()
     }
 
     required init?(coder aDecoder: NSCoder) {
         textFieldLabel = UITextField(frame: CGRect.null)
+        eventHandler = BuyListPresenter(BuyListVC())
         super.init(coder: aDecoder)
         setupViews()
     }
@@ -51,6 +54,6 @@ extension BuyListContentCell: UITextFieldDelegate {
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        // TODO: テキスト入力完了したら、saveする処理
+        eventHandler.saveAddItem(textField.text)
     }
 }

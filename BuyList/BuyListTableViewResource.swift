@@ -24,7 +24,7 @@ struct BuyListTableViewResource {
     }
 
     struct TableCell {
-        let title: String?
+        var title: String?
         let type: BuyListTableCellType
 
         init(title: String? = nil, type: BuyListTableCellType) {
@@ -33,6 +33,7 @@ struct BuyListTableViewResource {
         }
     }
 
+    private var isAppendEmptyContent: Bool = false
     var contentCells: [TableCell] = []
     let addCell = TableCell(title: Constant.addTitle, type: .add)
 
@@ -55,6 +56,20 @@ struct BuyListTableViewResource {
 
     mutating func appendContent(_ item: ItemEntity) {
         contentCells.append(TableCell(title: item.name, type: .content))
+    }
+
+    mutating func appendEmptyContent() {
+        if !isAppendEmptyContent {
+            contentCells.append(TableCell(type: .content))
+            isAppendEmptyContent = true
+        }
+    }
+
+    mutating func setEmptyContentName(_ name: String) {
+        if isAppendEmptyContent {
+            contentCells[contentCells.count].title = name
+            isAppendEmptyContent = false
+        }
     }
 
     mutating func removeContent(_ index: Int) {
