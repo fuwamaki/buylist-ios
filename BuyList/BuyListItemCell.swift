@@ -11,17 +11,17 @@ import UIKit
 class BuyListItemCell: UITableViewCell {
 
     private var eventHandler: BuyListItemCellEventHandler
-    private var textFieldLabel: UITextField
+    private var textFieldNameLabel: UITextField
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        textFieldLabel = UITextField(frame: CGRect.null)
+        textFieldNameLabel = UITextField(frame: CGRect.null)
         eventHandler = BuyListPresenter(BuyListVC())
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setupViews()
     }
 
     required init?(coder aDecoder: NSCoder) {
-        textFieldLabel = UITextField(frame: CGRect.null)
+        textFieldNameLabel = UITextField(frame: CGRect.null)
         eventHandler = BuyListPresenter(BuyListVC())
         super.init(coder: aDecoder)
         setupViews()
@@ -29,21 +29,21 @@ class BuyListItemCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        textFieldLabel.frame = CGRect(x: CGFloat.leftMargin, y: 0, width: bounds.size.width - CGFloat.leftMargin, height: bounds.size.height)
+        textFieldNameLabel.frame = CGRect(x: CGFloat.leftMargin, y: 0, width: bounds.size.width - CGFloat.leftMargin, height: bounds.size.height)
     }
 
     // TODO: countのlabel追加
     private func setupViews() {
-        textFieldLabel.font = UIFont.bodyText
-        textFieldLabel.textColor = UIColor.black
-        textFieldLabel.delegate = self
-        textFieldLabel.contentVerticalAlignment = .center
-        addSubview(textFieldLabel)
+        textFieldNameLabel.font = UIFont.bodyText
+        textFieldNameLabel.textColor = UIColor.black
+        textFieldNameLabel.delegate = self
+        textFieldNameLabel.contentVerticalAlignment = .center
+        addSubview(textFieldNameLabel)
         selectedBackgroundView?.backgroundColor = UIColor.white
     }
 
     func setItemTitle(_ title: String?) {
-        textFieldLabel.text = title ?? String.phi
+        textFieldNameLabel.text = title ?? String.phi
     }
 }
 
