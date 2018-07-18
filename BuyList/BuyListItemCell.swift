@@ -48,10 +48,11 @@ class BuyListItemCell: UITableViewCell {
         textFieldCountLabel.contentVerticalAlignment = .center
         addSubview(textFieldNameLabel)
         addSubview(textFieldCountLabel)
+        selectionStyle = .none
         selectedBackgroundView?.backgroundColor = UIColor.white
     }
 
-    func setItemText( name: String?, count: Int?) {
+    public func setItemText( name: String?, count: Int?) {
         guard let name = name, let count = count else {
             textFieldNameLabel.text = String.phi
             textFieldCountLabel.text = String.phi
@@ -70,6 +71,7 @@ extension BuyListItemCell: UITextFieldDelegate {
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
+        // TODO: 編集時にもsaveされてしまっているので要修正
         eventHandler.saveAddItem(textField.text)
     }
 }

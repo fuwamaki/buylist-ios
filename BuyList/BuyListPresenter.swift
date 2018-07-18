@@ -122,7 +122,6 @@ extension BuyListPresenter: UITableViewDelegate {
         if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
             switch cell.type {
             case .item:
-                // TODO: TextFieldの編集になるように
                 Debug.log("item selected")
             case .add:
                 insertItemCell()
