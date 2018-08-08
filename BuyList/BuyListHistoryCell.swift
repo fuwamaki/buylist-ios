@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class BuyListHistoryTableCell: UITableViewCell {
+final class BuyListHistoryCell: UITableViewCell {
 
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemCountLabel: UILabel!
@@ -47,4 +47,4 @@ final class BuyListHistoryTableCell: UITableViewCell {
     }
 }
 
-extension BuyListHistoryTableCell: NibLoadable {}
+extension BuyListHistoryCell: NibLoadable {}

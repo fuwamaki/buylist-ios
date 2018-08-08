@@ -42,7 +42,7 @@ extension BuyListHistoryPresenter: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueCellForIndexPath(indexPath) as BuyListHistoryTableCell
+        let cell = tableView.dequeueCellForIndexPath(indexPath) as BuyListHistoryCell
         // mock
         cell.setLabel(mockItemEntity.mockItems[indexPath.row])
         return cell
