@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="G2i-rD-n7S" customClass="BuyListItemCell" customModule="BuyList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G2i-rD-n7S" id="PUZ-YS-eJn">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Qf-h2-Hic">
+                        <rect key="frame" x="16" y="4" width="343" height="35.5"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item's Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ub-Gm-yvf">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="35.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1コ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Zy-Q8-8ze">
+                                <rect key="frame" x="301" y="0.0" width="42" height="35.5"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4Qf-h2-Hic" firstAttribute="leading" secondItem="PUZ-YS-eJn" secondAttribute="leading" constant="16" id="9Ar-pa-ZdJ"/>
+                    <constraint firstAttribute="bottom" secondItem="4Qf-h2-Hic" secondAttribute="bottom" constant="4" id="Fht-GT-TBw"/>
+                    <constraint firstItem="4Qf-h2-Hic" firstAttribute="centerY" secondItem="PUZ-YS-eJn" secondAttribute="centerY" id="P4T-kq-1pI"/>
+                    <constraint firstAttribute="trailing" secondItem="4Qf-h2-Hic" secondAttribute="trailing" constant="16" id="Y04-ZG-NLI"/>
+                    <constraint firstItem="4Qf-h2-Hic" firstAttribute="top" secondItem="PUZ-YS-eJn" secondAttribute="top" constant="4" id="cs9-8p-KgG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="countTextField" destination="9Zy-Q8-8ze" id="f8u-6n-ZXf"/>
+                <outlet property="nameTextField" destination="6ub-Gm-yvf" id="4Jg-Wz-Yyl"/>
+            </connections>
+            <point key="canvasLocation" x="454" y="79"/>
+        </tableViewCell>
+    </objects>
+</document>

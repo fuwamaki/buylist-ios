@@ -35,6 +35,8 @@
 		7B7EFF0A20F9AF8D00E9F330 /* MockItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */; };
 		7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */; };
 		7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */; };
+		9CBD726E21E39BB200A45DBC /* BuyListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */; };
+		9CBD727021E39BC000A45DBC /* BuyListAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD726F21E39BC000A45DBC /* BuyListAddCell.xib */; };
 		A24C351784CCB446C29EC380 /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
 		E10F35C21F46DE8A0040728A /* BuyListHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */; };
 		E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C61F46E3E30040728A /* BuyListPresenter.swift */; };
@@ -95,6 +97,8 @@
 		7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItemEntity.swift; sourceTree = "<group>"; };
 		7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListHistoryTableCell.xib; sourceTree = "<group>"; };
 		7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Addition.swift"; sourceTree = "<group>"; };
+		9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListItemCell.xib; sourceTree = "<group>"; };
+		9CBD726F21E39BC000A45DBC /* BuyListAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListAddCell.xib; sourceTree = "<group>"; };
 		A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77765413B76B23CC34D948D /* Pods-BuyList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.debug.xcconfig"; sourceTree = "<group>"; };
 		E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListHistoryVC.swift; sourceTree = "<group>"; };
@@ -141,19 +145,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2060529E202D75D2007F7219 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				E10F35CA1F46E4020040728A /* SettingPresenter.swift */,
-				206052A3202D7901007F7219 /* SettingTableViewResource.swift */,
-			);
-			name = Setting;
-			sourceTree = "<group>";
-		};
 		206052A5202D7EEA007F7219 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
 				E1B826451EE1596D008AEE9D /* SettingVC.swift */,
+				E10F35CA1F46E4020040728A /* SettingPresenter.swift */,
+				206052A3202D7901007F7219 /* SettingTableViewResource.swift */,
+				E10F35D11F46E45C0040728A /* SettingInteractor.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -175,14 +173,12 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
-		206052AD202DA486007F7219 /* UserInterface */ = {
+		206052AD202DA486007F7219 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E1B826471EE1596D008AEE9D /* Main.storyboard */,
 				E1B8264C1EE1596D008AEE9D /* LaunchScreen.storyboard */,
-				7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */,
 			);
-			name = UserInterface;
+			name = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		206052AE202DA4C8007F7219 /* AppDelegate */ = {
@@ -228,17 +224,10 @@
 			children = (
 				E1B826431EE1596D008AEE9D /* BuyListVC.swift */,
 				208D41FE2031B161004618CA /* BuyListContainerVC.swift */,
-				208D41F420305CB5004618CA /* BuyListItemCell.swift */,
-				208D42022031EBBB004618CA /* BuyListAddCell.swift */,
-			);
-			name = BuyList;
-			sourceTree = "<group>";
-		};
-		208D41F320305C91004618CA /* BuyList */ = {
-			isa = PBXGroup;
-			children = (
 				E10F35C61F46E3E30040728A /* BuyListPresenter.swift */,
 				208D41FA20318B98004618CA /* BuyListTableViewResource.swift */,
+				E10F35CC1F46E4200040728A /* BuyListInteractor.swift */,
+				9CBD726B21E3916800A45DBC /* Views */,
 			);
 			name = BuyList;
 			sourceTree = "<group>";
@@ -246,6 +235,7 @@
 		20B4407220F65B920078D371 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E1B826471EE1596D008AEE9D /* Main.storyboard */,
 				20EC136820F509C7001E40A6 /* MainTabBarController.swift */,
 			);
 			name = Main;
@@ -255,41 +245,11 @@
 			isa = PBXGroup;
 			children = (
 				E10F35C11F46DE8A0040728A /* BuyListHistoryVC.swift */,
-				7B10E8B020F6146A00D416CD /* BuyListHistoryCell.swift */,
-			);
-			name = BuyListHistory;
-			sourceTree = "<group>";
-		};
-		7B10E8AA20F60C4200D416CD /* BuyListHistory */ = {
-			isa = PBXGroup;
-			children = (
 				E10F35C81F46E3F50040728A /* BuyListHistoryPresenter.swift */,
-			);
-			name = BuyListHistory;
-			sourceTree = "<group>";
-		};
-		7B10E8AB20F60C6000D416CD /* BuyList */ = {
-			isa = PBXGroup;
-			children = (
-				E10F35CC1F46E4200040728A /* BuyListInteractor.swift */,
-			);
-			name = BuyList;
-			sourceTree = "<group>";
-		};
-		7B10E8AC20F60C6500D416CD /* BuyListHistory */ = {
-			isa = PBXGroup;
-			children = (
 				E10F35CE1F46E4320040728A /* BuyListHistoryInteractor.swift */,
+				9CBD726C21E3917E00A45DBC /* Views */,
 			);
 			name = BuyListHistory;
-			sourceTree = "<group>";
-		};
-		7B10E8AD20F60C6D00D416CD /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				E10F35D11F46E45C0040728A /* SettingInteractor.swift */,
-			);
-			name = Setting;
 			sourceTree = "<group>";
 		};
 		7B7EFF0820F9AF7D00E9F330 /* Mock */ = {
@@ -298,6 +258,37 @@
 				7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */,
 			);
 			name = Mock;
+			sourceTree = "<group>";
+		};
+		9CBD726B21E3916800A45DBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */,
+				9CBD726F21E39BC000A45DBC /* BuyListAddCell.xib */,
+				208D41F420305CB5004618CA /* BuyListItemCell.swift */,
+				208D42022031EBBB004618CA /* BuyListAddCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9CBD726C21E3917E00A45DBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */,
+				7B10E8B020F6146A00D416CD /* BuyListHistoryCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9CBD727121E39E3400A45DBC /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				20B4407220F65B920078D371 /* Main */,
+				208D41F220305C7C004618CA /* BuyList */,
+				20EC136720F50954001E40A6 /* BuyListHistory */,
+				206052A5202D7EEA007F7219 /* Setting */,
+			);
+			name = Files;
 			sourceTree = "<group>";
 		};
 		C09DB7C2E9BD0C87D97472A7 /* Pods */ = {
@@ -309,37 +300,6 @@
 				061618CD687D505957671086 /* Pods-BuyListTests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		E10F35C31F46E3970040728A /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				20B4407220F65B920078D371 /* Main */,
-				208D41F220305C7C004618CA /* BuyList */,
-				20EC136720F50954001E40A6 /* BuyListHistory */,
-				206052A5202D7EEA007F7219 /* Setting */,
-			);
-			name = VC;
-			sourceTree = "<group>";
-		};
-		E10F35C41F46E39E0040728A /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				208D41F320305C91004618CA /* BuyList */,
-				7B10E8AA20F60C4200D416CD /* BuyListHistory */,
-				2060529E202D75D2007F7219 /* Setting */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		E10F35C51F46E3A60040728A /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				7B10E8AB20F60C6000D416CD /* BuyList */,
-				7B10E8AC20F60C6500D416CD /* BuyListHistory */,
-				7B10E8AD20F60C6D00D416CD /* Setting */,
-			);
-			name = Interactor;
 			sourceTree = "<group>";
 		};
 		E18ABDB51F20BB170012416A /* Frameworks */ = {
@@ -381,10 +341,8 @@
 				E1B8264F1EE1596D008AEE9D /* Info.plist */,
 				E1B8264A1EE1596D008AEE9D /* Assets.xcassets */,
 				206052AE202DA4C8007F7219 /* AppDelegate */,
-				206052AD202DA486007F7219 /* UserInterface */,
-				E10F35C31F46E3970040728A /* VC */,
-				E10F35C41F46E39E0040728A /* Presenter */,
-				E10F35C51F46E3A60040728A /* Interactor */,
+				206052AD202DA486007F7219 /* LaunchScreen */,
+				9CBD727121E39E3400A45DBC /* Files */,
 				206052A8202D7F67007F7219 /* Extension */,
 				206052AF202DA4EF007F7219 /* DataStore */,
 				206052B0202DA4FF007F7219 /* Entity */,
@@ -493,10 +451,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1B8264E1EE1596D008AEE9D /* LaunchScreen.storyboard in Resources */,
+				9CBD726E21E39BB200A45DBC /* BuyListItemCell.xib in Resources */,
 				2096998F203516950066AEC4 /* sample.json in Resources */,
 				7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */,
 				E1B8264B1EE1596D008AEE9D /* Assets.xcassets in Resources */,
 				E1B826491EE1596D008AEE9D /* Main.storyboard in Resources */,
+				9CBD727021E39BC000A45DBC /* BuyListAddCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
