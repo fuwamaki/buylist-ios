@@ -8,28 +8,28 @@
 
 import UIKit
 
+enum TabBarNumber: Int {
+    case buyList = 0
+    case buyListHistory = 1
+    case setting = 2
+}
+
+struct TabBarItem {
+    let title: String
+    let tabNumber: TabBarNumber
+    
+    init(title: String, tabNumber: TabBarNumber) {
+        self.title = title
+        self.tabNumber = tabNumber
+    }
+}
+
 class MainTabBarController: UITabBarController {
 
-    enum TabNumber: Int {
-        case buylist = 0
-        case history = 1
-        case setting = 2
-    }
-
-    struct TabItem {
-        let title: String
-        let tabNumber: TabNumber
-
-        init(title: String, tabNumber: TabNumber) {
-            self.title = title
-            self.tabNumber = tabNumber
-        }
-    }
-
-    var tabItems: [TabItem] {
-        return [TabItem(title: "買い物リスト", tabNumber: .buylist),
-                TabItem(title: "買い物履歴", tabNumber: .history),
-                TabItem(title: "設定", tabNumber: .setting)]
+    var tabItems: [TabBarItem] {
+        return [TabBarItem(title: "買い物リスト", tabNumber: .buyList),
+                TabBarItem(title: "買い物履歴", tabNumber: .buyListHistory),
+                TabBarItem(title: "設定", tabNumber: .setting)]
     }
 
     override func viewDidLoad() {
