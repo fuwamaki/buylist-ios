@@ -15,36 +15,34 @@ enum BuyListTableCellType {
 }
 
 protocol BuyListEventHandler {
+    func saveAddItem(_ name: String?)
+    var numberOfSections: Int { get }
+    func numberOfRowsInSection(section: Int) -> Int
+    func titleForHeaderInSection(section: Int) -> String?
+    func cellForRowAt(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell
+    func editingStyleForRowAt(indexPath: IndexPath) -> UITableViewCell.EditingStyle
+    func commitEditingStyle(editingStyle: UITableViewCell.EditingStyle, indexPath: IndexPath)
     func setBuyListItem()
 }
 
-protocol BuyListItemCellEventHandler {
-    func saveAddItem(_ name: String?)
+protocol BuyListDelegate {
 }
 
-protocol BuyListUserInterface: class {
-    func reloadTableView()
-}
-
-class BuyListPresenter: NSObject {
+class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
 
     var buyListTableViewResource = BuyListTableViewResource()
     var interactable: BuyListInteractable
     var userInterface: BuyListUserInterface
 
-    init(_ userInterface: BuyListUserInterface) {
-        let interactor = BuyListInteractor()
+    init(userInterface: BuyListUserInterface, interactable: BuyListInteractable) {
         self.userInterface = userInterface
-        self.interactable = interactor
+        self.interactable = interactable
     }
 
     private func insertItemCell() {
         buyListTableViewResource.appendEmptyItemCell()
         userInterface.reloadTableView()
     }
-}
-
-extension BuyListPresenter: BuyListEventHandler {
 
     func setBuyListItem() {
         let items = interactable.getItems()
@@ -53,72 +51,62 @@ extension BuyListPresenter: BuyListEventHandler {
         }
         userInterface.reloadTableView()
     }
-}
 
-extension BuyListPresenter: BuyListItemCellEventHandler {
-
+    // MARK: BuyListEventHandler
     func saveAddItem(_ name: String?) {
         if let name = name {
             interactable.saveItem(name: name, count: 1)
             buyListTableViewResource.setEmptyItemName(name)
         }
     }
-}
 
-extension BuyListPresenter: UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
+    var numberOfSections: Int {
         return buyListTableViewResource.tableSectionCount
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfRowsInSection(section: Int) -> Int {
         return buyListTableViewResource[section]?.cells.count ?? 0
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func titleForHeaderInSection(section: Int) -> String? {
         return buyListTableViewResource[section]?.title
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
-            switch cell.type {
-            case .item:
-                let buyListItemCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListItemCell
-                buyListItemCell.setItemText(name: cell.name, count: cell.count)
-                return buyListItemCell
-            case .add:
-                let buyListAddCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListAddCell
-                return buyListAddCell
-            }
-        } else {
+    func cellForRowAt(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] else {
             fatalError("Failed to dequeue cell.")
         }
-    }
-
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
-            switch cell.type {
-            case .item:
-                return .delete
-            case .add:
-                return .insert
-            }
+        switch cell.type {
+        case .item:
+            let buyListItemCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListItemCell
+            buyListItemCell.setItemText(name: cell.name, count: cell.count)
+            return buyListItemCell
+        case .add:
+            let buyListAddCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListAddCell
+            return buyListAddCell
         }
-        return .none
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func editingStyleForRowAt(indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        guard let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] else {
+            return .none
+        }
+        switch cell.type {
+        case .item:
+            return .delete
+        case .add:
+            return .insert
+        }
+    }
+
+    func commitEditingStyle(editingStyle: UITableViewCell.EditingStyle, indexPath: IndexPath) {
         if editingStyle == .delete {
             buyListTableViewResource.removeItemCell(indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            userInterface.deleteTableViewRow(indexPath: indexPath)
         }
     }
-}
 
-extension BuyListPresenter: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    func didSelectRowAt(indexPath: IndexPath) {
         if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
             switch cell.type {
             case .item:

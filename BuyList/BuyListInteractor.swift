@@ -16,7 +16,7 @@ protocol BuyListInteractable {
 
 class BuyListInteractor: BuyListInteractable {
 
-    private let itemRealm = ItemRealm()
+    var itemRealm = ItemRealm()
 
     private struct Constant {
         static let none = "なし"
