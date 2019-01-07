@@ -14,7 +14,7 @@ class BuyListItemCell: UITableViewCell {
     private var textFieldNameLabel: UITextField
     private var textFieldCountLabel: UITextField
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         textFieldNameLabel = UITextField(frame: CGRect.null)
         textFieldCountLabel = UITextField(frame: CGRect.null)
         eventHandler = BuyListPresenter(BuyListVC())

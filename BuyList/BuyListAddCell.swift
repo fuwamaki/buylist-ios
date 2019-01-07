@@ -14,7 +14,7 @@ class BuyListAddCell: UITableViewCell {
         static let title = "項目を追加"
     }
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setupViews()
     }
