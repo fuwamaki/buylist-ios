@@ -25,4 +25,8 @@ extension CGFloat {
     static var bottomMargin: CGFloat {
         return 8.0
     }
+
+    static var shortTextWidth: CGFloat {
+        return 24.0
+    }
 }

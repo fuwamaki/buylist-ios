@@ -13,6 +13,7 @@
 		200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */; };
 		200BEF7420B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */; };
 		200BEF7620B9AD23003F0A99 /* UIView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */; };
+		20138C6B2100E99600CA2F59 /* BuyIdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20138C6A2100E99600CA2F59 /* BuyIdManager.swift */; };
 		206052A4202D7901007F7219 /* SettingTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A3202D7901007F7219 /* SettingTableViewResource.swift */; };
 		206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A9202D7F98007F7219 /* NSObject+Addition.swift */; };
 		206052B3202DABCE007F7219 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052B2202DABCE007F7219 /* AppInfo.swift */; };
@@ -69,6 +70,7 @@
 		200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Addition.swift"; sourceTree = "<group>"; };
 		200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Addition.swift"; sourceTree = "<group>"; };
 		200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Addition.swift"; sourceTree = "<group>"; };
+		20138C6A2100E99600CA2F59 /* BuyIdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyIdManager.swift; sourceTree = "<group>"; };
 		206052A3202D7901007F7219 /* SettingTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewResource.swift; sourceTree = "<group>"; };
 		206052A9202D7F98007F7219 /* NSObject+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Addition.swift"; sourceTree = "<group>"; };
 		206052B2202DABCE007F7219 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				E18ABDBA1F20C34A0012416A /* ItemRealm.swift */,
 				208D42062032CB63004618CA /* LoadJsonFile.swift */,
+				20138C6A2100E99600CA2F59 /* BuyIdManager.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */,
 				200BEF6E20B99831003F0A99 /* UITableView+Addition.swift in Sources */,
 				E10F35D21F46E45C0040728A /* SettingInteractor.swift in Sources */,
+				20138C6B2100E99600CA2F59 /* BuyIdManager.swift in Sources */,
 				E1B826441EE1596D008AEE9D /* BuyListVC.swift in Sources */,
 				200BEF7420B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift in Sources */,
 				208D41FF2031B161004618CA /* BuyListContainerVC.swift in Sources */,

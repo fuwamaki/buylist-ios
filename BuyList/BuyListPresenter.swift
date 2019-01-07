@@ -84,7 +84,7 @@ extension BuyListPresenter: UITableViewDataSource {
             switch cell.type {
             case .item:
                 let buyListItemCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListItemCell
-                buyListItemCell.setItemTitle(cell.name)
+                buyListItemCell.setItemText(name: cell.name, count: cell.count)
                 return buyListItemCell
             case .add:
                 let buyListAddCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListAddCell
@@ -122,7 +122,6 @@ extension BuyListPresenter: UITableViewDelegate {
         if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
             switch cell.type {
             case .item:
-                // TODO: TextFieldの編集になるように
                 Debug.log("item selected")
             case .add:
                 insertItemCell()
