@@ -1,5 +1,5 @@
 //
-//  BuyListContainerVC.swift
+//  BuyListContainerViewController.swift
 //  BuyList
 //
 //  Created by 牧宥作 on 2018/02/12.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BuyListContainerVC: UIViewController {
+class BuyListContainerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

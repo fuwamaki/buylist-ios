@@ -1,5 +1,5 @@
 //
-//  SettingVC.swift
+//  SettingViewController.swift
 //  BuyList
 //
 //  Created by 牧 宥作 on 2017/06/02.
@@ -9,7 +9,7 @@
 import UIKit
 
 // MEMO: Static Cellsは、親ViewがUITableViewControllerじゃないといけない。
-class SettingVC: UITableViewController {
+class SettingViewController: UITableViewController {
 
     private var eventHandler: SettingEventHandler?
     @IBOutlet weak var versionText: UILabel!
@@ -27,7 +27,7 @@ class SettingVC: UITableViewController {
     }
 }
 
-extension SettingVC: SettingUserInterface {
+extension SettingViewController: SettingUserInterface {
 
     func setVersionText(_ version: String) {
         versionText.text = version

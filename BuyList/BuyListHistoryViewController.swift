@@ -1,5 +1,5 @@
 //
-//  BuyListHistoryVC.swift
+//  BuyListHistoryViewController.swift
 //  BuyList
 //
 //  Created by 牧 宥作 on 2017/08/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BuyListHistoryVC: UIViewController {
+class BuyListHistoryViewController: UIViewController {
 
     private var eventHandler: BuyListHistoryEventHandler?
     @IBOutlet weak var tableView: UITableView!
@@ -28,5 +28,5 @@ class BuyListHistoryVC: UIViewController {
     }
 }
 
-extension BuyListHistoryVC: BuyListHistoryUserInterface {
+extension BuyListHistoryViewController: BuyListHistoryUserInterface {
 }

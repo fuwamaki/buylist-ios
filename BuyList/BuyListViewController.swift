@@ -1,5 +1,5 @@
 //
-//  BuyListVC.swift
+//  BuyListViewController.swift
 //  BuyList
 //
 //  Created by 牧 宥作 on 2017/06/02.
@@ -13,7 +13,7 @@ protocol BuyListUserInterface: class, UITextFieldDelegate {
     func deleteTableViewRow(indexPath: IndexPath)
 }
 
-class BuyListVC: UIViewController, BuyListUserInterface {
+class BuyListViewController: UIViewController, BuyListUserInterface {
 
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -58,7 +58,7 @@ class BuyListVC: UIViewController, BuyListUserInterface {
     }
 }
 
-extension BuyListVC: UITableViewDataSource {
+extension BuyListViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return eventHandler.numberOfSections
@@ -85,13 +85,13 @@ extension BuyListVC: UITableViewDataSource {
     }
 }
 
-extension BuyListVC: UITableViewDelegate {
+extension BuyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-extension BuyListVC {
+extension BuyListViewController {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
