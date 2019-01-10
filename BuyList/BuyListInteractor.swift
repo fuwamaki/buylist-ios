@@ -9,7 +9,7 @@
 import Foundation
 
 protocol BuyListInteractable {
-    func getItems() -> [ItemEntity]
+    func getItems()
     func saveItem(name: String, count: Int)
     func getBuyListMockData() -> [ItemEntity]
 }
@@ -17,15 +17,65 @@ protocol BuyListInteractable {
 class BuyListInteractor: BuyListInteractable {
 
     var itemRealm = ItemRealm()
+    private var items: [ItemEntity] = []
 
-    func getItems() -> [ItemEntity] {
-        return itemRealm.realmAction(action: .find) ?? []
+    func getItems() {
+        itemRealm.findItems { [weak self] result in
+            switch result {
+            case .success(let items):
+                print("success")
+                self?.items = items
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     func saveItem(name: String, count: Int) {
-        // TODO: 警告消せるようにクロージャの扱いを修正する
-        let itemRealmEntity = ItemRealmEntity(value: ["buyId": "0002", "itemId": "0002", "name": name, "count": count, "createTime": Date()])
-        let _ = itemRealm.realmAction(action: .save, item: itemRealmEntity)
+        let item = ItemEntity(itemId: getDistinctItemId(), name: name, count: count, createTime: Date())
+        itemRealm.saveItem(item: item) { result in
+            switch result {
+            // swiftlint:disable empty_enum_arguments
+            case .success(_):
+                print("success")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
+    func deleteItem(item: ItemEntity) {
+        itemRealm.deleteItem(item: item) { result in
+            switch result {
+            // swiftlint:disable empty_enum_arguments
+            case .success(_):
+                print("success")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
+    func updateItem(item: ItemEntity) {
+        itemRealm.updateItem(item: item) { result in
+            switch result {
+            // swiftlint:disable empty_enum_arguments
+            case .success(_):
+                print("success")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
+    // 0からカウントしていて空いていた重複しないid値を返す
+    func getDistinctItemId() -> Int {
+        let itemIds = items.compactMap { return $0.itemId }
+        var itemId = 0
+        repeat {
+            itemId += 1
+        } while(itemIds.contains(itemId))
+        return itemId
     }
 
     // mock

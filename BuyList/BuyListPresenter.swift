@@ -45,10 +45,10 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
     }
 
     func setBuyListItem() {
-        let items = interactable.getItems()
-        for item in items {
-            buyListTableViewResource.appendItemCell(item)
-        }
+//        let items = interactable.getItems()
+//        for item in items {
+//            buyListTableViewResource.appendItemCell(item)
+//        }
         userInterface.reloadTableView()
     }
 

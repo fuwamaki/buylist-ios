@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import Result
 
 enum RealmAction {
     case find, save, delete, update
@@ -15,37 +16,65 @@ enum RealmAction {
 
 final class ItemRealm {
 
-    func realmAction(action: RealmAction, item: ItemRealmEntity? = nil) -> [ItemEntity]? {
-        let realm = try! Realm()
-        switch action {
-        case .find:
+    func convertItemEntity(item: ItemEntity) -> ItemRealmEntity {
+        let itemRealmEntity = ItemRealmEntity()
+        itemRealmEntity.itemId = item.itemId
+        itemRealmEntity.name = item.name
+        itemRealmEntity.count = item.count
+        itemRealmEntity.createTime = item.createTime
+        return itemRealmEntity
+    }
+
+    func findItems(completion: @escaping (Result<[ItemEntity], NSError>) -> Void) {
+        do {
+            let realm = try Realm()
             var items: [ItemEntity] = []
             let objects = realm.objects(ItemRealmEntity.self)
             objects.forEach {
                 items.append(ItemEntity(itemId: $0.itemId, name: $0.name, count: $0.count, createTime: $0.createTime))
             }
-            return items
-        case .save:
-            try! realm.write {
-                if let item = item {
-                    realm.add(item)
-                }
+            completion(.success(items))
+        } catch let error as NSError {
+            completion(.failure(error))
+        }
+    }
+
+    func saveItem(item: ItemEntity, completion: @escaping (Result<Any?, NSError>) -> Void) {
+        let item = convertItemEntity(item: item)
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(item)
+                completion(.success(nil))
             }
-            return nil
-        case .delete:
-            try! realm.write {
-                if let item = item {
-                    realm.delete(item)
-                }
+        } catch let error as NSError {
+            completion(.failure(error))
+        }
+    }
+
+    func deleteItem(item: ItemEntity, completion: @escaping (Result<Any?, NSError>) -> Void) {
+        let item = convertItemEntity(item: item)
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.delete(item)
+                completion(.success(nil))
             }
-            return nil
-        case .update:
-            try! realm.write {
-                if let item = item {
-                    realm.add(item, update: true)
-                }
+        } catch let error as NSError {
+            completion(.failure(error))
+        }
+    }
+
+    func updateItem(item: ItemEntity, completion: @escaping (Result<Any?, NSError>) -> Void) {
+        let item = convertItemEntity(item: item)
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(item, update: true)
+                completion(.success(nil))
             }
-            return nil
+        } catch let error as NSError {
+            completion(.failure(error))
         }
     }
 }
