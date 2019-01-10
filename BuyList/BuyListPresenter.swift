@@ -40,7 +40,7 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
     }
 
     private func insertItemCell() {
-        buyListTableViewResource.appendEmptyItemCell()
+        buyListTableViewResource.appendEditingItemCell()
         userInterface.reloadTableView()
     }
 
@@ -56,7 +56,7 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
     func saveAddItem(_ name: String?) {
         if let name = name {
             interactable.saveItem(name: name, count: 1)
-            buyListTableViewResource.setEmptyItemName(name)
+            buyListTableViewResource.setEditingItemName(name)
         }
     }
 

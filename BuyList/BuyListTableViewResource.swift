@@ -8,11 +8,9 @@
 
 import Foundation
 
+// TODO: 面倒くさいから消す
 struct BuyListTableViewResource {
 
-    private struct Constant {
-        static let addTitle = "項目を追加"
-    }
     struct TableSection {
         let title: String?
         let cells: [TableCell]
@@ -35,13 +33,15 @@ struct BuyListTableViewResource {
         }
     }
 
-    private var isAppendEmptyItemCell: Bool = false
-    var itemCells: [TableCell] = []
-    let addCell = TableCell(name: Constant.addTitle, type: .add)
+    // 編集中のItemがあるかどうかのフラグ
+    private var isEditingItemCell: Bool = false
+
+    private var itemCells: [TableCell] = []
+    private let addCells = [TableCell(name: "項目を追加", type: .add)]
 
     private var tableSections: [TableSection] {
         let itemSection = TableSection(cells: itemCells)
-        let addSection = TableSection(cells: [addCell])
+        let addSection = TableSection(cells: addCells)
         return [itemSection, addSection]
     }
 
@@ -60,17 +60,17 @@ struct BuyListTableViewResource {
         itemCells.append(TableCell(name: item.name, type: .item, count: item.count))
     }
 
-    mutating func appendEmptyItemCell() {
-        if !isAppendEmptyItemCell {
+    mutating func appendEditingItemCell() {
+        if !isEditingItemCell {
             itemCells.append(TableCell(type: .item))
-            isAppendEmptyItemCell = true
+            isEditingItemCell = true
         }
     }
 
-    mutating func setEmptyItemName(_ name: String) {
-        if isAppendEmptyItemCell {
+    mutating func setEditingItemName(_ name: String) {
+        if isEditingItemCell {
             itemCells[itemCells.count].name = name
-            isAppendEmptyItemCell = false
+            isEditingItemCell = false
         }
     }
 
