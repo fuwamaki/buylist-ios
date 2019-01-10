@@ -18,10 +18,6 @@ class BuyListInteractor: BuyListInteractable {
 
     var itemRealm = ItemRealm()
 
-    private struct Constant {
-        static let none = "なし"
-    }
-
     func getItems() -> [ItemEntity] {
         return itemRealm.realmAction(action: .find) ?? []
     }
@@ -38,7 +34,7 @@ class BuyListInteractor: BuyListInteractable {
         var items: [ItemEntity] = []
         if let jsonDate = loadJsonFile.getJson() {
             jsonDate.rows.forEach {
-                items.append(ItemEntity(buyId: "1", itemId: $0.itemId, name: $0.name, count: $0.count, createTime: Date()))
+                items.append(ItemEntity(itemId: $0.itemId, name: $0.name, count: $0.count, createTime: Date()))
             }
         }
         return items
