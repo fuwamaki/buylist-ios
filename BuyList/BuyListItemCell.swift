@@ -13,18 +13,19 @@ class BuyListItemCell: UITableViewCell {
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var countTextField: UITextField!
 
-//    init(userInterface: BuyListUserInterface) {
-//        super.init()
-//        nameTextField.delegate = userInterface
-//        countTextField.delegate = userInterface
-//    }
+    var userInterface: BuyListUserInterface? {
+        didSet {
+            nameTextField.delegate = userInterface
+            countTextField.delegate = userInterface
+        }
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        super.init(style: .default, reuseIdentifier: reuseIdentifier)
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
 
     override func layoutSubviews() {
