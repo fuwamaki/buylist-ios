@@ -35,6 +35,7 @@
 		7B7EFF0A20F9AF8D00E9F330 /* MockItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */; };
 		7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */; };
 		7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */; };
+		9CB5031D21E787BB005E8DAD /* ItemRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5031C21E787BB005E8DAD /* ItemRealmEntity.swift */; };
 		9CBD726E21E39BB200A45DBC /* BuyListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */; };
 		9CBD727021E39BC000A45DBC /* BuyListAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD726F21E39BC000A45DBC /* BuyListAddCell.xib */; };
 		A24C351784CCB446C29EC380 /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
@@ -97,6 +98,7 @@
 		7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItemEntity.swift; sourceTree = "<group>"; };
 		7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListHistoryTableCell.xib; sourceTree = "<group>"; };
 		7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Addition.swift"; sourceTree = "<group>"; };
+		9CB5031C21E787BB005E8DAD /* ItemRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRealmEntity.swift; sourceTree = "<group>"; };
 		9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListItemCell.xib; sourceTree = "<group>"; };
 		9CBD726F21E39BC000A45DBC /* BuyListAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListAddCell.xib; sourceTree = "<group>"; };
 		A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +206,7 @@
 			children = (
 				7B7EFF0820F9AF7D00E9F330 /* Mock */,
 				7B10E8AE20F60DB500D416CD /* ItemEntity.swift */,
+				9CB5031C21E787BB005E8DAD /* ItemRealmEntity.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */,
 				200BEF7020B99867003F0A99 /* NibLoadable.swift in Sources */,
 				E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */,
+				9CB5031D21E787BB005E8DAD /* ItemRealmEntity.swift in Sources */,
 				E10F35CF1F46E4320040728A /* BuyListHistoryInteractor.swift in Sources */,
 				7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */,
 				7B10E8AF20F60DB500D416CD /* ItemEntity.swift in Sources */,

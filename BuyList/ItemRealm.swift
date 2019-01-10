@@ -13,26 +13,16 @@ enum RealmAction {
     case find, save, delete, update
 }
 
-class ItemRealmEntity: Object {
-    @objc dynamic var buyId: String = "0001"
-    @objc dynamic var itemId: String = "0001"
-    @objc dynamic var name: String = String.phi
-    @objc dynamic var count: Int = 0
-    @objc dynamic var createTime: Date = Date()
-    @objc dynamic var checkTime: Date?
-}
-
 final class ItemRealm {
 
     func realmAction(action: RealmAction, item: ItemRealmEntity? = nil) -> [ItemEntity]? {
-
         let realm = try! Realm()
         switch action {
         case .find:
             var items: [ItemEntity] = []
             let objects = realm.objects(ItemRealmEntity.self)
             objects.forEach {
-                items.append(ItemEntity(buyId: $0.buyId, itemId: $0.itemId, name: $0.name, count: $0.count, createTime: $0.createTime))
+                items.append(ItemEntity(itemId: $0.itemId, name: $0.name, count: $0.count, createTime: $0.createTime))
             }
             return items
         case .save:

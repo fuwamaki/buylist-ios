@@ -15,7 +15,7 @@ struct SampleJsonData: Codable {
     var rows: [Rows]
 
     struct Rows: Codable {
-        var itemId: String
+        var itemId: Int
         var name: String
         var count: Int
     }

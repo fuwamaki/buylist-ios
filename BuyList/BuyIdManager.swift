@@ -15,7 +15,9 @@ final class BuyIdManager {
 
     func setBuyIds(_ items: [ItemEntity]) {
         var ids: [Int] = []
-        items.forEach{ if let id = Int($0.buyId) { ids.append(id) } }
+        items.forEach {
+            ids.append($0.itemId)
+        }
         buyIds = ids
     }
 
