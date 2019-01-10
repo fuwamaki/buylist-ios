@@ -8,26 +8,14 @@
 
 import UIKit
 
+// TODO: 消す
 class BuyListAddCell: UITableViewCell {
-
-    fileprivate struct Constant {
-        static let title = "項目を追加"
-    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        setupViews()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupViews()
-    }
-
-    private func setupViews() {
-        selectedBackgroundView?.backgroundColor = UIColor.white
-        textLabel?.font = UIFont.bodyText
-        textLabel?.textColor = UIColor.black
-        textLabel?.text = Constant.title
     }
 }
