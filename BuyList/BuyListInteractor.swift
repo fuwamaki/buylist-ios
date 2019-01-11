@@ -39,9 +39,9 @@ class BuyListInteractor: BuyListInteractable {
         let item = ItemEntity(itemId: getDistinctItemId(), name: name, count: count, createTime: Date())
         itemRealm.saveItem(item: item) { [weak self] result in
             switch result {
-            // swiftlint:disable empty_enum_arguments
-            case .success(_):
-                print("success")
+            case .success(let item):
+                self?.items.append(item)
+                self?.delegate?.reloadData()
             case .failure(let error):
                 self?.delegate?.displayErrorAlert(error.description)
             }
