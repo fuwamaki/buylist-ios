@@ -7,6 +7,7 @@ target 'BuyList' do
   pod 'RealmSwift', '~> 3.7.4'
   pod 'SwiftLint', '~> 0.26.0'
   pod 'Result', '~> 4.1.0'
+  pod 'KRProgressHUD', '~> 3.4.0'
   # Pods for BuyList
 
   target 'BuyListTests' do
