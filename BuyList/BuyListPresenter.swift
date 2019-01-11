@@ -44,7 +44,7 @@ protocol BuyListEventHandler {
     func didSelectRow(indexPath: IndexPath)
     func insertItemCell()
     func setBuyListItems()
-    func saveAddItem(_ name: String?)
+    func saveItem(nameText: String?, countText: String?)
 }
 
 class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
@@ -52,6 +52,7 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
     var buyListTableViewResource = BuyListTableViewResource()
     var interactable: BuyListInteractable
     weak var userInterface: BuyListUserInterface?
+    weak var textFieldUserInterface: BuyListTextFieldInterface?
     var buyListTableCells: [BuyListTableCell] = []
 
     func setBuyListTableCells() {
@@ -91,10 +92,9 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
         interactable.getItems()
     }
 
-    func saveAddItem(_ name: String?) {
-        if let name = name {
-            interactable.saveItem(name: name, count: 1)
-            buyListTableViewResource.setEditingItemName(name)
+    func saveItem(nameText: String?, countText: String?) {
+        if let name = nameText, let countText = countText, let count = Int(countText) {
+            interactable.saveItem(name: name, count: count)
         }
     }
 
@@ -105,6 +105,7 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
     func cellForRow(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         if let cell = buyListTableCells[indexPath.row] as? BuyListItemTableCell {
             let buyListItemCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListItemCell
+            buyListItemCell.userInterface = textFieldUserInterface
             buyListItemCell.setItemText(name: cell.name, count: cell.count)
             return buyListItemCell
         } else if let cell = buyListTableCells[indexPath.row] as? BuyListAddTableCell {

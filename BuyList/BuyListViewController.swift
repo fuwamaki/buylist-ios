@@ -9,7 +9,11 @@
 import UIKit
 import KRProgressHUD
 
-protocol BuyListUserInterface: class, UITextFieldDelegate {
+protocol BuyListTextFieldInterface: UITextFieldDelegate {
+    func touchDoneButton(nameText: String?, countText: String?)
+}
+
+protocol BuyListUserInterface: class {
     func showHud()
     func dismissHud()
     func showAlert(_ alert: UIAlertController)
@@ -45,6 +49,7 @@ class BuyListViewController: UIViewController, BuyListUserInterface {
         let interactor = BuyListInteractor()
         let presenter = BuyListPresenter(userInterface: self, interactable: interactor)
         interactor.delegate = presenter
+        presenter.textFieldUserInterface = self
         eventHandler = presenter
     }
 
@@ -107,7 +112,11 @@ extension BuyListViewController: UITableViewDelegate {
     }
 }
 
-extension BuyListViewController {
+extension BuyListViewController: BuyListTextFieldInterface {
+    func touchDoneButton(nameText: String?, countText: String?) {
+        eventHandler.saveItem(nameText: nameText, countText: countText)
+    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
@@ -115,6 +124,6 @@ extension BuyListViewController {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         // TODO: 編集時にもsaveされてしまっているので要修正
-        eventHandler.saveAddItem(textField.text)
+//        eventHandler.saveAddItem(textField.text)
     }
 }

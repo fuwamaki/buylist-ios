@@ -13,7 +13,7 @@ class BuyListItemCell: UITableViewCell {
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var countTextField: UITextField!
 
-    var userInterface: BuyListUserInterface? {
+    var userInterface: BuyListTextFieldInterface? {
         didSet {
             nameTextField.delegate = userInterface
             countTextField.delegate = userInterface
@@ -28,6 +28,11 @@ class BuyListItemCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupDoneToolBar()
+    }
+
     override func layoutSubviews() {
         super.layoutSubviews()
     }
@@ -37,6 +42,19 @@ class BuyListItemCell: UITableViewCell {
             nameTextField.text = name
             countTextField.text = String(count)
         }
+    }
+
+    func setupDoneToolBar() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let toolBarBtn = UIBarButtonItem(title: "DONE", style: .plain, target: self, action: #selector(touchDoneButton))
+        toolBar.items = [toolBarBtn]
+        nameTextField.inputAccessoryView = toolBar
+        countTextField.inputAccessoryView = toolBar
+    }
+
+    @objc func touchDoneButton() {
+        userInterface?.touchDoneButton(nameText: nameTextField.text, countText: countTextField.text)
     }
 }
 
