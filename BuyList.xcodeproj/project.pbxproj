@@ -24,7 +24,6 @@
 		208D41F520305CB5004618CA /* BuyListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F420305CB5004618CA /* BuyListItemCell.swift */; };
 		208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FA20318B98004618CA /* BuyListTableViewResource.swift */; };
 		208D41FF2031B161004618CA /* BuyListContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FE2031B161004618CA /* BuyListContainerViewController.swift */; };
-		208D42032031EBBB004618CA /* BuyListAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42022031EBBB004618CA /* BuyListAddCell.swift */; };
 		208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42062032CB63004618CA /* LoadJsonFile.swift */; };
 		2096998F203516950066AEC4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2096998E203516940066AEC4 /* sample.json */; };
 		20EC136920F509C7001E40A6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC136820F509C7001E40A6 /* MainTabBarController.swift */; };
@@ -37,7 +36,6 @@
 		7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */; };
 		9CB5031D21E787BB005E8DAD /* ItemRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5031C21E787BB005E8DAD /* ItemRealmEntity.swift */; };
 		9CBD726E21E39BB200A45DBC /* BuyListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */; };
-		9CBD727021E39BC000A45DBC /* BuyListAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD726F21E39BC000A45DBC /* BuyListAddCell.xib */; };
 		A24C351784CCB446C29EC380 /* Pods_BuyList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */; };
 		E10F35C21F46DE8A0040728A /* BuyListHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C11F46DE8A0040728A /* BuyListHistoryViewController.swift */; };
 		E10F35C71F46E3E30040728A /* BuyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10F35C61F46E3E30040728A /* BuyListPresenter.swift */; };
@@ -85,7 +83,6 @@
 		208D41F420305CB5004618CA /* BuyListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListItemCell.swift; sourceTree = "<group>"; };
 		208D41FA20318B98004618CA /* BuyListTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListTableViewResource.swift; sourceTree = "<group>"; };
 		208D41FE2031B161004618CA /* BuyListContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContainerViewController.swift; sourceTree = "<group>"; };
-		208D42022031EBBB004618CA /* BuyListAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListAddCell.swift; sourceTree = "<group>"; };
 		208D42062032CB63004618CA /* LoadJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonFile.swift; sourceTree = "<group>"; };
 		2096998E203516940066AEC4 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		20EC136820F509C7001E40A6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 		7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Addition.swift"; sourceTree = "<group>"; };
 		9CB5031C21E787BB005E8DAD /* ItemRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRealmEntity.swift; sourceTree = "<group>"; };
 		9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListItemCell.xib; sourceTree = "<group>"; };
-		9CBD726F21E39BC000A45DBC /* BuyListAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListAddCell.xib; sourceTree = "<group>"; };
 		A94FD1DB41AC00D427FD76FF /* Pods_BuyListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77765413B76B23CC34D948D /* Pods-BuyList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.debug.xcconfig"; sourceTree = "<group>"; };
 		E10F35C11F46DE8A0040728A /* BuyListHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyListHistoryViewController.swift; sourceTree = "<group>"; };
@@ -267,9 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */,
-				9CBD726F21E39BC000A45DBC /* BuyListAddCell.xib */,
 				208D41F420305CB5004618CA /* BuyListItemCell.swift */,
-				208D42022031EBBB004618CA /* BuyListAddCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -459,7 +453,6 @@
 				7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */,
 				E1B8264B1EE1596D008AEE9D /* Assets.xcassets in Resources */,
 				E1B826491EE1596D008AEE9D /* Main.storyboard in Resources */,
-				9CBD727021E39BC000A45DBC /* BuyListAddCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,7 +572,6 @@
 				208D41FF2031B161004618CA /* BuyListContainerViewController.swift in Sources */,
 				206052A4202D7901007F7219 /* SettingTableViewResource.swift in Sources */,
 				200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */,
-				208D42032031EBBB004618CA /* BuyListAddCell.swift in Sources */,
 				7B7EFF0720F8B5AD00E9F330 /* DeviceManager.swift in Sources */,
 				206052B5202DD16F007F7219 /* HomeScreenQuickAction.swift in Sources */,
 				208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */,
