@@ -39,13 +39,13 @@ final class ItemRealm {
         }
     }
 
-    func saveItem(item: ItemEntity, completion: @escaping (Result<Any?, NSError>) -> Void) {
-        let item = convertItemEntity(item: item)
+    func saveItem(item: ItemEntity, completion: @escaping (Result<ItemEntity, NSError>) -> Void) {
+        let itemRealmEntity = convertItemEntity(item: item)
         do {
             let realm = try Realm()
             try realm.write {
-                realm.add(item)
-                completion(.success(nil))
+                realm.add(itemRealmEntity)
+                completion(.success(item))
             }
         } catch let error as NSError {
             completion(.failure(error))
@@ -53,11 +53,11 @@ final class ItemRealm {
     }
 
     func deleteItem(item: ItemEntity, completion: @escaping (Result<Any?, NSError>) -> Void) {
-        let item = convertItemEntity(item: item)
+        let itemRealmEntity = convertItemEntity(item: item)
         do {
             let realm = try Realm()
             try realm.write {
-                realm.delete(item)
+                realm.delete(itemRealmEntity)
                 completion(.success(nil))
             }
         } catch let error as NSError {
@@ -66,11 +66,11 @@ final class ItemRealm {
     }
 
     func updateItem(item: ItemEntity, completion: @escaping (Result<Any?, NSError>) -> Void) {
-        let item = convertItemEntity(item: item)
+        let itemRealmEntity = convertItemEntity(item: item)
         do {
             let realm = try Realm()
             try realm.write {
-                realm.add(item, update: true)
+                realm.add(itemRealmEntity, update: true)
                 completion(.success(nil))
             }
         } catch let error as NSError {
