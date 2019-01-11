@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 protocol BuyListUserInterface: class, UITextFieldDelegate {
+    func showHud()
+    func dismissHud()
+    func showAlert(_ alert: UIAlertController)
     func reloadTableView()
     func deleteTableViewRow(indexPath: IndexPath)
 }
@@ -20,7 +24,7 @@ class BuyListViewController: UIViewController, BuyListUserInterface {
             tableView.delegate = self
             tableView.dataSource = self
             tableView.registerForCell(BuyListItemCell.self)
-            tableView.registerForCell(BuyListAddCell.self)
+            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "buyListAddTableCell")
         }
     }
 
@@ -30,7 +34,7 @@ class BuyListViewController: UIViewController, BuyListUserInterface {
         super.viewDidLoad()
         setupViper()
         setupViews()
-        eventHandler.setBuyListItem()
+        eventHandler.setBuyListItems()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -40,6 +44,7 @@ class BuyListViewController: UIViewController, BuyListUserInterface {
     private func setupViper() {
         let interactor = BuyListInteractor()
         let presenter = BuyListPresenter(userInterface: self, interactable: interactor)
+        interactor.delegate = presenter
         eventHandler = presenter
     }
 
@@ -49,6 +54,18 @@ class BuyListViewController: UIViewController, BuyListUserInterface {
     }
 
     // MARK: BuyListUserInterface
+    func showHud() {
+        KRProgressHUD.show()
+    }
+
+    func dismissHud() {
+        KRProgressHUD.dismiss()
+    }
+
+    func showAlert(_ alert: UIAlertController) {
+        self.present(alert, animated: true, completion: nil)
+    }
+
     func reloadTableView() {
         tableView.reloadData()
     }
@@ -58,22 +75,20 @@ class BuyListViewController: UIViewController, BuyListUserInterface {
     }
 }
 
+extension BuyListViewController: BuyListContainerDelegate {
+    func addItemCell() {
+        eventHandler.insertItemCell()
+    }
+}
+
 extension BuyListViewController: UITableViewDataSource {
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return eventHandler.numberOfSections
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventHandler.numberOfRowsInSection(section: section)
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return eventHandler.titleForHeaderInSection(section: section)
+        return eventHandler.numberOfItems
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return eventHandler.cellForRowAt(tableView: tableView, indexPath: indexPath)
+        return eventHandler.cellForRow(tableView: tableView, indexPath: indexPath)
     }
 
     func editingStyleForRowAt(indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -88,6 +103,7 @@ extension BuyListViewController: UITableViewDataSource {
 extension BuyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        eventHandler.didSelectRow(indexPath: indexPath)
     }
 }
 

@@ -9,13 +9,26 @@
 import Foundation
 import UIKit
 
+protocol BuyListContainerDelegate: class {
+    func addItemCell()
+}
+
 class BuyListContainerViewController: UIViewController {
+
+    weak var containerDelegate: BuyListContainerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? BuyListViewController {
+            containerDelegate = viewController
+        }
+    }
+
     @IBAction func addButton(_ sender: Any) {
         Debug.log("add")
+        containerDelegate?.addItemCell()
     }
 }

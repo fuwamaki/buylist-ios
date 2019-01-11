@@ -9,61 +9,65 @@
 import Foundation
 
 protocol BuyListInteractable {
+    var items: [ItemEntity] { get }
     func getItems()
     func saveItem(name: String, count: Int)
+    func deleteItem(item: ItemEntity)
+    func updateItem(item: ItemEntity)
     func getBuyListMockData() -> [ItemEntity]
 }
 
 class BuyListInteractor: BuyListInteractable {
 
+    weak var delegate: BuyListDelegate?
     var itemRealm = ItemRealm()
-    private var items: [ItemEntity] = []
+    var items: [ItemEntity] = []
 
     func getItems() {
         itemRealm.findItems { [weak self] result in
             switch result {
             case .success(let items):
-                print("success")
                 self?.items = items
+                self?.delegate?.reloadData()
             case .failure(let error):
-                print(error)
+                self?.delegate?.displayErrorAlert(error.description)
             }
         }
     }
 
     func saveItem(name: String, count: Int) {
         let item = ItemEntity(itemId: getDistinctItemId(), name: name, count: count, createTime: Date())
-        itemRealm.saveItem(item: item) { result in
+        itemRealm.saveItem(item: item) { [weak self] result in
             switch result {
             // swiftlint:disable empty_enum_arguments
             case .success(_):
                 print("success")
             case .failure(let error):
-                print(error)
+                self?.delegate?.displayErrorAlert(error.description)
             }
         }
     }
 
     func deleteItem(item: ItemEntity) {
-        itemRealm.deleteItem(item: item) { result in
+        itemRealm.deleteItem(item: item) { [weak self] result in
             switch result {
             // swiftlint:disable empty_enum_arguments
             case .success(_):
                 print("success")
             case .failure(let error):
-                print(error)
+                self?.delegate?.displayErrorAlert(error.description)
             }
         }
     }
 
     func updateItem(item: ItemEntity) {
-        itemRealm.updateItem(item: item) { result in
+        itemRealm.updateItem(item: item) { [weak self] result in
             switch result {
             // swiftlint:disable empty_enum_arguments
             case .success(_):
                 print("success")
             case .failure(let error):
-                print(error)
+                self?.delegate?.displayErrorAlert(error.description)
             }
         }
     }

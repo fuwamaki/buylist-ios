@@ -14,45 +14,83 @@ enum BuyListTableCellType {
     case add
 }
 
-protocol BuyListEventHandler {
-    func saveAddItem(_ name: String?)
-    var numberOfSections: Int { get }
-    func numberOfRowsInSection(section: Int) -> Int
-    func titleForHeaderInSection(section: Int) -> String?
-    func cellForRowAt(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell
-    func editingStyleForRowAt(indexPath: IndexPath) -> UITableViewCell.EditingStyle
-    func commitEditingStyle(editingStyle: UITableViewCell.EditingStyle, indexPath: IndexPath)
-    func setBuyListItem()
+protocol BuyListTableCell {
 }
 
-protocol BuyListDelegate {
+struct BuyListItemTableCell: BuyListTableCell {
+    var name: String?
+    var count: Int?
+
+    init(name: String? = nil, count: Int? = nil) {
+        self.name = name
+        self.count = count
+    }
+}
+
+struct BuyListAddTableCell: BuyListTableCell {
+    var title: String = "項目を追加"
+}
+
+protocol BuyListDelegate: class {
+    func reloadData()
+    func displayErrorAlert(_ errorMessage: String)
+}
+
+protocol BuyListEventHandler {
+    var numberOfItems: Int { get }
+    func cellForRow(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell
+    func editingStyleForRowAt(indexPath: IndexPath) -> UITableViewCell.EditingStyle
+    func commitEditingStyle(editingStyle: UITableViewCell.EditingStyle, indexPath: IndexPath)
+    func didSelectRow(indexPath: IndexPath)
+    func insertItemCell()
+    func setBuyListItems()
+    func saveAddItem(_ name: String?)
 }
 
 class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
 
     var buyListTableViewResource = BuyListTableViewResource()
     var interactable: BuyListInteractable
-    var userInterface: BuyListUserInterface
+    weak var userInterface: BuyListUserInterface?
+    var buyListTableCells: [BuyListTableCell] = []
+
+    func setBuyListTableCells() {
+        buyListTableCells = interactable.items.compactMap { BuyListItemTableCell(name: $0.name, count: $0.count) }
+        buyListTableCells.append(BuyListAddTableCell())
+    }
 
     init(userInterface: BuyListUserInterface, interactable: BuyListInteractable) {
         self.userInterface = userInterface
         self.interactable = interactable
     }
 
-    private func insertItemCell() {
-        buyListTableViewResource.appendEditingItemCell()
-        userInterface.reloadTableView()
+    func insertItemCell() {
+        buyListTableCells.removeLast()
+        buyListTableCells.append(BuyListItemTableCell())
+        userInterface?.reloadTableView()
     }
 
-    func setBuyListItem() {
-//        let items = interactable.getItems()
-//        for item in items {
-//            buyListTableViewResource.appendItemCell(item)
-//        }
-        userInterface.reloadTableView()
+    // MARK: BuyListDelegate
+    func reloadData() {
+        userInterface?.dismissHud()
+        setBuyListTableCells()
+        userInterface?.reloadTableView()
+    }
+
+    func displayErrorAlert(_ errorMessage: String) {
+        userInterface?.dismissHud()
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        print(errorMessage)
+        alert.addAction(UIAlertAction(title: "Close", style: .default))
+        userInterface?.showAlert(alert)
     }
 
     // MARK: BuyListEventHandler
+    func setBuyListItems() {
+        userInterface?.showHud()
+        interactable.getItems()
+    }
+
     func saveAddItem(_ name: String?) {
         if let name = name {
             interactable.saveItem(name: name, count: 1)
@@ -60,30 +98,21 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
         }
     }
 
-    var numberOfSections: Int {
-        return buyListTableViewResource.tableSectionCount
+    var numberOfItems: Int {
+        return buyListTableCells.count
     }
 
-    func numberOfRowsInSection(section: Int) -> Int {
-        return buyListTableViewResource[section]?.cells.count ?? 0
-    }
-
-    func titleForHeaderInSection(section: Int) -> String? {
-        return buyListTableViewResource[section]?.title
-    }
-
-    func cellForRowAt(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] else {
-            fatalError("Failed to dequeue cell.")
-        }
-        switch cell.type {
-        case .item:
+    func cellForRow(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        if let cell = buyListTableCells[indexPath.row] as? BuyListItemTableCell {
             let buyListItemCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListItemCell
             buyListItemCell.setItemText(name: cell.name, count: cell.count)
             return buyListItemCell
-        case .add:
-            let buyListAddCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListAddCell
+        } else if let cell = buyListTableCells[indexPath.row] as? BuyListAddTableCell {
+            let buyListAddCell = tableView.dequeueReusableCell(withIdentifier: "buyListAddTableCell", for: indexPath)
+            buyListAddCell.textLabel?.text = cell.title
             return buyListAddCell
+        } else {
+            fatalError("Failed to dequeue cell.")
         }
     }
 
@@ -102,18 +131,17 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
     func commitEditingStyle(editingStyle: UITableViewCell.EditingStyle, indexPath: IndexPath) {
         if editingStyle == .delete {
             buyListTableViewResource.removeItemCell(indexPath.row)
-            userInterface.deleteTableViewRow(indexPath: indexPath)
+            userInterface?.deleteTableViewRow(indexPath: indexPath)
         }
     }
 
-    func didSelectRowAt(indexPath: IndexPath) {
-        if let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] {
-            switch cell.type {
-            case .item:
-                Debug.log("item selected")
-            case .add:
-                insertItemCell()
-            }
+    func didSelectRow(indexPath: IndexPath) {
+        if buyListTableCells[indexPath.row] is BuyListItemTableCell {
+            Debug.log("item selected")
+        } else if buyListTableCells[indexPath.row] is BuyListAddTableCell {
+            insertItemCell()
+        } else {
+            fatalError("Failed to dequeue cell.")
         }
     }
 }
