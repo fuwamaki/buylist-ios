@@ -47,7 +47,7 @@ protocol BuyListEventHandler {
     func saveItem(nameText: String?, countText: String?)
 }
 
-class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
+class BuyListPresenter: NSObject {
 
     var buyListTableViewResource = BuyListTableViewResource()
     var interactable: BuyListInteractable
@@ -55,7 +55,12 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
     weak var textFieldUserInterface: BuyListTextFieldInterface?
     var buyListTableCells: [BuyListTableCell] = []
 
-    func setBuyListTableCells() {
+    // parameter in BuyListEventHandler
+    var numberOfItems: Int {
+        return buyListTableCells.count
+    }
+
+    private func setBuyListTableCells() {
         buyListTableCells = interactable.items.compactMap { BuyListItemTableCell(name: $0.name, count: $0.count) }
         buyListTableCells.append(BuyListAddTableCell())
     }
@@ -64,32 +69,18 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
         self.userInterface = userInterface
         self.interactable = interactable
     }
+}
+
+extension BuyListPresenter: BuyListEventHandler {
+    func setBuyListItems() {
+        userInterface?.showHud()
+        interactable.getItems()
+    }
 
     func insertItemCell() {
         buyListTableCells.removeLast()
         buyListTableCells.append(BuyListItemTableCell())
         userInterface?.reloadTableView()
-    }
-
-    // MARK: BuyListDelegate
-    func reloadData() {
-        userInterface?.dismissHud()
-        setBuyListTableCells()
-        userInterface?.reloadTableView()
-    }
-
-    func displayErrorAlert(_ errorMessage: String) {
-        userInterface?.dismissHud()
-        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
-        print(errorMessage)
-        alert.addAction(UIAlertAction(title: "Close", style: .default))
-        userInterface?.showAlert(alert)
-    }
-
-    // MARK: BuyListEventHandler
-    func setBuyListItems() {
-        userInterface?.showHud()
-        interactable.getItems()
     }
 
     func saveItem(nameText: String?, countText: String?) {
@@ -98,10 +89,7 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
         }
     }
 
-    var numberOfItems: Int {
-        return buyListTableCells.count
-    }
-
+    // MARK: TableView functions
     func cellForRow(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         if let cell = buyListTableCells[indexPath.row] as? BuyListItemTableCell {
             let buyListItemCell = tableView.dequeueCellForIndexPath(indexPath) as BuyListItemCell
@@ -139,5 +127,21 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
         } else {
             fatalError("Failed to dequeue cell.")
         }
+    }
+}
+
+extension BuyListPresenter: BuyListDelegate {
+    func reloadData() {
+        userInterface?.dismissHud()
+        setBuyListTableCells()
+        userInterface?.reloadTableView()
+    }
+
+    func displayErrorAlert(_ errorMessage: String) {
+        userInterface?.dismissHud()
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        print(errorMessage)
+        alert.addAction(UIAlertAction(title: "Close", style: .default))
+        userInterface?.showAlert(alert)
     }
 }
