@@ -103,6 +103,10 @@ extension BuyListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         eventHandler.commitEditingStyle(editingStyle: editingStyle, indexPath: indexPath)
     }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
 }
 
 extension BuyListViewController: UITableViewDelegate {
@@ -118,12 +122,7 @@ extension BuyListViewController: BuyListTextFieldInterface {
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        textField.resignFirstResponder() // close keyboard
         return false
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        // TODO: 編集時にもsaveされてしまっているので要修正
-//        eventHandler.saveAddItem(textField.text)
     }
 }
