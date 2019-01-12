@@ -118,15 +118,10 @@ class BuyListPresenter: NSObject, BuyListEventHandler, BuyListDelegate {
     }
 
     func editingStyleForRowAt(indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        guard let cell = buyListTableViewResource[indexPath.section]?.cells[indexPath.row] else {
-            return .none
-        }
-        switch cell.type {
-        case .item:
-            return .delete
-        case .add:
+        if buyListTableCells[indexPath.row] is BuyListAddTableCell {
             return .insert
         }
+        return .none
     }
 
     func commitEditingStyle(editingStyle: UITableViewCell.EditingStyle, indexPath: IndexPath) {
