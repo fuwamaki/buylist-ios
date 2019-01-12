@@ -17,7 +17,7 @@ enum TabBarNumber: Int {
 struct TabBarItem {
     let title: String
     let tabNumber: TabBarNumber
-    
+
     init(title: String, tabNumber: TabBarNumber) {
         self.title = title
         self.tabNumber = tabNumber
