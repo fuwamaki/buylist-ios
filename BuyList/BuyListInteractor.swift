@@ -16,12 +16,26 @@ protocol BuyListInteractable {
     func updateItem(item: ItemEntity)
 }
 
-class BuyListInteractor: BuyListInteractable {
+class BuyListInteractor {
 
     weak var delegate: BuyListDelegate?
     var itemRealm = ItemRealm()
+
+    // parameter in BuyListInteractable
     var items: [ItemEntity] = []
 
+    // 0からカウントしていて、空いていた重複しないid値を返す
+    func getDistinctItemId() -> Int {
+        let itemIds = items.compactMap { return $0.itemId }
+        var itemId = 0
+        repeat {
+            itemId += 1
+        } while(itemIds.contains(itemId))
+        return itemId
+    }
+}
+
+extension BuyListInteractor: BuyListInteractable {
     func getItems() {
         itemRealm.findItems { [weak self] result in
             switch result {
@@ -70,15 +84,5 @@ class BuyListInteractor: BuyListInteractable {
                 self?.delegate?.displayErrorAlert(error.description)
             }
         }
-    }
-
-    // 0からカウントしていて、空いていた重複しないid値を返す
-    func getDistinctItemId() -> Int {
-        let itemIds = items.compactMap { return $0.itemId }
-        var itemId = 0
-        repeat {
-            itemId += 1
-        } while(itemIds.contains(itemId))
-        return itemId
     }
 }
