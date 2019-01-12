@@ -22,7 +22,6 @@
 		208A605220B9B9B4007794C8 /* UIColor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208A605120B9B9B4007794C8 /* UIColor+Addition.swift */; };
 		208D41F12030552C004618CA /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F02030552C004618CA /* Debug.swift */; };
 		208D41F520305CB5004618CA /* BuyListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F420305CB5004618CA /* BuyListItemCell.swift */; };
-		208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FA20318B98004618CA /* BuyListTableViewResource.swift */; };
 		208D41FF2031B161004618CA /* BuyListContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FE2031B161004618CA /* BuyListContainerViewController.swift */; };
 		208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42062032CB63004618CA /* LoadJsonFile.swift */; };
 		2096998F203516950066AEC4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2096998E203516940066AEC4 /* sample.json */; };
@@ -81,7 +80,6 @@
 		208A605120B9B9B4007794C8 /* UIColor+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Addition.swift"; sourceTree = "<group>"; };
 		208D41F02030552C004618CA /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		208D41F420305CB5004618CA /* BuyListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListItemCell.swift; sourceTree = "<group>"; };
-		208D41FA20318B98004618CA /* BuyListTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListTableViewResource.swift; sourceTree = "<group>"; };
 		208D41FE2031B161004618CA /* BuyListContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContainerViewController.swift; sourceTree = "<group>"; };
 		208D42062032CB63004618CA /* LoadJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonFile.swift; sourceTree = "<group>"; };
 		2096998E203516940066AEC4 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 				E1B826431EE1596D008AEE9D /* BuyListViewController.swift */,
 				208D41FE2031B161004618CA /* BuyListContainerViewController.swift */,
 				E10F35C61F46E3E30040728A /* BuyListPresenter.swift */,
-				208D41FA20318B98004618CA /* BuyListTableViewResource.swift */,
 				E10F35CC1F46E4200040728A /* BuyListInteractor.swift */,
 				9CBD726B21E3916800A45DBC /* Views */,
 			);
@@ -574,7 +571,6 @@
 				200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */,
 				7B7EFF0720F8B5AD00E9F330 /* DeviceManager.swift in Sources */,
 				206052B5202DD16F007F7219 /* HomeScreenQuickAction.swift in Sources */,
-				208D41FB20318B98004618CA /* BuyListTableViewResource.swift in Sources */,
 				E18ABDBB1F20C34A0012416A /* ItemRealm.swift in Sources */,
 				208D41F520305CB5004618CA /* BuyListItemCell.swift in Sources */,
 				208A605220B9B9B4007794C8 /* UIColor+Addition.swift in Sources */,

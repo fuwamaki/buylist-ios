@@ -50,7 +50,6 @@ protocol BuyListEventHandler {
 
 class BuyListPresenter: NSObject {
 
-    var buyListTableViewResource = BuyListTableViewResource()
     var interactable: BuyListInteractable
     weak var userInterface: BuyListUserInterface?
     weak var textFieldUserInterface: BuyListTextFieldInterface?
