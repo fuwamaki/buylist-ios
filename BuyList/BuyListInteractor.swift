@@ -14,7 +14,6 @@ protocol BuyListInteractable {
     func saveItem(name: String, count: Int)
     func deleteItem(indexPath: IndexPath)
     func updateItem(item: ItemEntity)
-    func getBuyListMockData() -> [ItemEntity]
 }
 
 class BuyListInteractor: BuyListInteractable {
@@ -73,7 +72,7 @@ class BuyListInteractor: BuyListInteractable {
         }
     }
 
-    // 0からカウントしていて空いていた重複しないid値を返す
+    // 0からカウントしていて、空いていた重複しないid値を返す
     func getDistinctItemId() -> Int {
         let itemIds = items.compactMap { return $0.itemId }
         var itemId = 0
@@ -81,17 +80,5 @@ class BuyListInteractor: BuyListInteractable {
             itemId += 1
         } while(itemIds.contains(itemId))
         return itemId
-    }
-
-    // mock
-    let loadJsonFile = LoadJsonFile()
-    func getBuyListMockData() -> [ItemEntity] {
-        var items: [ItemEntity] = []
-        if let jsonDate = loadJsonFile.getJson() {
-            jsonDate.rows.forEach {
-                items.append(ItemEntity(itemId: $0.itemId, name: $0.name, count: $0.count, createTime: Date()))
-            }
-        }
-        return items
     }
 }
