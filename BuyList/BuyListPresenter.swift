@@ -33,6 +33,7 @@ struct BuyListAddTableCell: BuyListTableCell {
 
 protocol BuyListDelegate: class {
     func reloadData()
+    func deleteItemRow(indexPath: IndexPath)
     func displayErrorAlert(_ errorMessage: String)
 }
 
@@ -114,8 +115,7 @@ extension BuyListPresenter: BuyListEventHandler {
 
     func commitEditingStyle(editingStyle: UITableViewCell.EditingStyle, indexPath: IndexPath) {
         if editingStyle == .delete {
-            buyListTableViewResource.removeItemCell(indexPath.row)
-            userInterface?.deleteTableViewRow(indexPath: indexPath)
+            interactable.deleteItem(indexPath: indexPath)
         }
     }
 
@@ -135,6 +135,11 @@ extension BuyListPresenter: BuyListDelegate {
         userInterface?.dismissHud()
         setBuyListTableCells()
         userInterface?.reloadTableView()
+    }
+
+    func deleteItemRow(indexPath: IndexPath) {
+        setBuyListTableCells()
+        userInterface?.deleteTableViewRow(indexPath: indexPath)
     }
 
     func displayErrorAlert(_ errorMessage: String) {

@@ -53,11 +53,11 @@ final class ItemRealm {
     }
 
     func deleteItem(item: ItemEntity, completion: @escaping (Result<Any?, NSError>) -> Void) {
-        let itemRealmEntity = convertItemEntity(item: item)
         do {
             let realm = try Realm()
+            let deleteItem = realm.objects(ItemRealmEntity.self).filter { $0.itemId == item.itemId }
             try realm.write {
-                realm.delete(itemRealmEntity)
+                realm.delete(deleteItem)
                 completion(.success(nil))
             }
         } catch let error as NSError {

@@ -12,7 +12,7 @@ protocol BuyListInteractable {
     var items: [ItemEntity] { get }
     func getItems()
     func saveItem(name: String, count: Int)
-    func deleteItem(item: ItemEntity)
+    func deleteItem(indexPath: IndexPath)
     func updateItem(item: ItemEntity)
     func getBuyListMockData() -> [ItemEntity]
 }
@@ -48,12 +48,13 @@ class BuyListInteractor: BuyListInteractable {
         }
     }
 
-    func deleteItem(item: ItemEntity) {
-        itemRealm.deleteItem(item: item) { [weak self] result in
+    func deleteItem(indexPath: IndexPath) {
+        itemRealm.deleteItem(item: items[indexPath.row]) { [weak self] result in
             switch result {
             // swiftlint:disable empty_enum_arguments
             case .success(_):
-                print("success")
+                self?.items.remove(at: indexPath.row)
+                self?.delegate?.deleteItemRow(indexPath: indexPath)
             case .failure(let error):
                 self?.delegate?.displayErrorAlert(error.description)
             }
