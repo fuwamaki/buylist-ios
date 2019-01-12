@@ -1,9 +1,0 @@
-{
-    "total":"1",
-    "page":"1",
-    "records":"2",
-    "rows":[
-            {"itemId":"00000001","name":"お酒", "count":1},
-            {"itemId":"00000002","name":"タバコ", "count":2}
-    ]
-}

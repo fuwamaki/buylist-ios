@@ -23,8 +23,6 @@
 		208D41F12030552C004618CA /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F02030552C004618CA /* Debug.swift */; };
 		208D41F520305CB5004618CA /* BuyListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41F420305CB5004618CA /* BuyListItemCell.swift */; };
 		208D41FF2031B161004618CA /* BuyListContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D41FE2031B161004618CA /* BuyListContainerViewController.swift */; };
-		208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208D42062032CB63004618CA /* LoadJsonFile.swift */; };
-		2096998F203516950066AEC4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 2096998E203516940066AEC4 /* sample.json */; };
 		20EC136920F509C7001E40A6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC136820F509C7001E40A6 /* MainTabBarController.swift */; };
 		7B10E8AF20F60DB500D416CD /* ItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10E8AE20F60DB500D416CD /* ItemEntity.swift */; };
 		7B10E8B120F6146A00D416CD /* BuyListHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10E8B020F6146A00D416CD /* BuyListHistoryCell.swift */; };
@@ -81,8 +79,6 @@
 		208D41F02030552C004618CA /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		208D41F420305CB5004618CA /* BuyListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListItemCell.swift; sourceTree = "<group>"; };
 		208D41FE2031B161004618CA /* BuyListContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListContainerViewController.swift; sourceTree = "<group>"; };
-		208D42062032CB63004618CA /* LoadJsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonFile.swift; sourceTree = "<group>"; };
-		2096998E203516940066AEC4 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		20EC136820F509C7001E40A6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		249B28BDA1A60EC0121F48BB /* Pods_BuyList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		753227B3DC93A70EBA086EF9 /* Pods-BuyList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyList.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuyList/Pods-BuyList.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				E18ABDBA1F20C34A0012416A /* ItemRealm.swift */,
-				208D42062032CB63004618CA /* LoadJsonFile.swift */,
 				20138C6A2100E99600CA2F59 /* BuyIdManager.swift */,
 			);
 			name = DataStore;
@@ -331,7 +326,6 @@
 		E1B826401EE1596D008AEE9D /* BuyList */ = {
 			isa = PBXGroup;
 			children = (
-				2096998E203516940066AEC4 /* sample.json */,
 				E1B8264F1EE1596D008AEE9D /* Info.plist */,
 				E1B8264A1EE1596D008AEE9D /* Assets.xcassets */,
 				206052AE202DA4C8007F7219 /* AppDelegate */,
@@ -446,7 +440,6 @@
 			files = (
 				E1B8264E1EE1596D008AEE9D /* LaunchScreen.storyboard in Resources */,
 				9CBD726E21E39BB200A45DBC /* BuyListItemCell.xib in Resources */,
-				2096998F203516950066AEC4 /* sample.json in Resources */,
 				7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */,
 				E1B8264B1EE1596D008AEE9D /* Assets.xcassets in Resources */,
 				E1B826491EE1596D008AEE9D /* Main.storyboard in Resources */,
@@ -560,7 +553,6 @@
 				E1B826421EE1596D008AEE9D /* AppDelegate.swift in Sources */,
 				200BEF7620B9AD23003F0A99 /* UIView+Addition.swift in Sources */,
 				208A605020B9B8A9007794C8 /* UIFont+Addition.swift in Sources */,
-				208D42072032CB63004618CA /* LoadJsonFile.swift in Sources */,
 				200BEF6E20B99831003F0A99 /* UITableView+Addition.swift in Sources */,
 				E10F35D21F46E45C0040728A /* SettingInteractor.swift in Sources */,
 				20138C6B2100E99600CA2F59 /* BuyIdManager.swift in Sources */,
