@@ -27,8 +27,8 @@ class BuyListContainerViewController: UIViewController {
         }
     }
 
-    @IBAction func addButton(_ sender: Any) {
-        Debug.log("add")
+    @IBAction func addItemButton(_ sender: Any) {
+        Debug.log("push add Button")
         containerDelegate?.addItemCell()
     }
 }
