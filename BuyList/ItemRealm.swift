@@ -8,7 +8,6 @@
 
 import Foundation
 import RealmSwift
-import Result
 
 enum RealmAction {
     case find, save, delete, update

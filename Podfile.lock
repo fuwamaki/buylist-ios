@@ -1,38 +1,34 @@
 PODS:
-  - KRActivityIndicatorView (3.0.0)
-  - KRProgressHUD (3.4.0):
-    - KRActivityIndicatorView (= 3.0.0)
-  - Realm (3.7.4):
-    - Realm/Headers (= 3.7.4)
-  - Realm/Headers (3.7.4)
-  - RealmSwift (3.7.4):
-    - Realm (= 3.7.4)
-  - Result (4.1.0)
-  - SwiftLint (0.26.0)
+  - KRActivityIndicatorView (3.0.4)
+  - KRProgressHUD (3.4.4):
+    - KRActivityIndicatorView (= 3.0.4)
+  - Realm (3.19.1):
+    - Realm/Headers (= 3.19.1)
+  - Realm/Headers (3.19.1)
+  - RealmSwift (3.19.1):
+    - Realm (= 3.19.1)
+  - SwiftLint (0.35.0)
 
 DEPENDENCIES:
-  - KRProgressHUD (~> 3.4.0)
-  - RealmSwift (~> 3.7.4)
-  - Result (~> 4.1.0)
-  - SwiftLint (~> 0.26.0)
+  - KRProgressHUD (~> 3.4.4)
+  - RealmSwift (~> 3.19.0)
+  - SwiftLint (~> 0.35.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - KRActivityIndicatorView
     - KRProgressHUD
     - Realm
     - RealmSwift
-    - Result
     - SwiftLint
 
 SPEC CHECKSUMS:
-  KRActivityIndicatorView: c414000730a6f4969eeb354bee4f2aebc89c2c2e
-  KRProgressHUD: 79c8703f82179fe34b3602f10b30726f887983fa
-  Realm: a469bb59e33f9926102ccaea4349822c53b9117e
-  RealmSwift: a45861b21c180f5cf0f122144b9759fa8dde3e9e
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
+  KRActivityIndicatorView: 549db10b9578d58bac73db063d8b544e8970f7f2
+  KRProgressHUD: c3b9a48a0ee4824ea13212ac3f1efa50dca021e3
+  Realm: fb377747e694c7deb62d402400454134fe321bee
+  RealmSwift: 1302b0ab60f3105a2b214a735eeb0938607cf16b
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
 
-PODFILE CHECKSUM: 3a70e37aac450d34cafff1e89f0f99c72a3e01e8
+PODFILE CHECKSUM: c67d7e48a2654e3bde4791ce08b4d0b94daa57fc
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4
