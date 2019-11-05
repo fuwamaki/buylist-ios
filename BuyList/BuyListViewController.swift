@@ -55,7 +55,7 @@ class BuyListViewController: UIViewController {
 
     private func setupViews() {
         view.pinSubview(tableView, margin: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
-        tableView.backgroundColor = UIColor.baseGray
+        tableView.backgroundColor = UIColor.Background.primary
         tableView.tableFooterView = UIView()
     }
 }

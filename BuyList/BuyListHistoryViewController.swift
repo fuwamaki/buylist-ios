@@ -23,7 +23,7 @@ class BuyListHistoryViewController: UIViewController {
     private func setupTableView(_ presenter: BuyListHistoryPresenter) {
         tableView.delegate = presenter
         tableView.dataSource = presenter
-        tableView.backgroundColor = UIColor.baseGray
+        tableView.backgroundColor = UIColor.Background.primary
         tableView.registerForCell(BuyListHistoryCell.self)
     }
 }

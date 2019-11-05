@@ -7,68 +7,95 @@
 //
 
 import UIKit
+import Foundation
+
+// color style variable
+var colorStyle: UIUserInterfaceStyle {
+    return UITraitCollection.current.userInterfaceStyle
+}
 
 extension UIColor {
 
-    public convenience init(hex: String) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int = UInt32()
-        Scanner(string: hex).scanHexInt32(&int)
-        let a, r, g, b: UInt32
-        switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (1, 1, 1, 0)
+    convenience init(hex: String, alpha: CGFloat) {
+        let v = Int("000000" + hex, radix: 16) ?? 0
+        let r = CGFloat(v / Int(powf(256, 2)) % 256) / 255
+        let g = CGFloat(v / Int(powf(256, 1)) % 256) / 255
+        let b = CGFloat(v / Int(powf(256, 0)) % 256) / 255
+        self.init(red: r, green: g, blue: b, alpha: min(max(alpha, 0), 1))
+    }
+
+    convenience init(hex: String) {
+        self.init(hex: hex, alpha: 1.0)
+    }
+
+    struct Background {
+        static var primary: UIColor {
+            switch colorStyle {
+            case .dark:
+                return UIColor(hex: "#212121")
+            default:
+                return UIColor(hex: "#fefefe")
+            }
         }
-        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+
+        static var secondary: UIColor {
+            switch colorStyle {
+            case .dark:
+                return UIColor(hex: "#1f1f1f")
+            default:
+                return UIColor(hex: "#f5f5f5")
+            }
+        }
+
+        static var tertiary: UIColor {
+            switch colorStyle {
+            case .dark:
+                return UIColor(hex: "#464646")
+            default:
+                return UIColor(hex: "#c8c8c8")
+            }
+        }
+
+        static var quaternary: UIColor {
+            switch colorStyle {
+            case .dark:
+                return UIColor(hex: "#585858")
+            default:
+                return UIColor(hex: "#b7b7b7")
+            }
+        }
     }
 
-    class var white: UIColor {
-        return UIColor(hex: "#ffffff")
-    }
+    struct Text {
+        static var primary: UIColor {
+            switch colorStyle {
+            case .dark:
+                return UIColor(hex: "#fefefe")
+            default:
+                return UIColor(hex: "#212121")
+            }
+        }
 
-    class var baseGray: UIColor {
-        return UIColor(hex: "#EFEFF4")
-    }
+        static var secondary: UIColor {
+            switch colorStyle {
+            case .dark:
+                return UIColor(hex: "#dedede")
+            default:
+                return UIColor(hex: "#757575")
+            }
+        }
 
-    class var gray: UIColor {
-        return UIColor(hex: "#c5c5c5")
-    }
+        static var gray: UIColor {
+            return UIColor(hex: "#b7b7b7")
+        }
 
-    class var black: UIColor {
-        return UIColor(hex: "#212121")
-    }
-
-    class var red: UIColor {
-        return UIColor(hex: "#fa4141")
-    }
-
-    class var orange: UIColor {
-        return UIColor(hex: "#ff7f00")
-    }
-
-    class var yellow: UIColor {
-        return UIColor(hex: "#facd00")
-    }
-
-    class var green: UIColor {
-        return UIColor(hex: "#41c823")
-    }
-
-    class var blue: UIColor {
-        return UIColor(hex: "#2891ff")
-    }
-
-    class var purple: UIColor {
-        return UIColor(hex: "#915aff")
-    }
-
-    class var pink: UIColor {
-        return UIColor(hex: "#ff649b")
+        static var reverse: UIColor {
+            switch colorStyle {
+            case .dark:
+                return UIColor(hex: "#212121")
+            default:
+                return UIColor(hex: "#fefefe")
+            }
+        }
     }
 }
