@@ -14,6 +14,9 @@
 		200BEF7420B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */; };
 		200BEF7620B9AD23003F0A99 /* UIView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */; };
 		20138C6B2100E99600CA2F59 /* BuyIdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20138C6A2100E99600CA2F59 /* BuyIdRepository.swift */; };
+		202ADB902371046B00E65BB8 /* BuyListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202ADB8F2371046B00E65BB8 /* BuyListViewController.storyboard */; };
+		202ADB922371047F00E65BB8 /* BuyListHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202ADB912371047F00E65BB8 /* BuyListHistoryViewController.storyboard */; };
+		202ADB942371048E00E65BB8 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202ADB932371048E00E65BB8 /* SettingViewController.storyboard */; };
 		206052A4202D7901007F7219 /* SettingTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A3202D7901007F7219 /* SettingTableViewResource.swift */; };
 		206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A9202D7F98007F7219 /* NSObject+Addition.swift */; };
 		206052B3202DABCE007F7219 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052B2202DABCE007F7219 /* AppInfo.swift */; };
@@ -69,6 +72,9 @@
 		200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Addition.swift"; sourceTree = "<group>"; };
 		200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Addition.swift"; sourceTree = "<group>"; };
 		20138C6A2100E99600CA2F59 /* BuyIdRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyIdRepository.swift; sourceTree = "<group>"; };
+		202ADB8F2371046B00E65BB8 /* BuyListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuyListViewController.storyboard; sourceTree = "<group>"; };
+		202ADB912371047F00E65BB8 /* BuyListHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuyListHistoryViewController.storyboard; sourceTree = "<group>"; };
+		202ADB932371048E00E65BB8 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
 		206052A3202D7901007F7219 /* SettingTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewResource.swift; sourceTree = "<group>"; };
 		206052A9202D7F98007F7219 /* NSObject+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Addition.swift"; sourceTree = "<group>"; };
 		206052B2202DABCE007F7219 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
@@ -151,6 +157,9 @@
 			children = (
 				E1B826471EE1596D008AEE9D /* Main.storyboard */,
 				E1B8264C1EE1596D008AEE9D /* LaunchScreen.storyboard */,
+				202ADB8F2371046B00E65BB8 /* BuyListViewController.storyboard */,
+				202ADB912371047F00E65BB8 /* BuyListHistoryViewController.storyboard */,
+				202ADB932371048E00E65BB8 /* SettingViewController.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -447,10 +456,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202ADB942371048E00E65BB8 /* SettingViewController.storyboard in Resources */,
 				E1B8264E1EE1596D008AEE9D /* LaunchScreen.storyboard in Resources */,
 				9CBD726E21E39BB200A45DBC /* BuyListItemCell.xib in Resources */,
 				7B85941520F6283100E32FBD /* BuyListHistoryCell.xib in Resources */,
+				202ADB922371047F00E65BB8 /* BuyListHistoryViewController.storyboard in Resources */,
 				E1B8264B1EE1596D008AEE9D /* Assets.xcassets in Resources */,
+				202ADB902371046B00E65BB8 /* BuyListViewController.storyboard in Resources */,
 				E1B826491EE1596D008AEE9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
