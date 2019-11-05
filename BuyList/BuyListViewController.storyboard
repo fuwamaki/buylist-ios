@@ -60,7 +60,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addItemButton:" destination="KRW-aW-Ref" eventType="touchUpInside" id="eCH-SW-JC5"/>
+                                    <action selector="clickAddItemButton:" destination="KRW-aW-Ref" eventType="touchUpInside" id="EIW-WK-Xck"/>
                                 </connections>
                             </button>
                         </subviews>

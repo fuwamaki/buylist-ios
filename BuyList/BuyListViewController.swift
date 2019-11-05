@@ -21,7 +21,7 @@ protocol BuyListUserInterface: class {
     func deleteTableViewRow(indexPath: IndexPath)
 }
 
-class BuyListViewController: UIViewController, BuyListUserInterface {
+class BuyListViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -56,9 +56,12 @@ class BuyListViewController: UIViewController, BuyListUserInterface {
     private func setupViews() {
         view.pinSubview(tableView, margin: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         tableView.backgroundColor = UIColor.baseGray
+        tableView.tableFooterView = UIView()
     }
+}
 
-    // MARK: BuyListUserInterface
+// MARK: BuyListUserInterface
+extension BuyListViewController: BuyListUserInterface {
     func showHud() {
         KRProgressHUD.show()
     }

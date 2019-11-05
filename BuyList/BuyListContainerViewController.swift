@@ -15,6 +15,11 @@ protocol BuyListContainerDelegate: class {
 
 class BuyListContainerViewController: UIViewController {
 
+    @IBAction private func clickAddItemButton(_ sender: Any) {
+        Debug.log("click add item button")
+        containerDelegate?.addItemCell()
+    }
+
     weak var containerDelegate: BuyListContainerDelegate?
 
     override func viewDidLoad() {
@@ -25,10 +30,5 @@ class BuyListContainerViewController: UIViewController {
         if let viewController = segue.destination as? BuyListViewController {
             containerDelegate = viewController
         }
-    }
-
-    @IBAction func addItemButton(_ sender: Any) {
-        Debug.log("push add Button")
-        containerDelegate?.addItemCell()
     }
 }
