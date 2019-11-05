@@ -17,6 +17,7 @@
 		202ADB902371046B00E65BB8 /* BuyListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202ADB8F2371046B00E65BB8 /* BuyListViewController.storyboard */; };
 		202ADB922371047F00E65BB8 /* BuyListHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202ADB912371047F00E65BB8 /* BuyListHistoryViewController.storyboard */; };
 		202ADB942371048E00E65BB8 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202ADB932371048E00E65BB8 /* SettingViewController.storyboard */; };
+		202ADB9623710DF700E65BB8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202ADB9523710DF700E65BB8 /* Colors.xcassets */; };
 		206052A4202D7901007F7219 /* SettingTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A3202D7901007F7219 /* SettingTableViewResource.swift */; };
 		206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A9202D7F98007F7219 /* NSObject+Addition.swift */; };
 		206052B3202DABCE007F7219 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052B2202DABCE007F7219 /* AppInfo.swift */; };
@@ -75,6 +76,7 @@
 		202ADB8F2371046B00E65BB8 /* BuyListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuyListViewController.storyboard; sourceTree = "<group>"; };
 		202ADB912371047F00E65BB8 /* BuyListHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BuyListHistoryViewController.storyboard; sourceTree = "<group>"; };
 		202ADB932371048E00E65BB8 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
+		202ADB9523710DF700E65BB8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		206052A3202D7901007F7219 /* SettingTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewResource.swift; sourceTree = "<group>"; };
 		206052A9202D7F98007F7219 /* NSObject+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Addition.swift"; sourceTree = "<group>"; };
 		206052B2202DABCE007F7219 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
@@ -146,6 +148,8 @@
 		202ADB8A2371019500E65BB8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				202ADB9523710DF700E65BB8 /* Colors.xcassets */,
+				E1B8264A1EE1596D008AEE9D /* Assets.xcassets */,
 				202ADB8B237101A900E65BB8 /* Storyboard */,
 				202ADB8C237101AF00E65BB8 /* Xib */,
 			);
@@ -343,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				E1B8264F1EE1596D008AEE9D /* Info.plist */,
-				E1B8264A1EE1596D008AEE9D /* Assets.xcassets */,
 				206052AE202DA4C8007F7219 /* AppDelegate */,
 				202ADB8E237101E500E65BB8 /* View */,
 				9CBD727121E39E3400A45DBC /* ViewController */,
@@ -464,6 +467,7 @@
 				E1B8264B1EE1596D008AEE9D /* Assets.xcassets in Resources */,
 				202ADB902371046B00E65BB8 /* BuyListViewController.storyboard in Resources */,
 				E1B826491EE1596D008AEE9D /* Main.storyboard in Resources */,
+				202ADB9623710DF700E65BB8 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,7 +685,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -734,7 +738,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -751,7 +755,7 @@
 				DEVELOPMENT_TEAM = 98UFL8A7L4;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BuyList/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maki.BuyList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -769,7 +773,7 @@
 				DEVELOPMENT_TEAM = 98UFL8A7L4;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BuyList/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maki.BuyList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
