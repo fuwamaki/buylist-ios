@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 protocol BuyListContainerDelegate: class {
-    func addItemCell()
+    func handleAddItemButton()
 }
 
 class BuyListContainerViewController: UIViewController {
 
     @IBAction private func clickAddItemButton(_ sender: Any) {
         Debug.log("click add item button")
-        containerDelegate?.addItemCell()
+        containerDelegate?.handleAddItemButton()
     }
 
     weak var containerDelegate: BuyListContainerDelegate?

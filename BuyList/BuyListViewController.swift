@@ -83,12 +83,14 @@ extension BuyListViewController: BuyListUserInterface {
     }
 }
 
+// MARK: BuyListContainerDelegate
 extension BuyListViewController: BuyListContainerDelegate {
-    func addItemCell() {
+    func handleAddItemButton() {
         eventHandler.insertItemCell()
     }
 }
 
+// MARK: UITableViewDataSource
 extension BuyListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,8 +112,13 @@ extension BuyListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 68
+    }
 }
 
+// MARK: UITableViewDelegate
 extension BuyListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -119,6 +126,7 @@ extension BuyListViewController: UITableViewDelegate {
     }
 }
 
+// MARK: BuyListTextFieldInterface
 extension BuyListViewController: BuyListTextFieldInterface {
     func touchDoneButton(nameText: String?, countText: String?) {
         eventHandler.saveItem(nameText: nameText, countText: countText)
