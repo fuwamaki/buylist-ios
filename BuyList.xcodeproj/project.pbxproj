@@ -29,7 +29,7 @@
 		7B293F6420FAEC610009FE92 /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B293F6320FAEC610009FE92 /* String+Addition.swift */; };
 		7B7EFF0720F8B5AD00E9F330 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0620F8B5AD00E9F330 /* DeviceManager.swift */; };
 		7B7EFF0A20F9AF8D00E9F330 /* MockItemEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */; };
-		7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */; };
+		7B85941520F6283100E32FBD /* BuyListHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B85941420F6283100E32FBD /* BuyListHistoryCell.xib */; };
 		7B8D318F20FADF1200F69FB7 /* CGFloat+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */; };
 		9CB5031D21E787BB005E8DAD /* ItemRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5031C21E787BB005E8DAD /* ItemRealmEntity.swift */; };
 		9CBD726E21E39BB200A45DBC /* BuyListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */; };
@@ -87,7 +87,7 @@
 		7B293F6320FAEC610009FE92 /* String+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
 		7B7EFF0620F8B5AD00E9F330 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		7B7EFF0920F9AF8D00E9F330 /* MockItemEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItemEntity.swift; sourceTree = "<group>"; };
-		7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListHistoryTableCell.xib; sourceTree = "<group>"; };
+		7B85941420F6283100E32FBD /* BuyListHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListHistoryCell.xib; sourceTree = "<group>"; };
 		7B8D318E20FADF1200F69FB7 /* CGFloat+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Addition.swift"; sourceTree = "<group>"; };
 		9CB5031C21E787BB005E8DAD /* ItemRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRealmEntity.swift; sourceTree = "<group>"; };
 		9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyListItemCell.xib; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		202ADB8C237101AF00E65BB8 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */,
+				7B85941420F6283100E32FBD /* BuyListHistoryCell.xib */,
 				9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */,
 			);
 			name = Xib;
@@ -178,7 +178,6 @@
 			children = (
 				E1B826451EE1596D008AEE9D /* SettingViewController.swift */,
 				E10F35CA1F46E4020040728A /* SettingPresenter.swift */,
-				206052A3202D7901007F7219 /* SettingTableViewResource.swift */,
 				E10F35D11F46E45C0040728A /* SettingInteractor.swift */,
 			);
 			name = Setting;
@@ -212,6 +211,7 @@
 		206052AF202DA4EF007F7219 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				206052A3202D7901007F7219 /* SettingTableViewResource.swift */,
 				E18ABDBA1F20C34A0012416A /* ItemRealm.swift */,
 				20138C6A2100E99600CA2F59 /* BuyIdRepository.swift */,
 			);
@@ -449,7 +449,7 @@
 			files = (
 				E1B8264E1EE1596D008AEE9D /* LaunchScreen.storyboard in Resources */,
 				9CBD726E21E39BB200A45DBC /* BuyListItemCell.xib in Resources */,
-				7B85941520F6283100E32FBD /* BuyListHistoryTableCell.xib in Resources */,
+				7B85941520F6283100E32FBD /* BuyListHistoryCell.xib in Resources */,
 				E1B8264B1EE1596D008AEE9D /* Assets.xcassets in Resources */,
 				E1B826491EE1596D008AEE9D /* Main.storyboard in Resources */,
 			);

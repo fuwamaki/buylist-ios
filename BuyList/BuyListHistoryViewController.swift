@@ -11,7 +11,7 @@ import UIKit
 class BuyListHistoryViewController: UIViewController {
 
     private var eventHandler: BuyListHistoryEventHandler?
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
