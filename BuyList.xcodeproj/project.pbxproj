@@ -13,7 +13,7 @@
 		200BEF7220B99962003F0A99 /* UITableViewCell+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */; };
 		200BEF7420B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */; };
 		200BEF7620B9AD23003F0A99 /* UIView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */; };
-		20138C6B2100E99600CA2F59 /* BuyIdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20138C6A2100E99600CA2F59 /* BuyIdManager.swift */; };
+		20138C6B2100E99600CA2F59 /* BuyIdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20138C6A2100E99600CA2F59 /* BuyIdRepository.swift */; };
 		206052A4202D7901007F7219 /* SettingTableViewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A3202D7901007F7219 /* SettingTableViewResource.swift */; };
 		206052AA202D7F98007F7219 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052A9202D7F98007F7219 /* NSObject+Addition.swift */; };
 		206052B3202DABCE007F7219 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206052B2202DABCE007F7219 /* AppInfo.swift */; };
@@ -68,7 +68,7 @@
 		200BEF7120B99962003F0A99 /* UITableViewCell+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Addition.swift"; sourceTree = "<group>"; };
 		200BEF7320B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Addition.swift"; sourceTree = "<group>"; };
 		200BEF7520B9AD23003F0A99 /* UIView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Addition.swift"; sourceTree = "<group>"; };
-		20138C6A2100E99600CA2F59 /* BuyIdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyIdManager.swift; sourceTree = "<group>"; };
+		20138C6A2100E99600CA2F59 /* BuyIdRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyIdRepository.swift; sourceTree = "<group>"; };
 		206052A3202D7901007F7219 /* SettingTableViewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewResource.swift; sourceTree = "<group>"; };
 		206052A9202D7F98007F7219 /* NSObject+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Addition.swift"; sourceTree = "<group>"; };
 		206052B2202DABCE007F7219 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
@@ -137,6 +137,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		202ADB8A2371019500E65BB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				202ADB8B237101A900E65BB8 /* Storyboard */,
+				202ADB8C237101AF00E65BB8 /* Xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		202ADB8B237101A900E65BB8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E1B826471EE1596D008AEE9D /* Main.storyboard */,
+				E1B8264C1EE1596D008AEE9D /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		202ADB8C237101AF00E65BB8 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */,
+				9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		202ADB8E237101E500E65BB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				208D41F420305CB5004618CA /* BuyListItemCell.swift */,
+				7B10E8B020F6146A00D416CD /* BuyListHistoryCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		206052A5202D7EEA007F7219 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,14 +201,6 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
-		206052AD202DA486007F7219 /* LaunchScreen */ = {
-			isa = PBXGroup;
-			children = (
-				E1B8264C1EE1596D008AEE9D /* LaunchScreen.storyboard */,
-			);
-			name = LaunchScreen;
-			sourceTree = "<group>";
-		};
 		206052AE202DA4C8007F7219 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				E18ABDBA1F20C34A0012416A /* ItemRealm.swift */,
-				20138C6A2100E99600CA2F59 /* BuyIdManager.swift */,
+				20138C6A2100E99600CA2F59 /* BuyIdRepository.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -218,7 +246,6 @@
 				208D41FE2031B161004618CA /* BuyListContainerViewController.swift */,
 				E10F35C61F46E3E30040728A /* BuyListPresenter.swift */,
 				E10F35CC1F46E4200040728A /* BuyListInteractor.swift */,
-				9CBD726B21E3916800A45DBC /* Views */,
 			);
 			name = BuyList;
 			sourceTree = "<group>";
@@ -226,7 +253,6 @@
 		20B4407220F65B920078D371 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E1B826471EE1596D008AEE9D /* Main.storyboard */,
 				20EC136820F509C7001E40A6 /* MainTabBarController.swift */,
 			);
 			name = Main;
@@ -238,7 +264,6 @@
 				E10F35C11F46DE8A0040728A /* BuyListHistoryViewController.swift */,
 				E10F35C81F46E3F50040728A /* BuyListHistoryPresenter.swift */,
 				E10F35CE1F46E4320040728A /* BuyListHistoryInteractor.swift */,
-				9CBD726C21E3917E00A45DBC /* Views */,
 			);
 			name = BuyListHistory;
 			sourceTree = "<group>";
@@ -251,25 +276,7 @@
 			name = Mock;
 			sourceTree = "<group>";
 		};
-		9CBD726B21E3916800A45DBC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9CBD726D21E39BB200A45DBC /* BuyListItemCell.xib */,
-				208D41F420305CB5004618CA /* BuyListItemCell.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		9CBD726C21E3917E00A45DBC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				7B85941420F6283100E32FBD /* BuyListHistoryTableCell.xib */,
-				7B10E8B020F6146A00D416CD /* BuyListHistoryCell.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		9CBD727121E39E3400A45DBC /* Files */ = {
+		9CBD727121E39E3400A45DBC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				20B4407220F65B920078D371 /* Main */,
@@ -277,7 +284,7 @@
 				20EC136720F50954001E40A6 /* BuyListHistory */,
 				206052A5202D7EEA007F7219 /* Setting */,
 			);
-			name = Files;
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		C09DB7C2E9BD0C87D97472A7 /* Pods */ = {
@@ -329,12 +336,13 @@
 				E1B8264F1EE1596D008AEE9D /* Info.plist */,
 				E1B8264A1EE1596D008AEE9D /* Assets.xcassets */,
 				206052AE202DA4C8007F7219 /* AppDelegate */,
-				206052AD202DA486007F7219 /* LaunchScreen */,
-				9CBD727121E39E3400A45DBC /* Files */,
-				206052A8202D7F67007F7219 /* Extension */,
+				202ADB8E237101E500E65BB8 /* View */,
+				9CBD727121E39E3400A45DBC /* ViewController */,
+				202ADB8A2371019500E65BB8 /* Resources */,
 				206052AF202DA4EF007F7219 /* DataStore */,
 				206052B0202DA4FF007F7219 /* Entity */,
 				206052B1202DAB89007F7219 /* Util */,
+				206052A8202D7F67007F7219 /* Extension */,
 			);
 			path = BuyList;
 			sourceTree = "<group>";
@@ -419,6 +427,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -553,7 +562,7 @@
 				208A605020B9B8A9007794C8 /* UIFont+Addition.swift in Sources */,
 				200BEF6E20B99831003F0A99 /* UITableView+Addition.swift in Sources */,
 				E10F35D21F46E45C0040728A /* SettingInteractor.swift in Sources */,
-				20138C6B2100E99600CA2F59 /* BuyIdManager.swift in Sources */,
+				20138C6B2100E99600CA2F59 /* BuyIdRepository.swift in Sources */,
 				E1B826441EE1596D008AEE9D /* BuyListViewController.swift in Sources */,
 				200BEF7420B99D7A003F0A99 /* UITableViewHeaderFooterView+Addition.swift in Sources */,
 				208D41FF2031B161004618CA /* BuyListContainerViewController.swift in Sources */,

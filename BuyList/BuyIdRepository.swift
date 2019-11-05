@@ -1,5 +1,5 @@
 //
-//  BuyIdManager.swift
+//  BuyIdRepository.swift
 //  BuyList
 //
 //  Created by 牧宥作 on 2018/07/20.
@@ -9,7 +9,7 @@
 import Foundation
 
 // buyIdをauto increment管理するクラス
-final class BuyIdManager {
+final class BuyIdRepository {
 
     private var buyIds: [Int]?
 
