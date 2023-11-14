@@ -7,9 +7,9 @@ target 'BuyList' do
   # Hide library warnings in Xcode
   inhibit_all_warnings!
 
-  pod 'RealmSwift', '~> 3.19.0'
-  pod 'SwiftLint', '~> 0.35.0'
-  pod 'KRProgressHUD', '~> 3.4.4'
+  pod 'RealmSwift', '~> 10.36.0'
+  pod 'SwiftLint', '~> 0.50.3'
+  pod 'KRProgressHUD', '~> 3.4.7'
   # Pods for BuyList
 
   target 'BuyListTests' do

@@ -69,7 +69,7 @@ final class ItemRealm {
         do {
             let realm = try Realm()
             try realm.write {
-                realm.add(itemRealmEntity, update: true)
+                realm.add(itemRealmEntity, update: .modified)
                 completion(.success(nil))
             }
         } catch let error as NSError {

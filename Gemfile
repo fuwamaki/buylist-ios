@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem 'cocoapods', '~> 1.8.0'
+gem 'cocoapods', '~> 1.14.2'
 
 # git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 # gem "rails"
